@@ -1,0 +1,44 @@
+🚚 OEM Fastening Solution for Conveyor Sorting Systems
+
+Custom-Engineered Bolts, Brackets & Fixings — Designed for Automation, Built for Downtime-Free Operation
+
+💡 Why Leading Parcel Sorter OEMs Choose Gorgeo
+
+When you're designing high-speed, 24/7 automation lines, fasteners aren’t just “parts” — they're load-bearing, precision-critical connection points.
+We specialize in non-standard fasteners, engineered for structural integrity, repeatable assembly, and zero-maintenance operation.
+
+<div class="two-column-box"> <div> <h4>✅ What We Supply</h4> <ul> <li>Custom shoulder bolts & dowel pins</li> <li>Zero-clearance aluminium profile connectors</li> <li>Anti-loosening bolts for dynamic joints</li> <li>Mounting brackets for guide rails & side panels</li> <li>Precision fixings for AGVs and AS/RS frames</li> </ul> </div> <div> <h4>🎯 Use-Cases We Serve</h4> <ul> <li>Cross-belt sorters & loop sorters</li> <li>Wheel sorter hub assemblies</li> <li>Frame misalignment correction modules</li> <li>Guide rail bracket retrofits</li> <li>Robotics & AMR dynamic joints</li> </ul> </div> </div>
+🧠 More Than Fasteners — We Engineer Fit, Fatigue, and Function
+
+Most failures aren’t due to size errors — they're due to:
+
+Misaligned brackets
+
+Incomplete preload transfer
+
+Stress concentration at profile joints
+
+Vibration-induced loosening over time
+
+Our engineering team works with your R&D, integrating fastening strategies at the design stage, preventing problems before they reach the assembly floor.
+
+📂 See How We Solve Real Problems
+
+Each solution below comes from a real failure event inside parcel sorting projects — from hub loosening to assembly jamming.
+
+<div class="card-grid-3"> <div class="card"> <h5>CMM Passed, But Assembly Jammed</h5> <p>How hidden geometric traps caused repeated jamming even with H7/g6 fit. We fixed it — no tolerance changes needed.</p> <a href="/case-studies/cmm-fit-jam-failure/">Read Case Study →</a> </div> <div class="card"> <h5>Bolts Snapped? It Was the Flange, Not the Bolt</h5> <p>Why preload collapsed in crossbelt sorter modules — and how a new contact face solved the problem.</p> <a href="/applications/flange-fatigue-failure/">Read Case Study →</a> </div> <div class="card"> <h5>AGV Loosening Solved — No Adhesives, No Welding</h5> <p>We replaced locknuts and washers with wedge-lock thread geometry — zero loosening after 100,000 km.</p> <a href="/case-studies/agv-wheel-locking-failure/">Read Case Study →</a> </div> </div>
+🧰 Our OEM Fastening Capabilities
+Feature	What It Means for Your Project
+🔩 Non-standard Part Supply	Fast lead times for drawings, prototyping, and small-lot runs
+📐 Joint Behavior Simulation	We diagnose fastener failures based on real assembly behavior
+🧱 Structural Integration	Design-for-assembly solutions that match aluminium profiles & brackets
+⚙️ Multi-load Fatigue Resistance	Validated under torque, impact, vibration, thermal cycling
+📦 Project-Based Logistics	Batch delivery + pre-kitting for OEM production workflows
+📞 Let's Talk Procurement & Customization
+
+If you're sourcing for an upcoming parcel sorting line — or retrofitting an older conveyor frame — we’d love to understand your challenges.
+From zero-clearance profile joints to custom preload-verified bolts, we design to eliminate failure and speed up your build cycle.
+
+<div class="cta-box"> <h3>📩 Start Your OEM Fastener Project</h3> <form action="/api/handle-download-blog" method="POST" onsubmit="return showSendingButton(this);"> <input type="hidden" name="document_type" value="oem_fastener_contact"> <input type="email" name="email" placeholder="Your Work Email" required> <button type="submit" class="cta-button w-100">Get in Touch</button> </form> <small style="color:#777;">We’ll respond within 1 business day. No spam.</small> </div>
+🔗 Related Industries & Applications
+<ul class="related-links-list"> <li><a href="/solutions/robotics-agv/">Robotics & AGV Modules →</a></li> <li><a href="/solutions/as-rs-systems/">AS/RS Systems →</a></li> <li><a href="/case-studies/">Case Studies: Fastening in Real Systems →</a></li> </ul>
