@@ -161,20 +161,27 @@
     });
   }
 
-  function getSidebarFile() {
-    const path = window.location.pathname.toLowerCase();
-    const metaSidebar = document.querySelector('meta[name="sidebar-type"]');
-    if (metaSidebar) {
-      const type = metaSidebar.content.trim().toLowerCase();
-      if (type === 'applications') return '_sidebar-applications.html';
-      if (type === 'blog') return '_sidebar-blog.html';
-    }
-    if (path.includes('/applications/') || path.includes('/blog/')) {
-        return path.includes('/applications/') ? '_sidebar-applications.html' : '_sidebar-blog.html';
-    }
-    return '_sidebar.html';
+ function getSidebarFile() {
+  const path = window.location.pathname.toLowerCase();
+  const metaSidebar = document.querySelector('meta[name="sidebar-type"]');
+
+  // 🥇 优先使用 meta 策略（原逻辑保留）
+  if (metaSidebar) {
+    const type = metaSidebar.content.trim().toLowerCase();
+    if (type === 'applications') return '_sidebar-applications.html';
+    if (type === 'blog') return '_sidebar-blog.html';
+    if (type === 'industry') return '_sidebar-industry.html'; 
   }
-  
+
+  // 🥈 路径策略（新增 industry-maps，保持原结构不变）
+  if (path.includes('/applications/')) return '_sidebar-applications.html';
+  if (path.includes('/blog/')) return '_sidebar-blog.html';
+  if (path.includes('/industry-maps/')) return '_sidebar-industry.html';
+
+  // 🥉 默认 fallback
+  return '_sidebar.html';
+}
+
   // ===================================================================
   // ✅ 吊桥升级 V2: 乾坤大挪移 - 前端图片压缩核心逻辑
   // ===================================================================
