@@ -2,141 +2,1102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Special Fasteners for Logistics Automation – Gorgeo Fasteners</title>
+  <title>Small-Batch Custom Metal Parts | Pins · Shafts · Sleeves · Spacers | Gorgeo Fasteners</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Gorgeo Fasteners manufactures small-batch custom metal parts — pins, shafts, sleeves, spacers and simple turned components — for fixture builders, tooling departments and small machining teams. Batch sizes from 5–2,000 pcs, H7 fits, heat treatment and surface finishing." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #020617;
+      --bg-card: #111827;
+      --accent: #f97316;
+      --accent-soft: rgba(249,115,22,0.1);
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border-subtle: #1f2937;
+      --max-width: 1120px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-soft: 0 18px 35px rgba(15, 23, 42, 0.9);
+    }
 
-  <meta name="description" content="Custom precision fasteners engineered for logistics automation. We solve fatigue, vibration, and misalignment in sorters, conveyors, and robotic modules. Get your drawing reviewed by experts." />
-  <link rel="canonical" href="https://www.gorgeofasteners.com/" />
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Gorgeo Fasteners",
-        "url": "https://www.gorgeofasteners.com",
-        "logo": "https://www.gorgeofasteners.com/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+86-137-2457-5413",
-          "contactType": "Technical Support"
-        },
-        "description": "Gorgeo Fasteners specializes in diagnosing and solving complex assembly failures for OEMs by focusing on high-precision geometric solutions (±0.01mm) for structural fits, eliminating issues like vibration loosening and interference jams."
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(31,41,55,0.9);
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.92));
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fed7aa, #f97316 45%, #7c2d12 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.7), 0 12px 30px rgba(0,0,0,0.8);
+      font-size: 18px;
+      font-weight: 700;
+      color: #020617;
+    }
+
+    .brand-text-main {
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    nav a {
+      color: var(--text-soft);
+      padding: 4px 0;
+      border-bottom: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      border-color: rgba(148,163,184,0.6);
+    }
+
+    .nav-cta {
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: #0b1120;
+      font-weight: 600;
+      font-size: 12px;
+      border: 1px solid rgba(248, 250, 252, 0.12);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.7);
+    }
+
+    .nav-cta:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--text-main);
+      font-size: 22px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
       }
-    ]
-  }
-  </script>
+      .nav-toggle {
+        display: block;
+      }
+    }
 
-  <link rel="stylesheet" href="assets/css/style.css">
+    /* hero */
+    .hero {
+      padding: 40px 0 32px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 10px 3px 3px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: radial-gradient(circle at top left, rgba(249,115,22,0.18), rgba(15,23,42,0.95));
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #fde68a;
+      margin-bottom: 14px;
+    }
+
+    .chip-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 30% 30%, #fed7aa, #f97316 55%, #7c2d12 100%);
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.7);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 3.1vw, 38px);
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 strong {
+      color: #fed7aa;
+      font-weight: 750;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--text-soft);
+      max-width: 560px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+      font-size: 11px;
+      color: #e5e7eb;
+    }
+
+    .hero-badge-row span {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(248,250,252,0.18);
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: #0b1120;
+      font-weight: 650;
+      font-size: 13px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.85);
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.7);
+      color: var(--text-main);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15,23,42,0.9);
+    }
+
+    .hero-footnote {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .hero-footnote strong {
+      color: #f97316;
+      font-weight: 600;
+    }
+
+    .hero-visual {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(31,41,55,0.9);
+      background: radial-gradient(circle at top left, rgba(249,115,22,0.22), rgba(15,23,42,0.96));
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-meta {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hero-meta span:nth-child(2) {
+      color: #e5e7eb;
+    }
+
+    .metal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metal-card {
+      border-radius: 14px;
+      border: 1px solid rgba(15,23,42,0.95);
+      background: radial-gradient(circle at top, #4b5563 0, #020617 60%, #000 100%);
+      padding: 12px;
+      position: relative;
+      overflow: hidden;
+      min-height: 120px;
+    }
+
+    .metal-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.10), transparent 55%);
+      opacity: 0.8;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .metal-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .metal-tagline {
+      font-size: 11px;
+      color: #d1d5db;
+      margin-bottom: 10px;
+    }
+
+    .metal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: 10px;
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.88);
+      position: relative;
+      z-index: 1;
+    }
+
+    .metal-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.32);
+    }
+
+    .metal-spec {
+      font-size: 10px;
+      color: var(--text-soft);
+      margin-top: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .metal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .metal-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* sections */
+    section {
+      padding: 32px 0;
+      border-top: 1px solid rgba(15,23,42,0.98);
+      background: radial-gradient(circle at top left, rgba(15,23,42,0.96), rgba(2,6,23,0.98));
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 650;
+      margin-bottom: 6px;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-soft);
+      max-width: 540px;
+    }
+
+    /* what we make */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top, #111827, #020617 65%);
+      padding: 14px 14px 16px;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.85);
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .card-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .card-list li {
+      margin-bottom: 4px;
+    }
+
+    .card-list li::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    /* who we support / why us */
+    .split-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .split-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .bullet-icon {
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(248,250,252,0.06);
+      border: 1px solid rgba(148,163,184,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #f97316;
+    }
+
+    .bullet strong {
+      color: #e5e7eb;
+    }
+
+    /* process */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .process-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .process-steps {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .step-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top, #020617, #000 80%);
+      padding: 12px 12px 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .step-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .step-body {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .step-num {
+      position: absolute;
+      right: 10px;
+      bottom: 6px;
+      font-size: 28px;
+      font-weight: 700;
+      color: rgba(30,64,175,0.18);
+    }
+
+    /* CTA strip */
+    .cta-strip {
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(55,65,81,0.95);
+      padding: 16px 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: radial-gradient(circle at top left, rgba(249,115,22,0.2), #020617 55%, #000 100%);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.9);
+    }
+
+    .cta-strip-main {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .cta-strip-sub {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    /* contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-bottom: 3px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.9);
+      color: var(--text-main);
+      padding: 8px 9px;
+      font-size: 12px;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(249,115,22,0.45);
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .contact-meta {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .contact-meta p {
+      margin-bottom: 8px;
+    }
+
+    .contact-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,0.9);
+      font-size: 11px;
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.9);
+      margin-bottom: 8px;
+    }
+
+    .contact-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.35);
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .contact-list li {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(15,23,42,1);
+      padding: 16px 0 18px;
+      background: #020617;
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+    }
+
+.logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+  </style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
+<div class="page">
+  <header>
+    <div class="wrap header-inner">
+      <div class="brand">
+       <img src="favicon.svg" alt="Gorgeo Fasteners logo" class="logo-img" />
+
+        <div>
+          <div class="brand-text-main">GORGEO FASTENERS</div>
+          <div class="brand-text-sub">SMALL-BATCH METAL PARTS</div>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#industries">Who we support</a>
+        <a href="#process">How it works</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Send drawing</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Fasteners That Don’t Fail in Logistics & Automation</h1>
-        <p>Stop bracket misalignment, M8 fatigue cracks, and bolt loosening in your sorters, conveyors, and robotic stations. Our ±0.01mm engineered fasteners prevent failure under 24/7 operation.</p>
-        <a class="cta-button" href="contact/">📎 Send Your Drawing for a Free Diagnosis</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container" style="text-align: center;">
-        <p style="max-width:720px; margin: 20px auto; font-size:1.1em;">
-          Whether it’s bolts that keep loosening in wheel sorters, misaligned brackets in conveyors, or fatigue failures under lateral impact — we’ve seen (and fixed) them all.
-        </p>
-        <h2>How We Engineer Fit That Holds</h2>
-        <p class="section-intro" style="max-width: 750px; margin: 0 auto 30px auto;">
-          We don’t just sell parts. We reverse-engineer the failure, eliminate tolerance gaps, and design fastening systems that hold geometry over time.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-          <a class="cta-button" href="process#process">Explore Our 3-Step Process</a>
-          <a class="cta-button secondary" href="blog/">Read Technical Breakdowns</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="applications-preview">
-      <div class="container">
-        <h2 style="text-align: center;">Engineered Fastening Solutions for Automation Systems</h2>
-        <p class="section-intro" style="max-width: 750px; margin: 0 auto 40px auto;">
-          From bracket drift in sorters to loose bolts in robot cells, we deliver fastener geometry that locks in precision and eliminates downtime.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: left;">
-          <div class="feature-card">
-            <img src="images/icon-merging-conveyor.png" alt="High-Speed Conveying Icon">
-            <div class="card-content">
-              <h3 style="margin-top: 0; margin-bottom: 10px;">Misalignment-Free Merging Conveyors</h3>
-              <p style="margin-bottom: 0;">Fix roller drift, bracket slop, and package jams with custom shoulder bolts and tolerance-matched inserts.</p>
-            </div>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="chip">
+            <div class="chip-dot"></div>
+            SMALL-BATCH METAL PARTS FOR SHOPS
           </div>
-
-          <div class="feature-card">
-            <img src="images/icon-sorter-module.webp" alt="Precision Sorter Module Icon">
-            <div class="card-content">
-              <h3 style="margin-top: 0; margin-bottom: 10px;">Fatigue-Proof Sorter Modules</h3>
-              <p style="margin-bottom: 0;">Replace M8 bolts cracking under lateral load with zero-clearance shoulder joints that hold for 10M+ cycles.</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <img src="images/icon-robotic-station.png" alt="Robotic Palletizing Station Icon">
-            <div class="card-content">
-              <h3 style="margin-top: 0; margin-bottom: 10px;">Zero-Play Fasteners for Robot Frames</h3>
-              <p style="margin-bottom: 0;">Precision pin + bolt assemblies that keep aluminum profiles locked — no walk, no shake, no realignment.</p>
-            </div>
-          </div>
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-          <a class="cta-button secondary" href="case-studies/">📂 View Case Studies</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark" id="resources">
-      <div class="container">
-        <div class="lead-capture-card" style="max-width: 750px; margin: 0 auto; text-align: center;">
-          <h2 style="color: #111111;">🧭 Field-Tested Checklist for Fastener Failures</h2>
-          <p style="font-size: 1.1em; color: #111111; opacity: 0.9;">
-            Download the checklist our engineers use to diagnose 90% of bolt-related misalignments, bracket drift, and vibration loosening in conveyor projects.
+          <h1>
+            <strong>Small-batch custom metal parts</strong> that keep your CNC on the work that actually pays.
+          </h1>
+          <p class="hero-sub">
+            Pins, shafts, sleeves, spacers and other simple turned parts for fixture builders, tooling departments
+            and small machining teams. Batch sizes from <strong>5–2,000 pcs</strong>, with H7 fits, heat treatment and
+            surface finishing when needed.
           </p>
-          <form action="api/handle-download" method="POST" class="lead-form" onsubmit="return showSendingButton(this);" style="margin-top: 24px;">
-            <input type="hidden" name="document_type" value="trouble_zones">
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your Work Email" required>
+          <div class="hero-badge-row">
+            <span>✔ Batch 5–2,000 pcs</span>
+            <span>✔ H7 fits · tight tolerances</span>
+            <span>✔ Carbon steel · alloy · stainless · aluminum</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Send drawing · get quick check</a>
+            <a href="#services" class="btn-ghost">See what we make</a>
+          </div>
+          <div class="hero-footnote">
+            You don’t need a full drawing to start — a cropped view or sketch is enough for a first feasibility look.
+          </div>
+        </div>
+
+        <aside class="hero-visual" aria-label="Small-batch metal part examples">
+          <div class="hero-meta">
+            <span>Examples of work · small-batch pins & shafts</span>
+            <span>Typical lead time: 7–10 days</span>
+          </div>
+          <div class="metal-grid">
+            <div class="metal-card">
+              <div class="metal-title">Locating pins</div>
+              <div class="metal-tagline">H7 fits · hardened tips</div>
+              <div class="metal-pill">
+                <span class="metal-pill-dot"></span>
+                50 pcs · 42CrMo
+              </div>
+              <div class="metal-spec">Ground OD · chamfered lead-in for fast assembly.</div>
             </div>
-            <button type="submit" class="cta-button w-100">Send Me the Checklist</button>
-          </form>
-          <p class="privacy-note" style="color: #adb5bd;">We reply fast. No spam.</p>
+            <div class="metal-card">
+              <div class="metal-title">Fixture shafts</div>
+              <div class="metal-tagline">Support & rotation shafts</div>
+              <div class="metal-pill">
+                <span class="metal-pill-dot"></span>
+                120 pcs · 45# steel
+              </div>
+              <div class="metal-spec">Turned, heat-treated, Ra controlled for bushing life.</div>
+            </div>
+            <div class="metal-card">
+              <div class="metal-title">Sleeves & spacers</div>
+              <div class="metal-tagline">Stack-up control parts</div>
+              <div class="metal-pill">
+                <span class="metal-pill-dot"></span>
+                600 pcs · SS304
+              </div>
+              <div class="metal-spec">Bored, deburred, consistent thickness for easy assembly.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- WHAT WE MAKE -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-kicker">WHAT WE MAKE</div>
+          <h2 class="section-title">Small-batch custom parts your team doesn’t want to tie up the CNC with.</h2>
+          <p class="section-sub">
+            We focus on the simple but critical pieces that keep fixtures, tools and small automation modules together —
+            so your in-house machines can stay on the complex, high-value work.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3 class="card-title">Custom pins</h3>
+            <div class="card-tag">Locating · alignment · stop pins</div>
+            <ul class="card-list">
+              <li>Straight pins, stepped pins, shoulder pins</li>
+              <li>Chamfered or radiused lead-in for easy insertion</li>
+              <li>Hardened working zones when needed</li>
+              <li>OD grinding and surface finish on request</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Shafts & axles</h3>
+            <div class="card-tag">Support, rotation & guide shafts</div>
+            <ul class="card-list">
+              <li>Through-hardened or surface-hardened options</li>
+              <li>Keyways, grooves, threads, cross-holes</li>
+              <li>Length control for stack-up consistency</li>
+              <li>Suited for bushings, bearings or direct fit</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Sleeves & bushings</h3>
+            <div class="card-tag">Alignment & wear control</div>
+            <ul class="card-list">
+              <li>Bored ID with controlled clearance</li>
+              <li>Press-fit, slip-fit or H7/g6 design</li>
+              <li>Chamfers / lead-ins to avoid assembly jams</li>
+              <li>Suitable for fixtures, jigs and small modules</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Spacers & washers</h3>
+            <div class="card-tag">Pack-up & gap control</div>
+            <ul class="card-list">
+              <li>Thickness-controlled spacers and shims</li>
+              <li>Flatness and parallelism on request</li>
+              <li>Batch-matched sets for rebuilds</li>
+              <li>Fits for metric & inch fasteners</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Simple turned components</h3>
+            <div class="card-tag">Overflow for small, repetitive parts</div>
+            <ul class="card-list">
+              <li>Low-complexity parts that burn shop time</li>
+              <li>Bosses, collars, standoffs, small adapters</li>
+              <li>Ideal for repeat fixture and tooling builds</li>
+              <li>Material traceability when needed</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Overflow machining support</h3>
+            <div class="card-tag">When your machines are already full</div>
+            <ul class="card-list">
+              <li>Take over low-margin, time-stealing parts</li>
+              <li>Flexible batch sizes: 5–2,000 pcs</li>
+              <li>Consistent quality across repeat orders</li>
+              <li>You keep control of critical, complex work</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="faq">
-      <div class="container">
-        <h2 style="text-align: center;">Quick Answers</h2>
-        <div class="faq" style="max-width: 750px; margin: 0 auto;">
-          <details>
-            <summary>Can loose bolts cause conveyor misalignment?</summary>
-            <p>Yes. Even torqued bolts can shift if there's play in the mounting hole. That movement causes bracket drift, roller misalignment, and long-term failure.</p>
-          </details>
-          <details>
-            <summary>What’s the difference between a ‘fit’ and a ‘geometry’ problem?</summary>
-            <p>A 'fit' issue is about dimensions (e.g., H7/g6). A 'geometry' issue is about how shape and direction affect function — like chamfer angle causing jamming. We solve both.</p>
-          </details>
-          <details>
-            <summary>How does your drawing diagnosis work?</summary>
-            <p>Send us a drawing or failed sample. We’ll analyze failure modes (vibration, impact, fatigue), inspect tolerance zones, and give you a fit-locked fix — free.</p>
-          </details>
+    <!-- WHO WE SUPPORT + WHY US -->
+    <section id="industries">
+      <div class="wrap split-2">
+        <div>
+          <div class="section-header">
+            <div class="section-kicker">WHO WE SUPPORT</div>
+            <h2 class="section-title">Built around fixture shops, tooling teams and small machining companies.</h2>
+            <p class="section-sub">
+              We’re not a mass-production shop. We exist to take care of the small parts that slow your schedule, clog
+              your CAM queue and eat into your margins.
+            </p>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">F</div>
+            <div><strong>Fixture & jig builders</strong> who always have a handful of pins / sleeves holding up a project.</div>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">M</div>
+            <div><strong>Small & mid-size machine shops</strong> whose CNC time is better spent on complex machining.</div>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">T</div>
+            <div><strong>Tooling departments</strong> inside OEMs that need repeatable small parts in controlled batches.</div>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">A</div>
+            <div><strong>Automation builders</strong> with custom pieces for small assemblies and mechanisms.</div>
+          </div>
         </div>
+
+        <div>
+          <div class="section-header">
+            <div class="section-kicker">WHY TEAMS WORK WITH US</div>
+            <h2 class="section-title">Because their CNC hours are too valuable for low-margin parts.</h2>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">1</div>
+            <div><strong>We stay in our lane.</strong> Pins, shafts, sleeves, spacers and simple turned parts only.</div>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">2</div>
+            <div><strong>We keep it small-batch.</strong> 5–2,000 pcs — exactly the jobs most shops dislike but still need.</div>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">3</div>
+            <div><strong>We give manufacturability feedback, not just prices.</strong> A screenshot is enough to start a sanity check.</div>
+          </div>
+          <div class="bullet">
+            <div class="bullet-icon">4</div>
+            <div><strong>We understand fit.</strong> H7 fits, stack-up control and practical chamfers to avoid assembly headaches.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-kicker">HOW IT WORKS</div>
+          <h2 class="section-title">Send a screenshot today — turn it into parts in a few weeks.</h2>
+          <p class="section-sub">
+            No complex onboarding, no long RFQs. Just enough information for us to confirm manufacturability and lock in
+            a realistic lead time.
+          </p>
+        </div>
+        <div class="process-steps">
+          <article class="step-card">
+            <div class="step-tag">Step 1</div>
+            <h3 class="step-title">Send the part that clogs your schedule</h3>
+            <p class="step-body">
+              Email or upload a drawing, cropped screenshot or simple sketch. Include material, quantity range and any
+              critical tolerance or fit notes.
+            </p>
+            <div class="step-num">01</div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-tag">Step 2</div>
+            <h3 class="step-title">Quick manufacturability & quote</h3>
+            <p class="step-body">
+              We check dimensions, tolerances and materials, flag obvious risks, and send a quote with batch options,
+              typical lead time and any suggestions.
+            </p>
+            <div class="step-num">02</div>
+          </article>
+
+          <article class="step-card">
+            <div class="step-tag">Step 3</div>
+            <h3 class="step-title">Production & repeatable batches</h3>
+            <p class="step-body">
+              Once confirmed, we run the batch, manage heat treatment and surface finishing when required, and keep
+              records so reorders stay consistent.
+            </p>
+            <div class="step-num">03</div>
+          </article>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="cta-strip">
+            <div>
+              <div class="cta-strip-main">Have one pin, shaft or sleeve holding up your project right now?</div>
+              <div class="cta-strip-sub">
+                Send that one. It’s usually the smallest part on the BOM that wastes the most hours.
+              </div>
+            </div>
+            <div>
+              <a href="#contact" class="btn-primary">Send a part for review</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="section-header">
+            <div class="section-kicker">SEND DRAWING</div>
+            <h2 class="section-title">Share one part that shouldn’t be tying up your CNC.</h2>
+            <p class="section-sub">
+              No obligation. We’ll give a quick manufacturability impression and a realistic batch/lead-time suggestion.
+            </p>
+          </div>
+
+         <form action="/api/technical-inquiry" method="POST" enctype="multipart/form-data">
+
+
+  <label for="email">Work Email <span style="color:#f97316">*</span></label>
+  <input id="email" name="email" type="email" placeholder="name@company.com" required />
+
+  <label for="file">Upload Screenshot / Drawing (PDF, JPG, PNG)</label>
+<input id="file" name="file" type="file" accept="image/*,.pdf" />
+
+
+  <label for="message">Message (Optional)</label>
+  <textarea id="message" name="message" placeholder="You can leave this empty if you want."></textarea>
+
+  <button type="submit" class="btn-primary" style="width: 100%; margin-top:10px;">
+    Send & Get Quick Feedback
+  </button>
+
+  <p style="font-size:11px; color:#6b7280; text-align:center; margin-top:8px;">
+    No phone. No long forms. Just one screenshot is enough.
+  </p>
+
+</form>
+
+        </div>
+
+        <aside class="contact-meta">
+          <div class="contact-tag">
+            <span class="contact-dot"></span>
+            Typical reply: within 24 hours on working days
+          </div>
+          <p>
+            Most teams start with one “annoying” part — a pin, shaft, sleeve or spacer that burns machine time or
+            keeps missing schedule. That’s usually enough for us to show how the cooperation works.
+          </p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> info@gorgeofasteners.com</li>
+            <li><strong>Phone / WhatsApp:</strong> +86 137 2457 5413</li>
+          </ul>
+          <p style="margin-top:10px;">
+            If you prefer, you can skip the form and simply send an email with:
+          </p>
+          <ul class="contact-list">
+            <li>• 1–2 screenshots or a PDF drawing</li>
+            <li>• Material and quantity range</li>
+            <li>• Any critical fit / tolerance notes</li>
+          </ul>
+          <p style="margin-top:10px;">
+            We’ll come back with a manufacturability view and suggested next step.
+          </p>
+        </aside>
       </div>
     </section>
   </main>
 
-  <div id="footer-placeholder"></div>
-  <script id="main-include-script" src="assets/js/includes.js"></script>
-  <script src="assets/js/form-loading.js"></script>
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Gorgeo Fasteners. Small-batch metal parts for fixture & machining teams.</div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <span>·</span>
+        <a href="mailto:info@gorgeofasteners.com">info@gorgeofasteners.com</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

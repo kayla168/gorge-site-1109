@@ -1,46 +1,76 @@
-// File: /api/technical-inquiry.js
+// File: /api/technical-inquiry.js (目录权限修复版)
 import { formidable } from 'formidable';
 import nodemailer from 'nodemailer';
+import os from 'os'; // ✅ 新增：引入系统模块
 
 export const config = {
   api: { bodyParser: false },
 };
 
+const getFirstFile = (files, fieldName) => {
+  const fileData = files[fieldName];
+  if (!fileData) return null;
+  if (Array.isArray(fileData)) return fileData[0];
+  return fileData;
+};
+
 export default async function handler(req, res) {
+  console.log('🔹 Step 1: API received request'); // 日志追踪
+
   if (req.method !== 'POST') {
     res.writeHead(405, { 'Content-Type': 'text/plain' });
     res.end('Method Not Allowed');
     return;
   }
 
-  // ✅ Formidable 设置：允许空文件 & 限制文件大小
+  // ✅ 核心修复：显式指定上传目录为系统临时目录
+  // 这解决了 Vercel 和 Windows 本地环境的权限冲突
   const form = formidable({
     multiples: false,
-    maxFileSize: 5 * 1024 * 1024, // 5MB
+    maxFileSize: 10 * 1024 * 1024,
     allowEmptyFiles: true,
     minFileSize: 0,
+    uploadDir: os.tmpdir(), // <--- 关键修改
+    keepExtensions: true,   // 保留文件后缀
   });
 
   try {
+    console.log('🔹 Step 2: Starting form parsing...');
+    
     const [fields, files] = await new Promise((resolve, reject) => {
       form.parse(req, (err, fields, files) => {
-        if (err) reject(err);
-        else resolve([fields, files]);
+        if (err) {
+          console.error('❌ Form parse error:', err); // 打印具体错误
+          reject(err);
+        } else {
+          console.log('🔹 Step 3: Form parsed successfully');
+          resolve([fields, files]);
+        }
       });
     });
 
-    const name = fields.name?.[0] || '';
+    // 变量提取
     const email = fields.email?.[0] || '';
-    const company = fields.company?.[0] || '';
-    const message = fields.message?.[0] || '';
+    const rawName = fields.name?.[0] || '';
+    // 修复：处理 message 为空的情况
+    const messageContent = fields.message?.[0]; 
+    const displayMessage = (messageContent && messageContent.trim() !== "") 
+      ? messageContent 
+      : 'No details provided in the message box.';
 
-    if (!name || !email || !message) {
+    const nameForAutoReply = rawName || 'there';
+    const nameForAdminSubject = rawName || 'Applicant';
+    const fromNameForAdmin = rawName ? rawName + ' (Website Inquiry)' : 'Website Inquiry';
+
+    // 验证
+    if (!email) {
+      console.log('⚠️ Error: Email field is missing');
       res.writeHead(302, { Location: '/contact/error.html' });
       res.end();
       return;
     }
 
-    // ✅ 邮件传输配置（与 Vercel 环境变量对应）
+    // 邮件配置
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT, 10),
@@ -52,87 +82,97 @@ export default async function handler(req, res) {
     });
 
     const signature = `
-      Best regards,<br>
-      <strong>Catherine Zhang</strong><br>
-      <span>Senior Assembly Fit Consultant</span><br>
-      <span>Structural Fit Reliability · ±0.01 mm</span><br>
-      <span>Gorgeo Fasteners | Sleeves · Pins · Locator Bolts</span>
-    `;
-
-    const autoReplyBody = `
-      <div style='font-family: Calibri, sans-serif; font-size: 11pt; color: #333; line-height: 1.5;'>
-        <p>Hi ${name},</p>
-        <p>This is an automatic confirmation that we have successfully received your inquiry and any attached drawings. Thank you for reaching out.</p>
-        <p>Our engineering team will personally review your message and get back to you within one business day. Please rest assured that all submitted files are handled with complete confidentiality.</p>
-        <hr style='border: none; border-top: 1px solid #eee; margin: 20px 0;'>
-        <p><strong>While you wait, explore how we solve similar challenges:</strong></p>
-        <ul style='padding-left: 0; list-style: none;'>
-          <li style='margin-bottom: 10px;'>
-            <a href='https://www.gorgeofasteners.com/blog/vibration-loosening-fix/' style='color: #007bff; text-decoration: none;'>
-              <strong>Case Study: Fixing Chronic Vibration Loosening</strong><br>
-              <span style='color: #555; font-size: 0.9em;'>How we use structural geometry, not just torque, to create joints that never back out.</span>
-            </a>
-          </li>
-          <li>
-            <a href='https://www.gorgeofasteners.com/blog/coating-induced-jam-fit/' style='color: #007bff; text-decoration: none;'>
-              <strong>Teardown: When a 0.05mm Coating Jams Assembly</strong><br>
-              <span style='color: #555; font-size: 0.9em;'>Dissecting how an unmodeled finish layer can turn a perfect CAD fit into a production-line failure.</span>
-            </a>
-          </li>
-        </ul>
+      <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
+        Best regards,<br>
+        <strong style="font-size: 1.1em; color: #000;">Catherine Zhang</strong><br>
+        <span style="color: #f97316; font-weight: 600;">Technical Review & Small-Batch Machining Support</span><br>
+        <span>Gorgeo Fasteners — Overflow Support for Machine Shops</span><br>
+        <span style="font-size: 12px; color: #666;">Pins · Shafts · Sleeves · Spacers</span><br>
         <br>
-        <p>${signature}</p>
-        <p style='font-size: 0.85em; color: #777; margin-top: 25px;'>
-          P.S. If you need to add any information to your inquiry, simply reply to this email. For truly urgent matters, you can find our direct contact details on our website.
-        </p>
+        <span style="font-size: 12px; color: #888;">📱 +86 137 2457 5413 (WhatsApp)</span><br>
+        <span style="font-size: 12px; color: #888;">⏱ UTC+8 — Reply within 24 hours</span>
       </div>
     `;
 
-    // ✅ 管理员邮件内容
+    const autoReplyBody = `
+      <div style='font-family: Calibri, sans-serif; font-size: 11pt; color: #333; line-height: 1.6;'>
+        <p>Hi ${nameForAutoReply},</p>
+        <p><strong>Confirmed — your inquiry and file(s) have been received successfully.</strong></p>
+        <p>I’ll review the part personally. Within <strong>24 hours on working days</strong> (often sooner), you’ll receive a reply covering:</p>
+        <ul style="background-color: #f9f9f9; padding: 12px 20px; border-left: 3px solid #f97316; list-style-type: none; margin: 15px 0;">
+          <li style="margin-bottom: 5px;">• Any tolerance / fit risks (H7, g6, clearance logic)</li>
+          <li style="margin-bottom: 5px;">• Material & batch feasibility</li>
+          <li style="margin-bottom: 5px;">• Potential cost drivers — and practical ways to reduce them</li>
+          <li>• Suggestions if something may cause assembly jams or tooling issues</li>
+        </ul>
+        <p>If anything is unclear in the drawing, I’ll reach out before quoting — <strong>it's always better to prevent problems than to price them in.</strong></p>
+        <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
+        <p style="font-size: 0.9em; color: #555;">
+          <em>If you'd like to add more context while waiting, feel free to reply with:</em><br>
+          <em>• Material preference</em><br>
+          <em>• Quantity range</em><br>
+          <em>• What’s currently blocking your schedule on this part</em>
+        </p>
+        ${signature}
+      </div>
+    `;
+
     const adminMail = {
-      from: `${name} (Website Inquiry) <${process.env.FROM_EMAIL}>`,
+      from: `${fromNameForAdmin} <${process.env.FROM_EMAIL}>`,
       to: process.env.FROM_EMAIL,
-      replyTo: `${name} <${email}>`,
-      subject: `New Technical Inquiry from ${name}${company ? ` (${company})` : ''}`,
+      replyTo: `${nameForAutoReply} <${email}>`,
+      subject: `New Technical Inquiry from ${nameForAdminSubject}`,
       html: `
-        <strong>Name:</strong> ${name}<br>
-        <strong>Email:</strong> ${email}<br>
-        <strong>Company:</strong> ${company}<br>
-        <strong>Message:</strong><br>${message}
+        <h3>New Inquiry Received</h3>
+        <p><strong>Name:</strong> ${rawName || '(Not provided)'}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong><br>${displayMessage}</p>
+        <hr>
+        <p style="color:gray; font-size:12px;">Sent from Gorgeo Fasteners Website</p>
       `,
       attachments: [],
     };
 
-    // ✅ 附件处理（判断文件存在且非空）
-    const drawing = files.drawing?.[0];
-    if (drawing && drawing.size > 0) {
-      const allowedExts = ['pdf', 'dwg', 'dxf', 'step', 'stp', 'iges', 'igs', 'jpg', 'jpeg', 'png', 'zip', 'rar'];
-      const ext = drawing.originalFilename.split('.').pop().toLowerCase();
+    // 附件处理
+    const fileAttachment = getFirstFile(files, 'file');
+    if (fileAttachment && fileAttachment.size > 0) {
+      console.log('🔹 Step 4: Attachment found:', fileAttachment.originalFilename);
+      const ext = fileAttachment.originalFilename.split('.').pop().toLowerCase();
+      // 扩大了允许的文件类型，防止因为类型被拒
+      const allowedExts = ['pdf', 'dwg', 'dxf', 'step', 'stp', 'iges', 'igs', 'jpg', 'jpeg', 'png', 'zip', 'rar', '7z'];
+      
       if (allowedExts.includes(ext)) {
         adminMail.attachments.push({
-          filename: drawing.originalFilename,
-          path: drawing.filepath,
+          filename: fileAttachment.originalFilename,
+          path: fileAttachment.filepath,
         });
       }
+    } else {
+      console.log('🔹 Step 4: No attachment or empty file');
     }
 
-    // ✅ 发送管理员邮件
-    await transporter.sendMail(adminMail);
+    console.log('🔹 Step 5: Sending emails...');
+    
+    // 发送邮件
+    await Promise.all([
+      transporter.sendMail(adminMail),
+      transporter.sendMail({
+        from: `${process.env.REPLY_TO_NAME} | Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
+        to: email,
+        subject: `Confirmation: We've received your inquiry`,
+        html: autoReplyBody,
+      })
+    ]);
 
-    // ✅ 自动回复客户邮件
-    await transporter.sendMail({
-      from: `${process.env.REPLY_TO_NAME} | Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
-      to: email,
-      subject: `Confirmation: We've received your inquiry [Analysis in Progress]`,
-      html: autoReplyBody,
-    });
-
-    // ✅ 成功跳转
+    console.log('✅ Step 6: Emails sent! Redirecting...');
+    
+    // 跳转
     res.writeHead(302, { Location: '/contact/thank-you.html' });
     res.end();
 
   } catch (err) {
-    console.error('❌ Mail send failed:', err);
+    console.error('❌ Server Crash Error:', err);
+    // 这里如果出错，也尝试跳转到错误页，避免白屏
     res.writeHead(302, { Location: '/contact/error.html' });
     res.end();
   }

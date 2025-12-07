@@ -1,116 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ===== Core Pages ===== -->
+  
   <url>
     <loc>https://www.gorgeofasteners.com/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-07</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.gorgeofasteners.com/about/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/process/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/contact/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <!-- ===== Solutions ===== -->
-  <url>
-    <loc>https://www.gorgeofasteners.com/solutions/oem-conveyor-solutions/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <!-- ===== Industry Maps Hub ===== -->
-  <url>
-    <loc>https://www.gorgeofasteners.com/industry-maps/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <!-- ===== 5 Published Industry Maps ===== -->
-  <url>
-    <loc>https://www.gorgeofasteners.com/industry-maps/cross-belt-sorter-manufacturers-europe/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/industry-maps/shoe-sorter-manufacturers/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/industry-maps/parcel-handling-integrators-usa/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/industry-maps/telescopic-conveyor-manufacturers-north-america/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/industry-maps/conveyor-oems-germany/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <!-- ===== Case Studies ===== -->
-  <url>
-    <loc>https://www.gorgeofasteners.com/case-studies/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/case-studies/agv-wedge-lock-design/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/case-studies/crossbelt-fatigue-failure/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/case-studies/cmm-fit-jam-failure/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/case-studies/creep-clearance-failure/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <!-- ===== Blog ===== -->
-  <url>
-    <loc>https://www.gorgeofasteners.com/blog/</loc>
-    <lastmod>2025-11-26T00:00:00+00:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/blog/vibration-loosening-fix/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/blog/coating-induced-jam-fit/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/blog/tolerance-trap-in-spec-failure/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://www.gorgeofasteners.com/blog/conveyor-misalignment-caused-by-low-precision-fastener/</loc>
-    <lastmod>2025-11-09T21:30:00+09:00</lastmod>
+    <loc>https://www.gorgeofasteners.com/thank-you.html</loc>
+    <lastmod>2025-12-07</lastmod>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

@@ -1,15 +1,4 @@
-# Gorgeo Fasteners Robots Exclusion Protocol
-
 User-agent: *
-Disallow: /api/
-Disallow: /thank-you-home/
-Disallow: /thank-you-blog/
-Disallow: /contact/thank-you.html
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
 Allow: /
 
 Sitemap: https://www.gorgeofasteners.com/sitemap.xml
