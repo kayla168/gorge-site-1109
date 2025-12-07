@@ -13,10 +13,15 @@
     { "source": "/about-us", "destination": "/", "permanent": true },
 { "source": "/industry-maps", "destination": "/", "permanent": true },
      { "source": "/industry-maps/:path*", "destination": "/", "permanent": true },
-
-    { "source": "/solutions", "destination": "/", "permanent": true },
+ { "source": "/solutions", "destination": "/", "permanent": true },
      { "source": "/solutions/:path*", "destination": "/", "permanent": true },
+    { "source": "/case-studies", "destination": "/", "permanent": true },
+     { "source": "/case-studies/:path*", "destination": "/", "permanent": true },
+     { "source": "/contact/:path*", "destination": "/", "permanent": true },
+        { "source": "/contact/", "destination": "/", "permanent": true },
     { "source": "/contact", "destination": "/#contact", "permanent": true }
+
+    
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" }
