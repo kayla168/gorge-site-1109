@@ -19,6 +19,7 @@
     { "source": "/about-us", "destination": "/", "permanent": true },
 { "source": "/industry-maps", "destination": "/", "permanent": true },
 { "source": "/industry-maps/", "destination": "/", "permanent": true },
+{ "source": "/industry-maps/*", "destination": "/", "permanent": true },
      { "source": "/industry-maps/:path*", "destination": "/", "permanent": true },
  { "source": "/solutions", "destination": "/", "permanent": true },
  { "source": "/solutions/", "destination": "/", "permanent": true },
