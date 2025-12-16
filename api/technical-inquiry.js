@@ -83,6 +83,12 @@ export default async function handler(req, res) {
       res.status(200).end('OK');
       return;
     }
+// Drop messages containing URLs (most are spam)
+if (/(https?:\/\/|www\.)/i.test(msg)) {
+  res.statusCode = 200;
+  res.end('OK');
+  return;
+}
 
     if (!email) {
       res.writeHead(302, { Location: '/contact/error.html' });
