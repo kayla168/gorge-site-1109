@@ -1,4 +1,3 @@
-// File: /api/technical-inquiry.js
 import { formidable } from 'formidable';
 import nodemailer from 'nodemailer';
 import os from 'os';
@@ -18,6 +17,12 @@ const getFirstFile = (files, fieldName) => {
   return fileData;
 };
 
+// ====== 所有被拦情况统一跳成功页 ======
+const redirectSuccess = (res) => {
+  res.writeHead(302, { Location: '/contact/thank-you.html' });
+  res.end();
+};
+
 export default async function handler(req, res) {
   // ====== 方法校验 ======
   if (req.method !== 'POST') {
@@ -25,7 +30,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  // ====== IP 解析（只能在 handler 内）======
+  // ====== IP 解析（必须在 handler 内）======
   const ip =
     (req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||
     req.socket.remoteAddress;
@@ -35,7 +40,7 @@ export default async function handler(req, res) {
   const lastTime = ipRequestMap.get(ip);
 
   if (lastTime && now - lastTime < 60 * 1000) {
-    res.status(200).end('OK');
+    redirectSuccess(res);
     return;
   }
 
@@ -63,7 +68,7 @@ export default async function handler(req, res) {
     // ====== 蜜罐反 bot ======
     const honeypot = fields.company_website?.[0];
     if (honeypot && String(honeypot).trim() !== '') {
-      res.status(200).end('OK');
+      redirectSuccess(res);
       return;
     }
 
@@ -72,23 +77,27 @@ export default async function handler(req, res) {
     const rawName = fields.name?.[0] || '';
     const messageContent = fields.message?.[0] || '';
 
-    // ====== 乱码随机串拦截 ======
     const msg = messageContent.trim();
+
+    // ====== 随机串垃圾 ======
     if (
       msg &&
       msg.length >= 18 &&
       !msg.includes(' ') &&
       /^[a-zA-Z]+$/.test(msg)
     ) {
-      res.status(200).end('OK');
+      redirectSuccess(res);
       return;
     }
-// Drop messages containing URLs (most are spam)
-if (/(https?:\/\/|www\.)/i.test(msg)) {
-  res.statusCode = 200;
-  res.end('OK');
-  return;
-}
+
+    // ====== URL 广告垃圾（只拦“无附件 + 有链接”）=====
+    const fileAttachment = getFirstFile(files, 'file');
+    const hasFile = !!(fileAttachment && fileAttachment.size > 0);
+
+    if (!hasFile && /(https?:\/\/|www\.)/i.test(msg)) {
+      redirectSuccess(res);
+      return;
+    }
 
     if (!email) {
       res.writeHead(302, { Location: '/contact/error.html' });
@@ -165,9 +174,7 @@ if (/(https?:\/\/|www\.)/i.test(msg)) {
       attachments: [],
     };
 
-    // ====== 附件 ======
-    const fileAttachment = getFirstFile(files, 'file');
-    if (fileAttachment && fileAttachment.size > 0) {
+    if (hasFile) {
       adminMail.attachments.push({
         filename: fileAttachment.originalFilename,
         path: fileAttachment.filepath,
@@ -186,8 +193,7 @@ if (/(https?:\/\/|www\.)/i.test(msg)) {
     ]);
 
     // ====== 成功跳转 ======
-    res.writeHead(302, { Location: '/contact/thank-you.html' });
-    res.end();
+    redirectSuccess(res);
 
   } catch (err) {
     console.error(err);
