@@ -1,12 +1,16 @@
-// File: /api/technical-inquiry.js (目录权限修复版)
+// File: /api/technical-inquiry.js
 import { formidable } from 'formidable';
 import nodemailer from 'nodemailer';
-import os from 'os'; // ✅ 新增：引入系统模块
+import os from 'os';
 
 export const config = {
   api: { bodyParser: false },
 };
 
+// ====== IP 限频（轻量版）======
+const ipRequestMap = new Map();
+
+// ====== 工具函数 ======
 const getFirstFile = (files, fieldName) => {
   const fileData = files[fieldName];
   if (!fileData) return null;
@@ -15,62 +19,78 @@ const getFirstFile = (files, fieldName) => {
 };
 
 export default async function handler(req, res) {
-  console.log('🔹 Step 1: API received request'); // 日志追踪
-
+  // ====== 方法校验 ======
   if (req.method !== 'POST') {
-    res.writeHead(405, { 'Content-Type': 'text/plain' });
-    res.end('Method Not Allowed');
+    res.status(405).send('Method Not Allowed');
     return;
   }
 
-  // ✅ 核心修复：显式指定上传目录为系统临时目录
-  // 这解决了 Vercel 和 Windows 本地环境的权限冲突
+  // ====== IP 解析（只能在 handler 内）======
+  const ip =
+    (req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||
+    req.socket.remoteAddress;
+
+  // ====== IP 限频：1 分钟 1 次 ======
+  const now = Date.now();
+  const lastTime = ipRequestMap.get(ip);
+
+  if (lastTime && now - lastTime < 60 * 1000) {
+    res.status(200).end('OK');
+    return;
+  }
+
+  ipRequestMap.set(ip, now);
+
+  // ====== formidable 配置 ======
   const form = formidable({
     multiples: false,
     maxFileSize: 10 * 1024 * 1024,
     allowEmptyFiles: true,
     minFileSize: 0,
-    uploadDir: os.tmpdir(), // <--- 关键修改
-    keepExtensions: true,   // 保留文件后缀
+    uploadDir: os.tmpdir(),
+    keepExtensions: true,
   });
 
   try {
-    console.log('🔹 Step 2: Starting form parsing...');
-    
+    // ====== 解析表单 ======
     const [fields, files] = await new Promise((resolve, reject) => {
       form.parse(req, (err, fields, files) => {
-        if (err) {
-          console.error('❌ Form parse error:', err); // 打印具体错误
-          reject(err);
-        } else {
-          console.log('🔹 Step 3: Form parsed successfully');
-          resolve([fields, files]);
-        }
+        if (err) reject(err);
+        else resolve([fields, files]);
       });
     });
 
-    // 变量提取
+    // ====== 蜜罐反 bot ======
+    const honeypot = fields.company_website?.[0];
+    if (honeypot && String(honeypot).trim() !== '') {
+      res.status(200).end('OK');
+      return;
+    }
+
+    // ====== 字段提取 ======
     const email = fields.email?.[0] || '';
     const rawName = fields.name?.[0] || '';
-    // 修复：处理 message 为空的情况
-    const messageContent = fields.message?.[0]; 
-    const displayMessage = (messageContent && messageContent.trim() !== "") 
-      ? messageContent 
-      : 'No details provided in the message box.';
+    const messageContent = fields.message?.[0] || '';
 
-    const nameForAutoReply = rawName || 'there';
-    const nameForAdminSubject = rawName || 'Applicant';
-    const fromNameForAdmin = rawName ? rawName + ' (Website Inquiry)' : 'Website Inquiry';
+    // ====== 乱码随机串拦截 ======
+    const msg = messageContent.trim();
+    if (
+      msg &&
+      msg.length >= 18 &&
+      !msg.includes(' ') &&
+      /^[a-zA-Z]+$/.test(msg)
+    ) {
+      res.status(200).end('OK');
+      return;
+    }
 
-    // 验证
     if (!email) {
-      console.log('⚠️ Error: Email field is missing');
       res.writeHead(302, { Location: '/contact/error.html' });
       res.end();
       return;
     }
 
-    // 邮件配置
+    // ====== 邮件配置 ======
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT, 10),
@@ -81,6 +101,10 @@ export default async function handler(req, res) {
       },
     });
 
+    const displayMessage =
+      msg !== '' ? msg : 'No details provided in the message box.';
+
+    // ====== 原样保留的签名 ======
     const signature = `
       <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
         Best regards,<br>
@@ -93,6 +117,9 @@ export default async function handler(req, res) {
         <span style="font-size: 12px; color: #888;">⏱ UTC+8 — Reply within 24 hours</span>
       </div>
     `;
+
+    // ====== 原样保留的自动回复内容 ======
+    const nameForAutoReply = rawName || 'there';
 
     const autoReplyBody = `
       <div style='font-family: Calibri, sans-serif; font-size: 11pt; color: #333; line-height: 1.6;'>
@@ -117,62 +144,47 @@ export default async function handler(req, res) {
       </div>
     `;
 
+    // ====== 管理员邮件 ======
     const adminMail = {
-      from: `${fromNameForAdmin} <${process.env.FROM_EMAIL}>`,
+      from: `Website Inquiry <${process.env.FROM_EMAIL}>`,
       to: process.env.FROM_EMAIL,
       replyTo: `${nameForAutoReply} <${email}>`,
-      subject: `New Technical Inquiry from ${nameForAdminSubject}`,
+      subject: 'New Technical Inquiry',
       html: `
         <h3>New Inquiry Received</h3>
         <p><strong>Name:</strong> ${rawName || '(Not provided)'}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong><br>${displayMessage}</p>
-        <hr>
-        <p style="color:gray; font-size:12px;">Sent from Gorgeo Fasteners Website</p>
       `,
       attachments: [],
     };
 
-    // 附件处理
+    // ====== 附件 ======
     const fileAttachment = getFirstFile(files, 'file');
     if (fileAttachment && fileAttachment.size > 0) {
-      console.log('🔹 Step 4: Attachment found:', fileAttachment.originalFilename);
-      const ext = fileAttachment.originalFilename.split('.').pop().toLowerCase();
-      // 扩大了允许的文件类型，防止因为类型被拒
-      const allowedExts = ['pdf', 'dwg', 'dxf', 'step', 'stp', 'iges', 'igs', 'jpg', 'jpeg', 'png', 'zip', 'rar', '7z'];
-      
-      if (allowedExts.includes(ext)) {
-        adminMail.attachments.push({
-          filename: fileAttachment.originalFilename,
-          path: fileAttachment.filepath,
-        });
-      }
-    } else {
-      console.log('🔹 Step 4: No attachment or empty file');
+      adminMail.attachments.push({
+        filename: fileAttachment.originalFilename,
+        path: fileAttachment.filepath,
+      });
     }
 
-    console.log('🔹 Step 5: Sending emails...');
-    
-    // 发送邮件
+    // ====== 发送邮件 ======
     await Promise.all([
       transporter.sendMail(adminMail),
       transporter.sendMail({
-        from: `${process.env.REPLY_TO_NAME} | Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
+        from: `Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
         to: email,
         subject: `Confirmation: We've received your inquiry`,
         html: autoReplyBody,
-      })
+      }),
     ]);
 
-    console.log('✅ Step 6: Emails sent! Redirecting...');
-    
-    // 跳转
+    // ====== 成功跳转 ======
     res.writeHead(302, { Location: '/contact/thank-you.html' });
     res.end();
 
   } catch (err) {
-    console.error('❌ Server Crash Error:', err);
-    // 这里如果出错，也尝试跳转到错误页，避免白屏
+    console.error(err);
     res.writeHead(302, { Location: '/contact/error.html' });
     res.end();
   }
