@@ -119,42 +119,63 @@ export default async function handler(req, res) {
     const displayMessage =
       msg !== '' ? msg : 'No details provided in the message box.';
 
-    // ====== 原样保留的签名 ======
+    // ====== 原样结构保留｜内容修正版签名 ======
     const signature = `
       <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
         Best regards,<br>
         <strong style="font-size: 1.1em; color: #000;">Catherine Zhang</strong><br>
-        <span style="color: #f97316; font-weight: 600;">Technical Review & Small-Batch Machining Support</span><br>
-        <span>Gorgeo Fasteners — Overflow Support for Machine Shops</span><br>
-        <span style="font-size: 12px; color: #666;">Pins · Shafts · Sleeves · Spacers</span><br>
+        <span style="color: #f97316; font-weight: 600;">Service & Replacement Parts Support (Parts Washer OEMs)</span><br>
+        <span>Gorgeo Fasteners — Small-Batch Support for Parts Washer & Cleaning Machine OEMs</span><br>
+        <span style="font-size: 12px; color: #666;">Pins · Screws · Sleeves · Spacers</span><br>
         <br>
         <span style="font-size: 12px; color: #888;">📱 +86 137 2457 5413 (WhatsApp)</span><br>
         <span style="font-size: 12px; color: #888;">⏱ UTC+8 — Reply within 24 hours</span>
       </div>
     `;
 
-    // ====== 原样保留的自动回复内容 ======
+    // ====== 原样结构保留｜内容修正版自动回复 ======
     const nameForAutoReply = rawName || 'there';
 
     const autoReplyBody = `
       <div style='font-family: Calibri, sans-serif; font-size: 11pt; color: #333; line-height: 1.6;'>
         <p>Hi ${nameForAutoReply},</p>
-        <p><strong>Confirmed — your inquiry and file(s) have been received successfully.</strong></p>
-        <p>I’ll review the part personally. Within <strong>24 hours on working days</strong> (often sooner), you’ll receive a reply covering:</p>
-        <ul style="background-color: #f9f9f9; padding: 12px 20px; border-left: 3px solid #f97316; list-style-type: none; margin: 15px 0;">
-          <li style="margin-bottom: 5px;">• Any tolerance / fit risks (H7, g6, clearance logic)</li>
-          <li style="margin-bottom: 5px;">• Material & batch feasibility</li>
-          <li style="margin-bottom: 5px;">• Potential cost drivers — and practical ways to reduce them</li>
-          <li>• Suggestions if something may cause assembly jams or tooling issues</li>
-        </ul>
-        <p>If anything is unclear in the drawing, I’ll reach out before quoting — <strong>it's always better to prevent problems than to price them in.</strong></p>
-        <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
-        <p style="font-size: 0.9em; color: #555;">
-          <em>If you'd like to add more context while waiting, feel free to reply with:</em><br>
-          <em>• Material preference</em><br>
-          <em>• Quantity range</em><br>
-          <em>• What’s currently blocking your schedule on this part</em>
+
+        <p><strong>Thanks — we’ve received your inquiry and file(s).</strong></p>
+
+        <p>
+          This looks like a <strong>standard small-batch service or replacement request</strong>.
+          I’ll take a quick look and get back to you within
+          <strong>24 hours on working days</strong> (often sooner).
         </p>
+
+        <p>My reply will include:</p>
+
+        <ul style="background-color: #f9f9f9; padding: 12px 20px; border-left: 3px solid #f97316; list-style-type: none; margin: 15px 0;">
+          <li style="margin-bottom: 5px;">• Whether this part is a good fit for small-batch production</li>
+          <li style="margin-bottom: 5px;">• Practical material and batch-size options</li>
+          <li style="margin-bottom: 5px;">• A realistic lead time and suggested next step</li>
+          <li>• Any simple adjustments that could make re-installation or service easier (if applicable)</li>
+        </ul>
+
+        <p>
+          If anything needs clarification, I’ll reach out first —
+          the goal is to keep things <strong>simple, clear, and low-risk</strong>.
+        </p>
+
+        <p>
+          We’re not here to replace your current supplier — we support OEMs when you need
+          low-volume custom parts, urgent replacements, or service-friendly designs.
+        </p>
+
+        <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
+
+        <p style="font-size: 0.9em; color: #555;">
+          <em>If you’d like to add more context while waiting, feel free to reply with:</em><br>
+          <em>• Target quantity or annual usage (if known)</em><br>
+          <em>• Where the part is used (service / maintenance / replacement)</em><br>
+          <em>• Any special environment notes (wet, vibration, corrosion)</em>
+        </p>
+
         ${signature}
       </div>
     `;
