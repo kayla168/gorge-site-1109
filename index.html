@@ -20,6 +20,7 @@
       --radius-lg: 16px;
       --radius-xl: 20px;
       --shadow-soft: 0 18px 35px rgba(15, 23, 42, 0.9);
+      --danger: #fca5a5;
     }
 
     * {
@@ -670,6 +671,26 @@
       resize: vertical;
     }
 
+    .file-note {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .file-note strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .file-error {
+      display: none;
+      font-size: 11px;
+      color: var(--danger);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
     .contact-meta {
       font-size: 12px;
       color: var(--text-soft);
@@ -1050,13 +1071,18 @@
             </p>
           </div>
 
-          <form action="/api/technical-inquiry" method="POST" enctype="multipart/form-data">
+          <form id="inquiry-form" action="/api/technical-inquiry" method="POST" enctype="multipart/form-data" novalidate>
             <label for="email">Work Email <span style="color:#f97316">*</span></label>
             <input id="email" name="email" type="email" placeholder="name@company.com" required />
             <input type="text" name="company_website" tabindex="-1" autocomplete="off" style="display:none">
 
             <label for="file">Upload Screenshot / Drawing (PDF, JPG, PNG)</label>
             <input id="file" name="file" type="file" accept="image/*,.pdf" />
+
+            <div class="file-note">
+              <strong>Max file size: 4MB.</strong> For larger drawings or files, please send a download link in the message box or email it directly to <strong>info@gorgeofasteners.com</strong>.
+            </div>
+            <div id="file-error" class="file-error" aria-live="polite"></div>
 
             <label for="message">Message (Optional)</label>
             <textarea id="message" name="message" placeholder="You can leave this empty if you want."></textarea>
@@ -1129,6 +1155,54 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    const form = document.getElementById('inquiry-form');
+    const fileInput = document.getElementById('file');
+    const fileError = document.getElementById('file-error');
+    const MAX_FILE_SIZE = 4 * 1024 * 1024; // 4MB
+
+    function showFileError(message) {
+      fileError.textContent = message;
+      fileError.style.display = 'block';
+    }
+
+    function clearFileError() {
+      fileError.textContent = '';
+      fileError.style.display = 'none';
+    }
+
+    if (fileInput) {
+      fileInput.addEventListener('change', function () {
+        clearFileError();
+
+        const file = fileInput.files && fileInput.files[0];
+        if (!file) return;
+
+        if (file.size > MAX_FILE_SIZE) {
+          showFileError(
+            'This file is larger than 4MB, which may fail during upload. Please upload a smaller file or send a download link / email the file to info@gorgeofasteners.com.'
+          );
+          fileInput.value = '';
+        }
+      });
+    }
+
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        clearFileError();
+
+        const file = fileInput.files && fileInput.files[0];
+        if (file && file.size > MAX_FILE_SIZE) {
+          event.preventDefault();
+          showFileError(
+            'This file is larger than 4MB. Please upload a smaller file or send a download link / email the file to info@gorgeofasteners.com.'
+          );
+          return;
+        }
+      });
+    }
+  })();
 </script>
 </body>
 </html>
