@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Small-Batch Custom Fasteners for Parts Washer OEMs | Service & Replacement Hardware | Gorgeo Fasteners</title>
+  <title>Custom Fasteners for Parts Washer OEMs | Assembly, Maintenance & Re-installation Parts | Gorgeo Fasteners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Gorgeo Fasteners manufactures small-batch custom fasteners and turned parts for parts washer OEMs and industrial cleaning machines — pins, screws, sleeves, spacers and simple special fasteners used in maintenance access and service assemblies. Batch sizes from 5–2,000 pcs, drawing/sample based, with controlled fits, heat treatment and surface finishing when needed." />
+        content="Gorgeo Fasteners supplies small-batch custom fasteners and installation parts for parts washer OEMs and industrial cleaning machines — including pins, screws, sleeves, spacers and special fastening components used in assembly, maintenance, re-installation and vibration-prone areas. Drawing or sample based, with controlled fits, heat treatment and surface finishing when needed." />
   <style>
     :root {
       --bg: #0f172a;
@@ -58,7 +58,6 @@
       padding: 0 16px;
     }
 
-    /* header */
     header {
       position: sticky;
       top: 0;
@@ -79,20 +78,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .brand-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #fed7aa, #f97316 45%, #7c2d12 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 1px rgba(15,23,42,0.7), 0 12px 30px rgba(0,0,0,0.8);
-      font-size: 18px;
-      font-weight: 700;
-      color: #020617;
     }
 
     .brand-text-main {
@@ -160,7 +145,6 @@
       }
     }
 
-    /* hero */
     .hero {
       padding: 40px 0 32px;
     }
@@ -281,17 +265,12 @@
       color: var(--text-soft);
     }
 
-    .hero-footnote strong {
-      color: #f97316;
-      font-weight: 600;
-    }
-
     .hero-visual {
       border-radius: var(--radius-xl);
       border: 1px solid rgba(31,41,55,0.9);
       background: radial-gradient(circle at top left, rgba(249,115,22,0.22), rgba(15,23,42,0.96));
       box-shadow: var(--shadow-soft);
-      padding: 16px 16px 18px;
+      padding: 16px;
       position: relative;
       overflow: hidden;
     }
@@ -299,96 +278,101 @@
     .hero-meta {
       font-size: 11px;
       color: var(--text-soft);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
-    }
-
-    .hero-meta span:nth-child(2) {
-      color: #e5e7eb;
-    }
-
-    .metal-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
 
-    .metal-card {
-      border-radius: 14px;
-      border: 1px solid rgba(15,23,42,0.95);
-      background: radial-gradient(circle at top, #4b5563 0, #020617 60%, #000 100%);
-      padding: 12px;
-      position: relative;
-      overflow: hidden;
-      min-height: 120px;
+    .hero-image-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 12px;
+      align-items: stretch;
     }
 
-    .metal-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(255,255,255,0.10), transparent 55%);
-      opacity: 0.8;
-      mix-blend-mode: screen;
-      pointer-events: none;
+    .hero-main-figure,
+    .hero-side-stack figure {
+      margin: 0;
     }
 
-    .metal-title {
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 4px;
+    .hero-main-figure {
+      display: flex;
+      flex-direction: column;
     }
 
-    .metal-tagline {
+    .hero-side-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .hero-side-stack figure {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-main-figure img,
+    .hero-side-stack img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+      background: #0b1120;
+    }
+
+    .hero-main-figure img {
+      height: 320px;
+    }
+
+    .hero-side-stack img {
+      height: 154px;
+    }
+
+    .figure-cap {
       font-size: 11px;
       color: #d1d5db;
-      margin-bottom: 10px;
-    }
-
-    .metal-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 3px 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.7);
-      font-size: 10px;
-      color: #e5e7eb;
-      background: rgba(15,23,42,0.88);
-      position: relative;
-      z-index: 1;
-    }
-
-    .metal-pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 3px rgba(34,197,94,0.32);
-    }
-
-    .metal-spec {
-      font-size: 10px;
-      color: var(--text-soft);
-      margin-top: 6px;
-      position: relative;
-      z-index: 1;
+      margin-top: 8px;
+      line-height: 1.45;
+      max-width: 100%;
     }
 
     @media (max-width: 900px) {
-      .metal-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 600px) {
-      .metal-grid {
+      .hero-image-grid {
         grid-template-columns: minmax(0, 1fr);
       }
+
+      .hero-main-figure img {
+        height: 260px;
+      }
+
+      .hero-side-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+      }
+
+      .hero-side-stack img {
+        height: 180px;
+      }
     }
 
-    /* sections */
+    @media (max-width: 640px) {
+      .hero-side-stack {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-main-figure img {
+        height: 220px;
+      }
+
+      .hero-side-stack img {
+        height: 160px;
+      }
+    }
+
     section {
       padding: 32px 0;
       border-top: 1px solid rgba(15,23,42,0.98);
@@ -416,10 +400,58 @@
     .section-sub {
       font-size: 13px;
       color: var(--text-soft);
-      max-width: 540px;
+      max-width: 560px;
     }
 
-    /* what we make */
+    .feature-visual {
+      margin: 18px 0 22px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(31,41,55,0.9);
+      background: radial-gradient(circle at top left, rgba(249,115,22,0.12), rgba(15,23,42,0.95));
+      box-shadow: var(--shadow-soft);
+      padding: 14px;
+    }
+
+    .feature-visual-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    .feature-visual img {
+      width: 100%;
+      height: 280px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    .feature-copy-title {
+      font-size: 15px;
+      font-weight: 650;
+      margin-bottom: 6px;
+    }
+
+    .feature-copy-body {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 860px) {
+      .feature-visual-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .feature-visual img {
+        height: 220px;
+      }
+    }
+
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -473,7 +505,6 @@
       color: var(--accent);
     }
 
-    /* who we support / why us */
     .split-2 {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
@@ -513,7 +544,6 @@
       color: #e5e7eb;
     }
 
-    /* process */
     .process-steps {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -570,7 +600,6 @@
       color: rgba(30,64,175,0.18);
     }
 
-    /* CTA strip */
     .cta-strip {
       border-radius: var(--radius-xl);
       border: 1px solid rgba(55,65,81,0.95);
@@ -595,7 +624,6 @@
       color: var(--text-soft);
     }
 
-    /* contact */
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
@@ -640,18 +668,6 @@
     textarea {
       min-height: 90px;
       resize: vertical;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    @media (max-width: 640px) {
-      .form-row {
-        grid-template-columns: minmax(0,1fr);
-      }
     }
 
     .contact-meta {
@@ -720,13 +736,12 @@
       color: #9ca3af;
     }
 
-.logo-img {
-    height: 36px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
+    .logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
@@ -734,11 +749,10 @@
   <header>
     <div class="wrap header-inner">
       <div class="brand">
-       <img src="favicon.svg" alt="Gorgeo Fasteners logo" class="logo-img" />
-
+        <img src="favicon.svg" alt="Gorgeo Fasteners logo" class="logo-img" />
         <div>
           <div class="brand-text-main">GORGEO FASTENERS</div>
-          <div class="brand-text-sub">SMALL-BATCH SERVICE FASTENERS</div>
+          <div class="brand-text-sub">CUSTOM FASTENERS FOR MAINTENANCE &amp; ASSEMBLY</div>
         </div>
       </div>
       <button class="nav-toggle" aria-label="Menu">☰</button>
@@ -759,62 +773,59 @@
         <div>
           <div class="chip">
             <div class="chip-dot"></div>
-            SMALL-BATCH CUSTOM FASTENERS FOR PARTS WASHER OEMs
+            CUSTOM FASTENERS FOR PARTS WASHER OEM ASSEMBLY &amp; MAINTENANCE
           </div>
           <h1>
-            <strong>Small-batch custom fasteners &amp; turned parts</strong> for parts washer service needs.<br/>
-            Designed for maintenance access, frequent re-installation, and vibration-prone areas.
+            <strong>Small-batch custom fasteners for parts washer OEMs</strong><br/>
+            Built for maintenance access, repeated re-installation, and more reliable fastening in vibration-prone areas.
           </h1>
           <p class="hero-sub">
-            Custom pins, screws, sleeves, spacers and simple special fasteners used on access panels, service doors, filter covers and pump housings of parts washers and industrial cleaning machines.
-            Typical batches from <strong>5–2,000 pcs</strong>, drawing or sample based, with controlled fits, heat treatment and surface finishing when needed.
+            We support parts washer and industrial cleaning machine OEMs with custom pins, screws, sleeves, spacers and other fastening parts used on access panels, service doors, filter covers and pump housings.
+            These parts are typically needed where equipment is opened, maintained and re-installed — and where poor fit, loosening or awkward access can slow down service work. Typical batches range from <strong>5–2,000 pcs</strong>, drawing or sample based.
           </p>
           <div class="hero-badge-row">
-            <span>✔ Batch 5–2,000 pcs</span>
-            <span>✔ Designed for installation &amp; repeated re-installation</span>
-            <span>✔ Quick turnaround for replacement / service parts</span>
+            <span>✔ Batch sizes from 5–2,000 pcs</span>
+            <span>✔ Built for maintenance access &amp; repeated re-installation</span>
+            <span>✔ Low-risk start from one drawing, sample or screenshot</span>
           </div>
           <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Send drawing · get quick check</a>
+            <a href="#contact" class="btn-primary">Send drawing · get a quick feasibility review</a>
             <a href="#services" class="btn-ghost">See typical parts</a>
           </div>
           <div class="hero-footnote">
-            You don’t need a full drawing to start — a photo, cropped view or sketch is enough for a first feasibility check.
+            You don’t need a full drawing to start — a photo, cropped view or simple sketch is enough for an initial feasibility review.
+            These parts are often low in spend, but disproportionately high in follow-up once fit confirmation, service access and re-installation are involved.
           </div>
         </div>
 
-        <aside class="hero-visual" aria-label="Small-batch metal part examples">
+        <aside class="hero-visual" aria-label="Custom fastener examples">
           <div class="hero-meta">
-            <span>Examples from parts washer / cleaning machine projects</span>
-            <span>Typical prototype lead time: 7–10 days</span>
+            <span>Representative custom parts & application examples</span>
+            <span>Low-volume · drawing or sample based</span>
           </div>
-          <div class="metal-grid">
-            <div class="metal-card">
-              <div class="metal-title">Captive fasteners for access covers</div>
-              <div class="metal-tagline">Anti-drop design · frequent opening</div>
-              <div class="metal-pill">
-                <span class="metal-pill-dot"></span>
-                50 pcs · alloy steel
-              </div>
-              <div class="metal-spec">Chamfered lead-in for fast re-installation during service.</div>
-            </div>
-            <div class="metal-card">
-              <div class="metal-title">Locating pins for repeatable assembly</div>
-              <div class="metal-tagline">H7 fits · hardened working zones</div>
-              <div class="metal-pill">
-                <span class="metal-pill-dot"></span>
-                120 pcs · carbon steel
-              </div>
-              <div class="metal-spec">Stable positioning after maintenance work.</div>
-            </div>
-            <div class="metal-card">
-              <div class="metal-title">Sleeves &amp; spacers inside cleaning modules</div>
-              <div class="metal-tagline">Stack-up control · corrosion-aware</div>
-              <div class="metal-pill">
-                <span class="metal-pill-dot"></span>
-                600 pcs · SS304
-              </div>
-              <div class="metal-spec">Consistent thickness for easy reassembly.</div>
+
+          <div class="hero-image-grid">
+            <figure class="hero-main-figure">
+              <img src="images/index/1.webp" alt="Custom machined fastening part for parts washer assembly and maintenance" />
+              <figcaption class="figure-cap">
+                Non-standard fastening part with custom geometry — suited for low-volume builds where standard catalog hardware is not the best fit.
+              </figcaption>
+            </figure>
+
+            <div class="hero-side-stack">
+              <figure>
+                <img src="images/index/2.jpg" alt="Installed fastening part used on equipment during assembly or maintenance" />
+                <figcaption class="figure-cap">
+                  Application-side view showing how fastening details matter once equipment is opened and re-installed.
+                </figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/index/3.jpg" alt="Complex custom fastening component with machined features" />
+                <figcaption class="figure-cap">
+                  Example of a more application-specific custom component where fit, geometry and repeatability matter.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </aside>
@@ -826,17 +837,32 @@
       <div class="wrap">
         <div class="section-header">
           <div class="section-kicker">WHAT WE MAKE</div>
-          <h2 class="section-title">Custom fasteners used where equipment is opened, serviced and re-installed.</h2>
+          <h2 class="section-title">Custom fasteners used where equipment is opened, maintained and re-installed.</h2>
           <p class="section-sub">
-            We focus on the simple but critical fastening parts used in parts washers and industrial cleaning machines — especially in areas affected by vibration, frequent access and maintenance work.
-            These are not main structural components, but they often decide whether a service repair is quick — or turns into downtime, rework, and delayed shipments.
+            We focus on the fastening parts used in parts washers and industrial cleaning machines where access, re-installation and long-term reliability matter.
+            These are usually small components — but when fit, retention or vibration performance is poor, they can lead to downtime, repeated rework and slower service turnaround.
           </p>
+        </div>
+
+        <div class="feature-visual" aria-label="Service-friendly fastening example">
+          <div class="feature-visual-grid">
+            <div>
+              <img src="images/index/4.jpg" alt="Custom fastening assembly with washer and sealing-related features" />
+            </div>
+            <div>
+              <div class="feature-copy-title">More than just one screw.</div>
+              <div class="feature-copy-body">
+                Some of the most useful service-friendly parts are fastening assemblies with spacing, sealing, retention or stack-up logic built into the part set.
+                This is where installation consistency, repeatable re-assembly and easier maintenance often start.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="grid-3">
           <article class="card">
             <h3 class="card-title">Custom pins</h3>
-            <div class="card-tag">Positioning &amp; alignment during assembly and re-installation</div>
+            <div class="card-tag">Positioning and repeatable alignment during assembly and re-installation</div>
             <ul class="card-list">
               <li>Straight pins, stepped pins, shoulder pins</li>
               <li>Chamfers / lead-ins to avoid jamming during service work</li>
@@ -847,7 +873,7 @@
 
           <article class="card">
             <h3 class="card-title">Special screws &amp; bolts</h3>
-            <div class="card-tag">Fastening solutions for access panels and service covers</div>
+            <div class="card-tag">Fastening parts for covers, access points and assemblies opened during maintenance</div>
             <ul class="card-list">
               <li>Captive designs to prevent dropped fasteners</li>
               <li>Anti-loosening concepts for vibration-prone areas</li>
@@ -857,8 +883,8 @@
           </article>
 
           <article class="card">
-            <h3 class="card-title">Sleeves & bushings</h3>
-            <div class="card-tag">Alignment &amp; wear control inside cleaning systems</div>
+            <h3 class="card-title">Sleeves &amp; bushings</h3>
+            <div class="card-tag">Alignment, fit control and wear management inside cleaning systems</div>
             <ul class="card-list">
               <li>Controlled ID for stable assembly</li>
               <li>Press-fit or slip-fit options depending on service needs</li>
@@ -868,8 +894,8 @@
           </article>
 
           <article class="card">
-            <h3 class="card-title">Spacers & washers</h3>
-            <div class="card-tag">Pack-up control for consistent re-assembly</div>
+            <h3 class="card-title">Spacers &amp; washers</h3>
+            <div class="card-tag">Thickness control for consistent assembly and rebuild work</div>
             <ul class="card-list">
               <li>Thickness-controlled spacers and shims</li>
               <li>Batch-matched sets for rebuilds</li>
@@ -879,24 +905,24 @@
           </article>
 
           <article class="card">
-            <h3 class="card-title">Simple turned components</h3>
-            <div class="card-tag">Low-complexity parts used across machine sub-assemblies</div>
+            <h3 class="card-title">Installation collars, standoffs &amp; small adapters</h3>
+            <div class="card-tag">Low-complexity custom parts used around machine sub-assemblies</div>
             <ul class="card-list">
               <li>Collars, standoffs, small adapters</li>
               <li>Repeatable geometry for maintenance cycles</li>
-              <li>Ideal for replacement and aftermarket use</li>
+              <li>Used where standard hardware is not an ideal fit</li>
               <li>Material traceability available when required</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3 class="card-title">Service &amp; replacement support</h3>
-            <div class="card-tag">When standard fasteners don’t fit your application</div>
+            <h3 class="card-title">Captive &amp; service-friendly fastening parts</h3>
+            <div class="card-tag">For repeated access, reduced part loss and easier maintenance</div>
             <ul class="card-list">
-              <li>Low volume, drawing or sample based</li>
-              <li>Focused on maintenance &amp; service needs</li>
-              <li>Designed to complement your existing BOM</li>
-              <li>A practical backup supplier for urgent cases</li>
+              <li>Captive screw concepts for covers opened during maintenance</li>
+              <li>Retention features to reduce dropped small parts</li>
+              <li>Practical designs for repeated maintenance cycles</li>
+              <li>Low-volume custom supply based on your current assembly</li>
             </ul>
           </article>
         </div>
@@ -909,49 +935,49 @@
         <div>
           <div class="section-header">
             <div class="section-kicker">WHO WE SUPPORT</div>
-            <h2 class="section-title">Built for parts washer OEMs and industrial cleaning machine manufacturers.</h2>
+            <h2 class="section-title">Built for parts washer OEMs and industrial cleaning machine teams.</h2>
             <p class="section-sub">
-              We work with OEMs who need reliable fastening solutions for equipment that is regularly opened, serviced and re-installed — and who can’t afford service backlog or production delays caused by small parts.
+              We work with OEM teams that need fastening parts for equipment that is regularly opened, maintained and re-installed — especially where vibration, awkward access or inconsistent fit can turn a small part into a repeated service problem.
             </p>
           </div>
           <div class="bullet">
             <div class="bullet-icon">F</div>
-            <div><strong>Parts washer OEMs</strong> with service and aftermarket responsibilities.</div>
+            <div><strong>Parts washer OEMs</strong> that need low-volume custom fastening parts for installed equipment.</div>
           </div>
           <div class="bullet">
             <div class="bullet-icon">M</div>
-            <div><strong>Engineering teams</strong> handling custom-built or modified machines.</div>
+            <div><strong>Engineering teams</strong> solving repeat access, fit or fastening issues on custom-built machines.</div>
           </div>
           <div class="bullet">
             <div class="bullet-icon">T</div>
-            <div><strong>Aftermarket & service departments</strong> supporting installed equipment.</div>
+            <div><strong>Service and aftermarket teams</strong> trying to shorten repair turnaround and reduce repeat maintenance issues.</div>
           </div>
           <div class="bullet">
             <div class="bullet-icon">A</div>
-            <div><strong>Equipment builders</strong> dealing with vibration, corrosion and maintenance-related fastener issues.</div>
+            <div><strong>OEM buyers and technical sourcing teams</strong> looking for a practical low-volume option when standard parts do not fit.</div>
           </div>
         </div>
 
         <div>
           <div class="section-header">
             <div class="section-kicker">WHY TEAMS WORK WITH US</div>
-            <h2 class="section-title">Because maintenance problems often start with small fasteners.</h2>
+            <h2 class="section-title">Because maintenance issues often show up in the fastening details.</h2>
           </div>
           <div class="bullet">
             <div class="bullet-icon">1</div>
-            <div><strong>We stay in a support role.</strong> We’re not here to replace your current supplier — we help when you need low-volume custom fasteners and special cases.</div>
+            <div><strong>We fit into your current supply structure.</strong> These parts often fall outside normal sourcing flow — too small for a full project, but too important to leave unresolved. We are usually brought in for low-volume custom parts, awkward applications or fastening details that need a practical backup source.</div>
           </div>
           <div class="bullet">
             <div class="bullet-icon">2</div>
-            <div><strong>We design for service, not just assembly.</strong> Fasteners selected with re-installation, vibration and access in mind.</div>
+            <div><strong>We think about maintenance as well as assembly.</strong> Fit, access, repeatable re-installation and vibration resistance all matter when a machine is opened more than once.</div>
           </div>
           <div class="bullet">
             <div class="bullet-icon">3</div>
-            <div><strong>We work from real inputs.</strong> Drawings, photos or samples — whatever helps confirm fit and function quickly.</div>
+            <div><strong>We work from real-world inputs.</strong> A drawing, a sample, a marked-up photo or even a cropped screenshot is enough to start the discussion.</div>
           </div>
           <div class="bullet">
             <div class="bullet-icon">4</div>
-            <div><strong>We control consistency across batches.</strong> Fits, finishes and repeat orders stay aligned, so reorders don’t turn into new problems.</div>
+            <div><strong>We keep repeat orders consistent.</strong> Fit, finish and function stay aligned so reorders do not create new installation or maintenance issues.</div>
           </div>
         </div>
       </div>
@@ -962,36 +988,35 @@
       <div class="wrap">
         <div class="section-header">
           <div class="section-kicker">HOW IT WORKS</div>
-          <h2 class="section-title">Start with one service part — keep it simple.</h2>
+          <h2 class="section-title">Start with one part that slows service or re-installation.</h2>
           <p class="section-sub">
-            No long RFQs. No system replacement. Just enough information for us to confirm feasibility, reduce risk, and give you a realistic lead time.
+            No long RFQ process. No system change. Just enough information for a quick feasibility review, a realistic lead time, and a low-risk next step.
           </p>
         </div>
         <div class="process-steps">
           <article class="step-card">
             <div class="step-tag">Step 1</div>
-            <h3 class="step-title">Send the part that delays service or shipment</h3>
+            <h3 class="step-title">Send the part, drawing or screenshot</h3>
             <p class="step-body">
-              Email or upload a drawing, cropped screenshot or simple sketch. Include material, quantity range and any
-              critical tolerance or fit notes.
+              Share a drawing, sample photo, cropped screenshot or simple sketch. If available, add material, quantity range and any fit or tolerance notes.
             </p>
             <div class="step-num">01</div>
           </article>
 
           <article class="step-card">
             <div class="step-tag">Step 2</div>
-            <h3 class="step-title">Confirmation & suggestions</h3>
+            <h3 class="step-title">Feasibility review and practical feedback</h3>
             <p class="step-body">
-              We review usage conditions, fit requirements and risks, then suggest 2–3 workable options with batch size, lead time and any practical improvements.
+              We review the fit, use condition and manufacturing risk, then come back with a practical way to make the part, expected lead time and any points worth confirming before production.
             </p>
             <div class="step-num">02</div>
           </article>
 
           <article class="step-card">
             <div class="step-tag">Step 3</div>
-            <h3 class="step-title">Prototype or small-batch delivery</h3>
+            <h3 class="step-title">Prototype or small-batch supply</h3>
             <p class="step-body">
-              Small batch production, heat treatment or surface finishing when needed, and records kept for repeat orders.
+              We make the first batch based on the confirmed requirement, with heat treatment or surface finishing when needed, and keep the part record for repeat orders.
             </p>
             <div class="step-num">03</div>
           </article>
@@ -1000,13 +1025,13 @@
         <div style="margin-top:18px;">
           <div class="cta-strip">
             <div>
-              <div class="cta-strip-main">Have one fastener holding up a service repair right now?</div>
+              <div class="cta-strip-main">Have one small part delaying maintenance, re-installation or shipment?</div>
               <div class="cta-strip-sub">
-                Start with that one. Small parts often create the biggest downtime, rework cost, and maintenance headaches.
+                Start with that one part. Small fastening components often create the most downtime when access, fit or retention is not right.
               </div>
             </div>
             <div>
-              <a href="#contact" class="btn-primary">Send a part for review</a>
+              <a href="#contact" class="btn-primary">Send one part for review</a>
             </div>
           </div>
         </div>
@@ -1019,83 +1044,80 @@
         <div>
           <div class="section-header">
             <div class="section-kicker">SEND DRAWING</div>
-            <h2 class="section-title">Share one part used during maintenance or replacement.</h2>
+            <h2 class="section-title">Share one part used in maintenance, access or re-installation.</h2>
             <p class="section-sub">
-              No obligation. We’ll give a quick feasibility view and suggest a low-risk next step — based on your drawing, photo or sample.
+              No obligation. We will review the part and suggest a practical low-risk next step based on your drawing, photo, screenshot or sample.
             </p>
           </div>
 
-         <form action="/api/technical-inquiry" method="POST" enctype="multipart/form-data">
+          <form action="/api/technical-inquiry" method="POST" enctype="multipart/form-data">
+            <label for="email">Work Email <span style="color:#f97316">*</span></label>
+            <input id="email" name="email" type="email" placeholder="name@company.com" required />
+            <input type="text" name="company_website" tabindex="-1" autocomplete="off" style="display:none">
 
+            <label for="file">Upload Screenshot / Drawing (PDF, JPG, PNG)</label>
+            <input id="file" name="file" type="file" accept="image/*,.pdf" />
 
-  <label for="email">Work Email <span style="color:#f97316">*</span></label>
-  <input id="email" name="email" type="email" placeholder="name@company.com" required />
-  <input type="text" name="company_website" tabindex="-1" autocomplete="off" style="display:none">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" placeholder="You can leave this empty if you want."></textarea>
 
-  <label for="file">Upload Screenshot / Drawing (PDF, JPG, PNG)</label>
-<input id="file" name="file" type="file" accept="image/*,.pdf" />
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top:10px;">
+              Send &amp; Get Feasibility Feedback
+            </button>
 
-
-  <label for="message">Message (Optional)</label>
-  <textarea id="message" name="message" placeholder="You can leave this empty if you want."></textarea>
-
-  <button type="submit" class="btn-primary" style="width: 100%; margin-top:10px;">
-    Send & Get Quick Feedback
-  </button>
-
-  <p style="font-size:11px; color:#6b7280; text-align:center; margin-top:8px;">
-    No phone. No long forms. Just one screenshot is enough.
-  </p>
-
-</form>
-
+            <p style="font-size:11px; color:#6b7280; text-align:center; margin-top:8px;">
+              No phone call required. No long form. One screenshot is enough to start.
+            </p>
+          </form>
         </div>
 
         <aside class="contact-meta">
-  <div class="contact-tag">
-    <span class="contact-dot"></span>
-    Typical reply: within 24 hours on working days
-  </div>
+          <div class="contact-tag">
+            <span class="contact-dot"></span>
+            Typical reply: within 24 hours on working days
+          </div>
 
-  <p>
-    Most OEMs start with one small replacement or service-related fastener —
-    the kind of part that keeps delaying a repair, holding up shipments, or creating repeated rework.
-    That’s usually enough to see whether the cooperation makes sense.
-  </p>
+          <p>
+            Many OEM teams start with one low-volume fastening part used in maintenance, access covers or repeat re-installation —
+            usually a part that keeps causing delay, awkward assembly, dropped hardware or repeated rework.
+            That is often enough to see whether cooperation makes sense.
+          </p>
 
-  <ul class="contact-list">
-    <li><strong>Email:</strong> info@gorgeofasteners.com</li>
-    <li><strong>Phone / WhatsApp:</strong> +86 137 2457 5413</li>
-  </ul>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> info@gorgeofasteners.com</li>
+            <li><strong>Phone / WhatsApp:</strong> +86 137 2457 5413</li>
+          </ul>
 
-  <p style="margin-top:10px;">
-    If you prefer, you can skip the form and simply send an email with:
-  </p>
+          <p style="margin-top:10px;">
+            If you prefer, you can skip the form and simply send an email with:
+          </p>
 
-  <ul class="contact-list">
-    <li>• 1–2 screenshots, photos or a PDF drawing</li>
-    <li>• Material and quantity range</li>
-    <li>• Any critical fit / tolerance notes</li>
-  </ul>
+          <ul class="contact-list">
+            <li>• 1–2 screenshots, photos or a PDF drawing</li>
+            <li>• Material and quantity range</li>
+            <li>• Any critical fit / tolerance notes</li>
+          </ul>
 
-  <p style="margin-top:10px;">
-    We’ll come back with a manufacturability view and suggested next step.
-  </p>
+          <p style="margin-top:10px;">
+            We help OEM teams take these small but time-consuming fastening issues out of daily follow-up.
+          </p>
 
-  <p style="margin-top:10px; font-size:0.9em; color:#555;">
-    We’re not here to replace your existing supplier.
-    We support OEMs when you need low-volume custom parts, urgent replacements,
-    or service-friendly designs.
-  </p>
-</aside>
+          <p style="margin-top:10px;">
+            We’ll come back with a manufacturability view, lead-time guidance and the most practical next step.
+          </p>
 
+          <p style="margin-top:10px; font-size:0.9em; color:#555;">
+            We’re not here to replace your existing supplier.
+            We usually support OEM teams with low-volume custom fasteners and installation parts when standard hardware does not fit, maintenance access is awkward, or repeat re-installation needs a better solution.
+          </p>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-inner">
-      <div>© <span id="year"></span> Gorgeo Fasteners. Small-batch custom fasteners for parts washers and industrial cleaning equipment.</div>
+      <div>© <span id="year"></span> Gorgeo Fasteners. Small-batch custom fasteners for parts washer assembly, maintenance and re-installation.</div>
       <div class="footer-links">
         <a href="#top">Back to top</a>
         <span>·</span>
@@ -1106,7 +1128,6 @@
 </div>
 
 <script>
-  
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>

@@ -119,21 +119,21 @@ export default async function handler(req, res) {
     const displayMessage =
       msg !== '' ? msg : 'No details provided in the message box.';
 
-    // ====== 原样结构保留｜内容修正版签名 ======
+    // ====== 修正版签名 ======
     const signature = `
       <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
         Best regards,<br>
         <strong style="font-size: 1.1em; color: #000;">Catherine Zhang</strong><br>
-        <span style="color: #f97316; font-weight: 600;">Service & Replacement Parts Support (Parts Washer OEMs)</span><br>
-        <span>Gorgeo Fasteners — Small-Batch Support for Parts Washer & Cleaning Machine OEMs</span><br>
+        <span style="color: #f97316; font-weight: 600;">Low-Volume Custom Fasteners for Parts Washer OEMs</span><br>
+        <span>Gorgeo Fasteners — Support for Maintenance, Assembly & Re-installation Parts</span><br>
         <span style="font-size: 12px; color: #666;">Pins · Screws · Sleeves · Spacers</span><br>
         <br>
         <span style="font-size: 12px; color: #888;">📱 +86 137 2457 5413 (WhatsApp)</span><br>
-        <span style="font-size: 12px; color: #888;">⏱ UTC+8 — Reply within 24 hours</span>
+        <span style="font-size: 12px; color: #888;">⏱ UTC+8 — Reply within one working day</span>
       </div>
     `;
 
-    // ====== 原样结构保留｜内容修正版自动回复 ======
+    // ====== 修正版自动回复 ======
     const nameForAutoReply = rawName || 'there';
 
     const autoReplyBody = `
@@ -143,37 +143,42 @@ export default async function handler(req, res) {
         <p><strong>Thanks — we’ve received your inquiry and file(s).</strong></p>
 
         <p>
-          This looks like a <strong>standard small-batch service or replacement request</strong>.
-          I’ll take a quick look and get back to you within
-          <strong>24 hours on working days</strong> (often sooner).
+          We’ll review what you sent and come back with a practical next step within
+          <strong>one working day</strong> (often sooner).
         </p>
 
-        <p>My reply will include:</p>
+        <p>
+          We usually start by checking what is already clear, then confirm any fit,
+          manufacturability or re-installation details only if they are important to move the part forward.
+        </p>
+
+        <p>Our reply will usually include:</p>
 
         <ul style="background-color: #f9f9f9; padding: 12px 20px; border-left: 3px solid #f97316; list-style-type: none; margin: 15px 0;">
-          <li style="margin-bottom: 5px;">• Whether this part is a good fit for small-batch production</li>
-          <li style="margin-bottom: 5px;">• Practical material and batch-size options</li>
-          <li style="margin-bottom: 5px;">• A realistic lead time and suggested next step</li>
-          <li>• Any simple adjustments that could make re-installation or service easier (if applicable)</li>
+          <li style="margin-bottom: 5px;">• Whether the part is suitable for low-volume production</li>
+          <li style="margin-bottom: 5px;">• Practical material or batch-size suggestions (if needed)</li>
+          <li style="margin-bottom: 5px;">• A realistic lead time and the most workable next step</li>
+          <li>• Any detail worth confirming before production, if something is still unclear</li>
         </ul>
 
         <p>
-          If anything needs clarification, I’ll reach out first —
-          the goal is to keep things <strong>simple, clear, and low-risk</strong>.
+          If more information would help, we’ll keep the follow-up simple.
+          A marked-up photo, one extra screenshot, or one fit note is often enough.
         </p>
 
         <p>
-          We’re not here to replace your current supplier — we support OEMs when you need
-          low-volume custom parts, urgent replacements, or service-friendly designs.
+          We usually support OEM teams with low-volume custom fasteners and installation parts
+          when standard hardware is not the best fit, maintenance access is awkward,
+          or repeated re-installation needs a more reliable solution.
         </p>
 
         <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
 
         <p style="font-size: 0.9em; color: #555;">
-          <em>If you’d like to add more context while waiting, feel free to reply with:</em><br>
-          <em>• Target quantity or annual usage (if known)</em><br>
-          <em>• Where the part is used (service / maintenance / replacement)</em><br>
-          <em>• Any special environment notes (wet, vibration, corrosion)</em>
+          <em>If you want to add context while waiting, you can simply reply with:</em><br>
+          <em>• Estimated quantity or annual usage (if known)</em><br>
+          <em>• Where the part is used on the machine</em><br>
+          <em>• Any fit, looseness, vibration or re-installation issue you’ve seen</em>
         </p>
 
         ${signature}
@@ -208,7 +213,7 @@ export default async function handler(req, res) {
       transporter.sendMail({
         from: `Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
         to: email,
-        subject: `Confirmation: We've received your inquiry`,
+        subject: `We’ve received your file — Gorgeo Fasteners`,
         html: autoReplyBody,
       }),
     ]);
