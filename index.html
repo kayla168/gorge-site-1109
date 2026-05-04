@@ -453,6 +453,81 @@
       }
     }
 
+
+    .production-media-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .production-video-card,
+    .production-side-stack figure {
+      margin: 0;
+    }
+
+    .production-video {
+      width: 100%;
+      height: 320px;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    .production-side-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .production-side-stack img {
+      width: 100%;
+      height: 142px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    @media (max-width: 860px) {
+      .production-media-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .production-video {
+        height: 240px;
+      }
+
+      .production-side-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+      }
+
+      .production-side-stack img {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .production-side-stack {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .production-video {
+        height: 220px;
+      }
+
+      .production-side-stack img {
+        height: 170px;
+      }
+    }
+
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -460,13 +535,163 @@
     }
 
     @media (max-width: 900px) {
-      .grid-3 {
+  
+    .production-media-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .production-video-card,
+    .production-side-stack figure {
+      margin: 0;
+    }
+
+    .production-video {
+      width: 100%;
+      height: 320px;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    .production-side-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .production-side-stack img {
+      width: 100%;
+      height: 142px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    @media (max-width: 860px) {
+      .production-media-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .production-video {
+        height: 240px;
+      }
+
+      .production-side-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+      }
+
+      .production-side-stack img {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .production-side-stack {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .production-video {
+        height: 220px;
+      }
+
+      .production-side-stack img {
+        height: 170px;
+      }
+    }
+
+    .grid-3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 640px) {
-      .grid-3 {
+  
+    .production-media-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .production-video-card,
+    .production-side-stack figure {
+      margin: 0;
+    }
+
+    .production-video {
+      width: 100%;
+      height: 320px;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    .production-side-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .production-side-stack img {
+      width: 100%;
+      height: 142px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 1px solid rgba(31,41,55,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
+      background: #0b1120;
+    }
+
+    @media (max-width: 860px) {
+      .production-media-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .production-video {
+        height: 240px;
+      }
+
+      .production-side-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
+      }
+
+      .production-side-stack img {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .production-side-stack {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .production-video {
+        height: 220px;
+      }
+
+      .production-side-stack img {
+        height: 170px;
+      }
+    }
+
+    .grid-3 {
         grid-template-columns: minmax(0, 1fr);
       }
     }
@@ -803,7 +1028,7 @@
           <p class="hero-sub">
             We support parts washer and industrial cleaning machine OEMs with custom pins, screws, sleeves, spacers and other fastening parts used on access panels, service doors, filter covers and pump housings.
             These parts are typically needed where equipment is opened, maintained and re-installed — and where poor fit, loosening or awkward access can slow down service work. Typical batches range from <strong>5–2,000 pcs</strong>, drawing or sample based.<br/><br/>
-We are a China-based manufacturer focused on small-batch custom fasteners for equipment OEMs, supporting engineering teams with consistent quality and repeat production.
+We are a China-based custom fastening parts supplier with selected machining support, focused on small-batch OEM parts for assembly, maintenance, re-installation and service-related applications.
           </p>
           <div class="hero-badge-row">
             <span>✔ Batch sizes from 5–2,000 pcs</span>
@@ -1005,6 +1230,50 @@ We are a China-based manufacturer focused on small-batch custom fasteners for eq
       </div>
     </section>
 
+
+    <!-- PRODUCTION SUPPORT -->
+    <section id="production-support">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-kicker">SELECTED PRODUCTION SUPPORT</div>
+          <h2 class="section-title">Matching suitable production routes for small custom parts.</h2>
+          <p class="section-sub">
+            We match suitable production routes based on part structure, quantity, material, tolerance, surface finish and application position —
+            especially for small-batch fastening and fixing parts used in equipment assembly, maintenance and re-installation.
+          </p>
+        </div>
+
+        <div class="feature-visual" aria-label="Selected production support for small custom fastening parts">
+          <div class="production-media-grid">
+            <div class="production-video-card">
+              <video class="production-video" autoplay muted loop playsinline preload="metadata" poster="images/index/production-route-poster.jpg">
+                <source src="media/production-route-support.mp4" type="video/mp4">
+              </video>
+              <div class="figure-cap">
+                Short machining process example — used as production route support for small custom parts.
+              </div>
+            </div>
+
+            <div class="production-side-stack">
+              <figure>
+                <img src="images/sample-old-part-review.jpg" alt="Sample, old part and basic dimension review for custom fastening parts" />
+                <figcaption class="figure-cap">
+                  Start from a sample, old part, basic dimensions or photo when a full drawing is not available.
+                </figcaption>
+              </figure>
+
+              <figure>
+                <img src="images/selected-machining-support.jpg" alt="Selected machining support for small-batch custom fastening parts" />
+                <figcaption class="figure-cap">
+                  Selected machining support for low-volume custom fastening and fixing parts.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROCESS -->
     <section id="process">
       <div class="wrap">
@@ -1144,7 +1413,7 @@ We are a China-based manufacturer focused on small-batch custom fasteners for eq
 
   <footer>
     <div class="wrap footer-inner">
-      <div>© <span id="year"></span> Gorgeo Fasteners. Small-batch custom fasteners for parts washer assembly, maintenance and re-installation — supported by in-house machining and stable small-batch production capability.</div>
+      <div>© <span id="year"></span> Gorgeo Fasteners. Small-batch custom fasteners for parts washer assembly, maintenance and re-installation — supported by selected machining routes and practical small-batch production support.</div>
       <div class="footer-links">
         <a href="#top">Back to top</a>
         <span>·</span>
