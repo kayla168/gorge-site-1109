@@ -2,153 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>File Received | Gorgeo Fasteners</title>
+  <title>Engineering Review Initiated | Custom Fasteners & Components</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     :root {
-      --bg: #0f172a;
-      --bg-soft: #020617;
-      --bg-card: #111827;
+      --bg-white: #ffffff;
+      --bg-light: #f8fafc;
       --accent: #f97316;
-      --accent-soft: rgba(249,115,22,0.1);
-      --text-main: #e5e7eb;
-      --text-soft: #9ca3af;
-      --border-subtle: #1f2937;
-      --radius-lg: 16px;
-      --radius-xl: 20px;
-      --max-width: 760px;
-      --shadow-soft: 0 18px 35px rgba(15,23,42,0.85);
+      --text-dark: #0f172a;
+      --text-body: #475569;
+      --border-light: #e5e7eb;
+      --radius-lg: 12px;
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #000 100%);
-      color: var(--text-main);
-      line-height: 1.55;
-      padding: 40px 16px;
-      -webkit-font-smoothing: antialiased;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-body);
+      padding: 40px 20px;
+      line-height: 1.6;
     }
 
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
+    .wrap { max-width: 700px; margin: 0 auto; }
 
     .card {
-      background: radial-gradient(circle at top, #111827, #020617 65%);
-      padding: 28px;
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(55,65,81,0.75);
-      box-shadow: var(--shadow-soft);
+      background: var(--bg-white);
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* ENGINEER BLOCK */
+    .engineer-identity {
+      background: #fef7ed;
+      border: 1px solid #fed7aa;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      color: var(--text-dark);
     }
 
     h1 {
-      font-size: 26px;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-
-    h1 strong {
-      color: #fed7aa;
-      font-weight: 700;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--text-dark);
     }
 
     .lead {
-      font-size: 15px;
-      color: var(--text-soft);
+      text-align: center;
+      font-size: 14px;
       margin-bottom: 24px;
-      max-width: 620px;
     }
 
-    .section-title {
-      margin-top: 28px;
+    /* TRUST LINE */
+    .trust-line {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* CAPABILITY */
+    .caps {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-size: 13px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .caps div::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    /* REVIEW */
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .box {
+      background: var(--bg-light);
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .box h3 {
+      font-size: 12px;
+      color: var(--accent);
       margin-bottom: 10px;
-      font-size: 16px;
-      font-weight: 650;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #f97316;
     }
 
-    .timeline {
-      margin-top: 8px;
-      margin-bottom: 24px;
-      border-left: 1px solid rgba(148,163,184,0.25);
-      padding-left: 18px;
-    }
-
-    .step {
-      margin-bottom: 18px;
-      position: relative;
-    }
-
-    .step::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #f97316;
-      position: absolute;
-      left: -23px;
-      top: 4px;
-      box-shadow: 0 0 0 3px rgba(249,115,22,0.25);
-    }
-
-    .step strong {
-      color: #e5e7eb;
-    }
-
-    .resources {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: var(--radius-lg);
-      background: rgba(15,23,42,0.6);
-      border: 1px solid rgba(55,65,81,0.6);
-    }
-
-    .resources p {
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .resources ul {
+    .box ul {
       list-style: none;
-      margin-top: 10px;
-    }
-
-    .resources li {
-      margin-bottom: 10px;
-      color: var(--text-main);
       font-size: 13px;
     }
 
-    .contact {
-      margin-top: 22px;
-      font-size: 13px;
-      color: var(--text-soft);
+    .box li {
+      margin-bottom: 6px;
     }
 
-    .contact strong {
-      color: #e5e7eb;
+    .box li::before {
+      content: "✓ ";
+      color: var(--accent);
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #f97316, #ea580c);
-      color: #0f172a;
-      font-weight: 650;
+    /* CTA */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .btn-main, .btn-secondary {
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-      border: 1px solid rgba(255,255,255,0.12);
     }
 
-    .btn:hover {
-      filter: brightness(1.06);
-      transform: translateY(-1px);
+    .btn-main {
+      background: var(--accent);
+      color: #fff;
     }
+
+    .btn-secondary {
+      border: 1px solid var(--border-light);
+      color: var(--text-dark);
+      background: transparent;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 18px;
+      color: var(--text-body);
+    }
+
   </style>
 </head>
 
@@ -156,52 +165,65 @@
   <div class="wrap">
     <div class="card">
 
-      <h1><strong>Thanks — your file has been received.</strong> We’ll review it and come back with a practical next step.</h1>
-
-      <p class="lead">
-        Your drawing, screenshot or file is now in review.
-        We’ll first look at what is already clear, check fit and manufacturability, and only come back with questions if anything important still needs confirming.
-        You’ll usually hear back within <strong>one working day</strong>.
-      </p>
-
-      <div class="section-title">What happens next</div>
-      <div class="timeline">
-        <div class="step">
-          <strong>1 — Initial review</strong><br>
-          We check the part, its likely use condition, and anything that may affect fit, re-installation or manufacturability.
-        </div>
-        <div class="step">
-          <strong>2 — Simple follow-up if needed</strong><br>
-          If anything important is still unclear, we’ll keep the follow-up simple and tell you exactly what would help move the part forward.
-        </div>
-        <div class="step">
-          <strong>3 — Feasibility view & next step</strong><br>
-          You’ll receive our practical feedback, lead-time guidance and the most workable way to move forward.
-        </div>
+      <!-- ENGINEER -->
+      <div class="engineer-identity">
+        Senior engineers will review your drawing within 24 hours
       </div>
 
-      <div class="section-title">Helpful note</div>
-      <div class="resources">
-        <p>
-          This is optional — if you already sent enough for a first review, we can start from that.
-        </p>
-        <p style="margin-top:10px;">
-          If your part is tied to a cover, panel, pin, spacer, sleeve or repeated service opening, you can speed things up by sending:
-        </p>
-        <ul>
-          <li>• One extra screenshot showing where the part is used</li>
-          <li>• Estimated quantity range</li>
-          <li>• Any looseness, fit or re-installation issue you have seen</li>
-        </ul>
+      <h1>Drawing Received</h1>
+      <p class="lead">We are reviewing manufacturability and technical requirements.</p>
+
+      <!-- TRUST -->
+      <div class="trust-line">
+        Free DFM Review • No MOQ for Prototype • NDA Available
       </div>
 
-      <div class="contact">
-        If you want to add anything, just reply to the confirmation email or write to:<br>
-        📩 <strong>info@gorgeofasteners.com</strong><br><br>
-        If a better screenshot, a marked-up photo or one more fit note becomes available later, just send it over — there is no need to restart the process.
+      <!-- CAPABILITY -->
+      <div class="caps">
+        <div>CNC Precision Machining</div>
+        <div>OEM / Small Batch</div>
+        <div>Material Guidance</div>
       </div>
 
-      <a class="btn" href="/">Back to homepage</a>
+      <!-- REVIEW -->
+      <div class="review-grid">
+
+        <div class="box">
+          <h3>Review Scope</h3>
+          <ul>
+            <li>Tolerances</li>
+            <li>Assembly fit</li>
+            <li>Material selection</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Deliverables</h3>
+          <ul>
+            <li>DFM feedback</li>
+            <li>Quotation</li>
+            <li>Lead time</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="actions">
+
+        <a class="btn-main" href="../index.html#contact">
+          Get Engineering Feedback (DFM)
+        </a>
+
+        <a class="btn-secondary" href="../index.html#contact">
+          Request Quotation
+        </a>
+
+      </div>
+
+      <div class="footer">
+        Response typically within 24 hours
+      </div>
 
     </div>
   </div>
