@@ -119,72 +119,86 @@ export default async function handler(req, res) {
     const displayMessage =
       msg !== '' ? msg : 'No details provided in the message box.';
 
-    // ====== 修正版签名 ======
-    const signature = `
-      <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
-        Best regards,<br>
-        <strong style="font-size: 1.1em; color: #000;">Catherine Zhang</strong><br>
-        <span style="color: #f97316; font-weight: 600;">Low-Volume Custom Fasteners for Parts Washer OEMs</span><br>
-        <span>Gorgeo Fasteners — Support for Maintenance, Assembly & Re-installation Parts</span><br>
-        <span style="font-size: 12px; color: #666;">Pins · Screws · Sleeves · Spacers</span><br>
-        <br>
-        <span style="font-size: 12px; color: #888;">📱 +86 137 2457 5413 (WhatsApp)</span><br>
-        <span style="font-size: 12px; color: #888;">⏱ UTC+8 — Reply within one working day</span>
-      </div>
-    `;
+   
+// ====== 优化版签名（工程收敛版） ======
+const signature = `
+  <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
 
-    // ====== 修正版自动回复 ======
-    const nameForAutoReply = rawName || 'there';
+    <div style="margin-bottom: 8px;">
+      Best regards,<br>
+      <strong style="font-size: 1.1em; color: #000;">Catherine Zhang</strong>
+    </div>
 
-    const autoReplyBody = `
-      <div style='font-family: Calibri, sans-serif; font-size: 11pt; color: #333; line-height: 1.6;'>
-        <p>Hi ${nameForAutoReply},</p>
+    <div style="margin-bottom: 10px;">
+      <span style="color: #f97316; font-weight: 600;">
+        Custom Fasteners & Precision Machined Components
+      </span><br>
+      <span style="font-size: 12px; color: #666;">
+       OEM · Low-Volume Production · Engineering Components
+      </span>
+    </div>
 
-        <p><strong>Thanks — we’ve received your inquiry and file(s).</strong></p>
+    <div style="margin-bottom: 10px;">
+      Gorgeo Fasteners
+    </div>
 
-        <p>
-          We’ll review what you sent and come back with a practical next step within
-          <strong>one working day</strong> (often sooner).
-        </p>
+    <div style="font-size: 12px; color: #888; margin-bottom: 4px;">
+      📱 +86 137 2457 5413 (WhatsApp)
+    </div>
 
-        <p>
-          We usually start by checking what is already clear, then confirm any fit,
-          manufacturability or re-installation details only if they are important to move the part forward.
-        </p>
+   
 
-        <p>Our reply will usually include:</p>
+  </div>
+`;
 
-        <ul style="background-color: #f9f9f9; padding: 12px 20px; border-left: 3px solid #f97316; list-style-type: none; margin: 15px 0;">
-          <li style="margin-bottom: 5px;">• Whether the part is suitable for low-volume production</li>
-          <li style="margin-bottom: 5px;">• Practical material or batch-size suggestions (if needed)</li>
-          <li style="margin-bottom: 5px;">• A realistic lead time and the most workable next step</li>
-          <li>• Any detail worth confirming before production, if something is still unclear</li>
-        </ul>
+// ====== 优化版自动回复 ======
+const nameForAutoReply = rawName || 'there';
 
-        <p>
-          If more information would help, we’ll keep the follow-up simple.
-          A marked-up photo, one extra screenshot, or one fit note is often enough.
-        </p>
+const autoReplyBody = `
+  <div style='font-family: Calibri, sans-serif; font-size: 11pt; color: #333; line-height: 1.6;'>
 
-        <p>
-          We usually support OEM teams with low-volume custom fasteners and installation parts
-          when standard hardware is not the best fit, maintenance access is awkward,
-          or repeated re-installation needs a more reliable solution.
-        </p>
+    <p>Hi ${nameForAutoReply},</p>
 
-        <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
+    <p><strong>Thanks — we’ve received your inquiry and file(s).</strong></p>
 
-        <p style="font-size: 0.9em; color: #555;">
-          <em>If you want to add context while waiting, you can simply reply with:</em><br>
-          <em>• Estimated quantity or annual usage (if known)</em><br>
-          <em>• Where the part is used on the machine</em><br>
-          <em>• Any fit, looseness, vibration or re-installation issue you’ve seen</em>
-        </p>
+    <p>
+      Our engineering team will review your requirements and respond with a practical next step within
+      <strong>one working day</strong> (often sooner).
+    </p>
 
-        ${signature}
-      </div>
-    `;
+    <p>
+      We focus on manufacturability, fit, and key technical details required for stable production and installation.
+    </p>
 
+    <p><strong>Typical output includes:</strong></p>
+
+    <ul style="background-color:#f9f9f9; padding:12px 20px; border-left:3px solid #f97316; list-style:none; margin:15px 0;">
+      <li style="margin-bottom:6px;">• DFM feedback where manufacturability risks are identified</li>
+      <li style="margin-bottom:6px;">• Material or process recommendations (if applicable)</li>
+      <li style="margin-bottom:6px;">• Production feasibility and lead time estimate</li>
+      <li>• Any critical clarification required before production</li>
+    </ul>
+
+    <p>
+      If anything is unclear, we’ll respond with the minimum required clarification — usually a marked-up drawing or a short technical note.
+    </p>
+
+    <p>
+      If you’d like to add context while we review, you can simply reply with:
+    </p>
+
+    <p style="margin: 10px 0;">
+      • Estimated quantity or annual usage<br>
+      • Application / where the part is used<br>
+      • Any fit, vibration, or installation concerns
+    </p>
+
+    <hr style='border:none; border-top:1px solid #eee; margin:20px 0;'>
+
+    ${signature}
+
+  </div>
+`;
     // ====== 管理员邮件 ======
     const adminMail = {
       from: `Website Inquiry <${process.env.FROM_EMAIL}>`,
