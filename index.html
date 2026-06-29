@@ -182,7 +182,7 @@
     @media (max-width: 900px) { .why-list { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 600px) { .why-list { grid-template-columns: 1fr; } }
 
-    /* 新增：轻量化 FAQ 模块样式 (不占大空间的硬核网格) */
+    /* 轻量化 FAQ 模块样式 */
     .faq-section { background: var(--bg-white); }
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: x; row-gap: 24px; column-gap: 40px; margin-top: 20px; }
     .faq-item { border-bottom: 1px solid var(--border-light); padding-bottom: 16px; }
@@ -196,7 +196,6 @@
     .profile-box { text-align: left; }
     .contact-interface { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
     
-    /* 核心改动：采用纯工程机械Icon逻辑替换真人头像，贯彻硬核工业风 */
     .system-icon-box {
       width: 48px;
       height: 48px;
@@ -249,7 +248,11 @@
   <div class="wrap grid-2" style="align-items: center;">
     <div>
       <h1>Custom Drawing-Based Components</h1>
-      <p class="hero-sub">Built for OEM Equipment Manufacturers.</p>
+      
+      <p class="hero-sub">
+        Built for OEM Equipment Manufacturers.<br/>
+        <span style="font-size: 18px; margin-top: 8px; display: inline-block; color: #cbd5e1;">Engineering-driven manufacturing for drawing-based components.</span>
+      </p>
       
       <div class="hero-positioning">
         We manufacture parts based on your drawings.
@@ -263,7 +266,7 @@
       </ul>
 
       <div class="hero-system-statement">
-        We work as an engineering interface between your drawings and manufacturing execution.
+        We work as an engineering interface between your drawings and manufacturing execution to reduce production risk.
       </div>
       
       <a href="#contact" class="btn-primary">Send Drawing</a>
@@ -444,7 +447,10 @@
 <section class="why-us">
   <div class="wrap">
     <h2 class="section-title" style="margin-bottom: 20px;">Why Work With Us</h2>
-    <p class="why-us-subtitle">A structured engineering workflow designed for OEM drawing-based production.</p>
+    
+    <p class="section-subtitle" style="margin-bottom: 40px; max-width: 700px;">
+      We help OEM teams reduce manufacturability and assembly risks in drawing-based production.
+    </p>
     
     <ul class="why-list">
       <li>
