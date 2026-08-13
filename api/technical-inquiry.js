@@ -134,7 +134,7 @@ const signature = `
         Custom Fasteners & Precision Machined Components
       </span><br>
       <span style="font-size: 12px; color: #666;">
-       OEM · Low-Volume Production · Engineering Components
+        Drawing-Based Components · Manufacturing Support · Repeat Production
       </span>
     </div>
 
@@ -142,9 +142,7 @@ const signature = `
       Gorgeo Fasteners
     </div>
 
-    <div style="font-size: 12px; color: #888; margin-bottom: 4px;">
-      📱 +86 137 2457 5413 (WhatsApp)
-    </div>
+    
 
    
 
@@ -159,38 +157,33 @@ const autoReplyBody = `
 
     <p>Hi ${nameForAutoReply},</p>
 
-    <p><strong>Thanks — we’ve received your inquiry and file(s).</strong></p>
+    <p><strong>Thanks — we’ve received your inquiry.</strong></p>
 
     <p>
-      Our engineering team will review your requirements and respond with a practical next step within
+      We’ll review the information you provided and get back to you within
       <strong>one working day</strong> (often sooner).
     </p>
 
     <p>
-      We focus on manufacturability, fit, and key technical details required for stable production and installation.
-    </p>
-
-    <p><strong>Typical output includes:</strong></p>
-
-    <ul style="background-color:#f9f9f9; padding:12px 20px; border-left:3px solid #f97316; list-style:none; margin:15px 0;">
-      <li style="margin-bottom:6px;">• DFM feedback where manufacturability risks are identified</li>
-      <li style="margin-bottom:6px;">• Material or process recommendations (if applicable)</li>
-      <li style="margin-bottom:6px;">• Production feasibility and lead time estimate</li>
-      <li>• Any critical clarification required before production</li>
-    </ul>
-
-    <p>
-      If anything is unclear, we’ll respond with the minimum required clarification — usually a marked-up drawing or a short technical note.
+      For drawing-based custom fasteners and precision components, our review typically starts with the part requirements, application, quantity, and any manufacturing considerations that may affect reliable production.
     </p>
 
     <p>
-      If you’d like to add context while we review, you can simply reply with:
+      If additional information is needed, we’ll keep the clarification focused on what is necessary to evaluate the next manufacturing step.
+    </p>
+
+    <p>
+      If you’d like to add more context while we review, simply reply to this email with:
     </p>
 
     <p style="margin: 10px 0;">
       • Estimated quantity or annual usage<br>
-      • Application / where the part is used<br>
-      • Any fit, vibration, or installation concerns
+      • Application or where the part is used<br>
+      • Any critical fit, assembly, or functional requirements
+    </p>
+
+    <p>
+      If you’ve already included these details in your inquiry or drawing, there’s no need to send them again.
     </p>
 
     <hr style='border:none; border-top:1px solid #eee; margin:20px 0;'>
@@ -227,7 +220,7 @@ const autoReplyBody = `
       transporter.sendMail({
         from: `Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
         to: email,
-        subject: `We’ve received your file — Gorgeo Fasteners`,
+        subject: `We’ve received your inquiry — Gorgeo Fasteners`,
         html: autoReplyBody,
       }),
     ]);

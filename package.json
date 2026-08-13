@@ -1,5 +1,10 @@
 {
+  "name": "gorgeo-fasteners-site",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "sync-header": "node scripts/sync-header.js"
+  },
   "dependencies": {
     "busboy": "^1.6.0",
     "formidable": "^3.5.4",

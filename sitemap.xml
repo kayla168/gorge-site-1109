@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://www.gorgeofasteners.com/</loc>
-    <lastmod>2026-02-09</lastmod>
-    <priority>1.0</priority>
   </url>
+
+  <!-- Manufacturing Insights Hub -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/</loc>
+  </url>
+
+  <!-- Manufacturing Insight 1 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/drawing-to-production/</loc>
+  </url>
+
+  <!-- Manufacturing Insight 2 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/component-requirements-equipment-performance/</loc>
+  </url>
+
+  <!-- Manufacturing Insight 3 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/</loc>
+  </url>
+
+  <!-- Manufacturing Insight 4 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/precision-component-process-development/</loc>
+  </url>
+
+  <!-- Manufacturing Cases Hub -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/cases/</loc>
+  </url>
+
+  <!-- Manufacturing Case 1 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/cases/434mm-long-sleeve-concentricity/</loc>
+  </url>
+
+  <!-- Manufacturing Case 2 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/cases/precision-components-for-cnc-spring-machine/</loc>
+  </url>
+
+  <!-- Manufacturing Case 3 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/cases/welding-locating-pins-replacement-supply/</loc>
+  </url>
+
+  <!-- Manufacturing Case 4 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/cases/precision-mirror-finish-eccentric-shaft/</loc>
+  </url>
+
 </urlset>
