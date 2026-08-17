@@ -228,6 +228,9 @@
     .hero-img-box { background: var(--bg-white); border-radius: 8px; padding: 20px; height: 100%; min-height: 350px; display: flex; align-items: center; justify-content: center; border: none; }
     .hero-img-box .img-placeholder { background: var(--bg-alt); border: none; }
 
+    /* 新增：痛点认知模块 */
+    .manufacturing-challenges { background: var(--bg-light); }
+
     /* 第2屏：Components */
     .components { background: var(--bg-light); }
     .components .img-placeholder { height: 160px; margin-bottom: 15px; }
@@ -511,7 +514,7 @@ header {
       <h1>Custom Fasteners & Drawing-Based Components for OEM Equipment</h1>
       
       <p class="hero-sub">
-        Manufacturing support for custom pins, spacers, sleeves, special bolts, shafts and small precision components — from drawing review to prototype and repeat production.
+        Manufacturing support for OEM equipment projects, providing drawing-based custom fasteners and precision components from drawing review to prototype and repeat production.
       </p>
 
       <ul class="value-list">
@@ -529,6 +532,36 @@ header {
     
     <div class="hero-img-box">
       <img class="img-placeholder" src="/images/index/1.png" alt="Hero Products" style="height: 60%; min-height: 300px; padding: 0; object-fit: cover;" />
+    </div>
+  </div>
+</section>
+
+<!-- 新增：痛点认知模块 -->
+<section class="manufacturing-challenges">
+  <div class="wrap">
+    <h2 class="section-title">Why Drawings Still Need Manufacturing Review</h2>
+    <p class="section-subtitle">A complete drawing defines engineering requirements, but successful production also depends on manufacturing decisions, process capability and repeatability.</p>
+    
+    <div class="grid-3">
+      <!-- 方案一：增加了 border-top 内联样式 -->
+      <div class="card" style="border-top: 3px solid var(--accent);">
+        <div>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750; line-height: 1.4;">Complete Drawings May Still Contain Manufacturing Risks</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">A drawing defines required dimensions and functions, but manufacturing methods, tolerances and process decisions influence whether requirements can be achieved consistently.</p>
+        </div>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--accent);">
+        <div>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750; line-height: 1.4;">Prototype Success Does Not Always Guarantee Repeat Production</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">A component may work during initial builds, but stable repeat production requires controlled processes and manufacturing verification.</p>
+        </div>
+      </div>
+      <div class="card" style="border-top: 3px solid var(--accent);">
+        <div>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750; line-height: 1.4;">Component Decisions Can Influence Equipment Performance</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">Material selection, dimensional relationships and manufacturing methods can affect assembly accuracy, reliability and long-term equipment operation.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -916,7 +949,8 @@ header {
           <textarea id="message" name="message" placeholder="Share any material, quantity, tolerance, application, or assembly requirements..."></textarea>
         </div>
 
-        <button type="submit" class="btn-primary" style="width: 100%;">
+        <!-- 增加了 id="submit-btn" -->
+        <button id="submit-btn" type="submit" class="btn-primary" style="width: 100%;">
           Send Your Drawing
         </button>
       </form>
@@ -970,10 +1004,21 @@ header {
       form.addEventListener('submit', function (event) {
         clearFileError();
         const file = fileInput.files && fileInput.files[0];
+        
+        // 文件大小检查
         if (file && file.size > MAX_FILE_SIZE) {
           event.preventDefault();
           showFileError('This file is larger than 4MB.');
           return;
+        }
+
+        // 验证通过，更新按钮状态，提供视觉反馈
+        const submitBtn = document.getElementById('submit-btn');
+        if (submitBtn) {
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
+          submitBtn.style.cursor = 'not-allowed';
         }
       });
     }
