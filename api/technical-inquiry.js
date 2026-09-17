@@ -123,29 +123,9 @@ export default async function handler(req, res) {
 // ====== 优化版签名（工程收敛版） ======
 const signature = `
   <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
-
-    <div style="margin-bottom: 8px;">
-      Best regards,<br>
-      <strong style="font-size: 1.1em; color: #000;">Catherine Zhang</strong>
-    </div>
-
-    <div style="margin-bottom: 10px;">
-      <span style="color: #f97316; font-weight: 600;">
-        Custom Fasteners & Precision Machined Components
-      </span><br>
-      <span style="font-size: 12px; color: #666;">
-        Drawing-Based Components · Manufacturing Support · Repeat Production
-      </span>
-    </div>
-
-    <div style="margin-bottom: 10px;">
-      Gorgeo Fasteners
-    </div>
-
-    
-
-   
-
+    Best regards,<br>
+    Catherine Zhang<br>
+    GorgeoFasteners
   </div>
 `;
 
@@ -157,36 +137,13 @@ const autoReplyBody = `
 
     <p>Hi ${nameForAutoReply},</p>
 
-    <p><strong>Thanks — we’ve received your inquiry.</strong></p>
+    <p>Thanks — we’ve received your inquiry.</p>
 
-    <p>
-      We’ll review the information you provided and get back to you within
-      <strong>one working day</strong> (often sooner).
-    </p>
+    <p>We’ll review the drawing and project information you provided from the manufacturing side, including the critical requirements and any considerations that may affect the proposed manufacturing approach.</p>
 
-    <p>
-      For drawing-based custom fasteners and precision components, our review typically starts with the part requirements, application, quantity, and any manufacturing considerations that may affect reliable production.
-    </p>
+    <p>If additional information is needed to continue the review, we’ll contact you about the specific details required.</p>
 
-    <p>
-      If additional information is needed, we’ll keep the clarification focused on what is necessary to evaluate the next manufacturing step.
-    </p>
-
-    <p>
-      If you’d like to add more context while we review, simply reply to this email with:
-    </p>
-
-    <p style="margin: 10px 0;">
-      • Estimated quantity or annual usage<br>
-      • Application or where the part is used<br>
-      • Any critical fit, assembly, or functional requirements
-    </p>
-
-    <p>
-      If you’ve already included these details in your inquiry or drawing, there’s no need to send them again.
-    </p>
-
-    <hr style='border:none; border-top:1px solid #eee; margin:20px 0;'>
+    <p>You can expect a follow-up from us within one working day (often sooner).</p>
 
     ${signature}
 
@@ -218,9 +175,9 @@ const autoReplyBody = `
     await Promise.all([
       transporter.sendMail(adminMail),
       transporter.sendMail({
-        from: `Gorgeo Fasteners <${process.env.FROM_EMAIL}>`,
+        from: `GorgeoFasteners <${process.env.FROM_EMAIL}>`,
         to: email,
-        subject: `We’ve received your inquiry — Gorgeo Fasteners`,
+        subject: `We’ve received your inquiry — GorgeoFasteners`,
         html: autoReplyBody,
       }),
     ]);
