@@ -12,25 +12,80 @@
     <loc>https://www.gorgeofasteners.com/insights/</loc>
   </url>
 
-  <!-- Manufacturing Insight 1 -->
+
+  <!-- =========================================
+       Project & Sourcing Questions
+       ========================================= -->
+
+  <!-- Project & Sourcing Question 1 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/why-can-the-same-custom-fastener-drawing-get-different-supplier-responses/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 2 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/why-can-a-simple-looking-custom-fastener-be-difficult-to-source/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 3 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/should-a-drawing-requirement-change-when-a-supplier-says-it-is-difficult-to-manufacture/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 4 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/why-can-a-successful-prototype-still-be-difficult-to-repeat-in-production/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 5 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/why-is-the-moq-so-high-for-a-custom-part/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 6 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/what-information-does-a-manufacturer-need-to-quote-a-custom-part/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 7 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/what-should-be-reviewed-when-changing-suppliers-for-a-custom-part/</loc>
+  </url>
+
+  <!-- Project & Sourcing Question 8 -->
+  <url>
+    <loc>https://www.gorgeofasteners.com/insights/why-does-a-manufacturer-still-ask-questions-when-the-drawing-is-complete/</loc>
+  </url>
+
+
+  <!-- =========================================
+       Engineering & Manufacturing Guides
+       ========================================= -->
+
+  <!-- Engineering & Manufacturing Guide 1 -->
   <url>
     <loc>https://www.gorgeofasteners.com/insights/drawing-to-production/</loc>
   </url>
 
-  <!-- Manufacturing Insight 2 -->
+  <!-- Engineering & Manufacturing Guide 2 -->
   <url>
     <loc>https://www.gorgeofasteners.com/insights/component-requirements-equipment-performance/</loc>
   </url>
 
-  <!-- Manufacturing Insight 3 -->
+  <!-- Engineering & Manufacturing Guide 3 -->
   <url>
     <loc>https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/</loc>
   </url>
 
-  <!-- Manufacturing Insight 4 -->
+  <!-- Engineering & Manufacturing Guide 4 -->
   <url>
     <loc>https://www.gorgeofasteners.com/insights/precision-component-process-development/</loc>
   </url>
+
+
+  <!-- =========================================
+       Manufacturing Cases
+       ========================================= -->
 
   <!-- Manufacturing Cases Hub -->
   <url>

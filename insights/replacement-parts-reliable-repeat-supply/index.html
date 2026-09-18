@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Why Replacement Parts Need More Than Matching the Original Geometry | Gorgeo Fasteners</title>
+  <title>Why Is Matching the Original Geometry Not Always Enough for a Replacement Part? | Gorgeo Fasteners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Replacement components need more than matching geometry. Learn how requirement definition, manufacturing consistency, production validation and repeat supply work together for production-critical parts." />
+  <meta name="description" content="Matching the original geometry may not be enough to establish replacement-part equivalence. Learn what should be reviewed when manufacturing a replacement component from an existing drawing or sample." />
   <link rel="canonical" href="https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/" />
   
-  <meta property="og:title" content="Why Replacement Parts Need More Than Matching the Original Geometry | Gorgeo Fasteners" />
-  <meta property="og:description" content="Replacement components need more than matching geometry. Learn how requirement definition, manufacturing consistency, production validation and repeat supply work together for production-critical parts." />
+  <meta property="og:title" content="Why Is Matching the Original Geometry Not Always Enough for a Replacement Part? | Gorgeo Fasteners" />
+  <meta property="og:description" content="Matching the original geometry may not be enough to establish replacement-part equivalence. Learn what should be reviewed when manufacturing a replacement component from an existing drawing or sample." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/" />
 
@@ -17,8 +17,8 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/#article",
-  "headline": "Why Replacement Parts Need More Than Matching the Original Geometry",
-  "description": "Replacement components need more than matching geometry. Learn how requirement definition, manufacturing consistency, production validation and repeat supply work together for production-critical parts.",
+  "headline": "Why Is Matching the Original Geometry Not Always Enough for a Replacement Part?",
+  "description": "Matching the original geometry may not be enough to establish replacement-part equivalence. Learn what should be reviewed when manufacturing a replacement component from an existing drawing or sample.",
   "url": "https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -54,7 +54,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Why Replacement Parts Need More Than Matching the Original Geometry",
+      "name": "Why Is Matching the Original Geometry Not Always Enough for a Replacement Part?",
       "item": "https://www.gorgeofasteners.com/insights/replacement-parts-reliable-repeat-supply/"
     }
   ]
@@ -288,44 +288,7 @@
       font-size: 15px;
       line-height: 1.6;
     }
-    .engineering-summary p:last-child { margin-bottom: 0; font-weight: 700; }
-
-    /* What vs How 2-Column */
-    .what-how-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin: 30px 0;
-    }
-    .what-how-box {
-      background: var(--bg-alt);
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid var(--border-light);
-    }
-    .what-how-box h3 {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-dark);
-      margin-bottom: 15px;
-      font-weight: 750;
-    }
-    .what-how-list { list-style: none; padding: 0; margin: 0; }
-    .what-how-list li {
-      font-size: 15px;
-      color: var(--text-body);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .what-how-list li::before {
-      content: "•";
-      color: var(--accent);
-      font-weight: bold;
-    }
-    @media (max-width: 768px) { .what-how-grid { grid-template-columns: 1fr; } }
+    .engineering-summary p:last-child { margin-bottom: 0; }
 
     /* Engineering Callouts */
     .engineering-principle {
@@ -368,45 +331,6 @@
     }
     .relationship-operator { color: var(--text-muted); font-size: 14px; }
     .relationship-result { margin-top: 10px; padding-top: 15px; border-top: 1px solid var(--border-light); width: 100%; max-width: 300px; color: var(--accent); }
-
-    /* Mini Process */
-    .case-mini-process {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 25px 0;
-      flex-wrap: wrap;
-      background: var(--bg-white);
-      padding: 20px;
-      border: 1px solid var(--border-light);
-      border-radius: 6px;
-    }
-    .case-mini-step { font-size: 13px; font-weight: 700; color: var(--text-dark); text-align: center; flex: 1; min-width: 160px; }
-    .case-mini-arrow { font-size: 14px; color: var(--text-muted); font-weight: bold; }
-    @media (max-width: 768px) {
-      .case-mini-process { flex-direction: column; gap: 10px; padding: 20px; align-items: flex-start; }
-      .case-mini-step { text-align: left; min-width: auto; }
-      .case-mini-arrow { transform: rotate(90deg); margin: 5px 0 5px 10px; }
-    }
-
-    /* Workflow Wide */
-    .workflow-wide { 
-      display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; 
-      background: var(--bg-light); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); 
-      margin: 30px 0;
-    }
-    .workflow-step { text-align: center; flex: 1; min-width: 110px; }
-    .workflow-arrow { color: var(--border-light); font-size: 20px; font-weight: bold; }
-    .workflow-step h4 { color: var(--text-dark); font-size: 14px; margin: 0; font-weight: 700; }
-    @media (max-width: 900px) {
-      .workflow-arrow { display: none; }
-      .workflow-wide { gap: 20px; }
-      .workflow-step { min-width: 45%; }
-    }
-    @media (max-width: 600px) {
-      .workflow-wide { flex-direction: column; }
-      .workflow-step { min-width: 100%; }
-    }
 
     /* Checklist Grid */
     .checklist-grid {
@@ -452,6 +376,25 @@
     @media (max-width: 900px) { .info-grid-3x2 { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .info-grid-3x2 { grid-template-columns: 1fr; } }
 
+    /* Workflow Wide */
+    .workflow-wide { 
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; 
+      background: var(--bg-white); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); 
+      margin: 30px 0;
+    }
+    .workflow-step { text-align: center; flex: 1; min-width: 110px; }
+    .workflow-arrow { color: var(--border-light); font-size: 20px; font-weight: bold; }
+    .workflow-step h4 { color: var(--text-dark); font-size: 14px; margin: 0; font-weight: 700; }
+    @media (max-width: 900px) {
+      .workflow-arrow { display: none; }
+      .workflow-wide { gap: 20px; }
+      .workflow-step { min-width: 45%; }
+    }
+    @media (max-width: 600px) {
+      .workflow-wide { flex-direction: column; }
+      .workflow-step { min-width: 100%; }
+    }
+
     /* Related Content */
     .related-card {
       background: var(--bg-alt);
@@ -462,15 +405,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
-    .related-label {
-      font-size: 12px;
-      font-weight: 750;
-      color: var(--text-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 15px;
-      display: block;
     }
     .related-card h3 { margin: 0 0 10px 0; font-size: 20px; color: var(--text-dark); font-weight: 750; }
     .related-card p { margin: 0 0 20px 0; font-size: 15px; color: var(--text-body); line-height: 1.6; max-width: 800px; }
@@ -661,50 +595,30 @@ header {
           <span>→</span>
           <a href="/insights/" data-local-href="../../insights/index.html">Manufacturing Insights</a>
           <span>→</span>
-          <span>Why Replacement Parts Need More Than Matching the Original Geometry</span>
+          <span>Why Is Matching the Original Geometry Not Always Enough for a Replacement Part?</span>
         </nav>
 
-        <span class="insight-eyebrow">Manufacturing Insight <span>·</span> Replacement Component → Repeat Supply</span>
-        <h1>Why Replacement Parts Need More Than Matching the Original Geometry</h1>
+        <span class="insight-eyebrow">Manufacturing Insight <span>·</span> Replacement Parts</span>
+        <h1>Why Is Matching the Original Geometry Not Always Enough for a Replacement Part?</h1>
         
         <p class="insight-intro">
-          A replacement component can look correct and still be difficult to rely on in production.
+          Matching the original geometry is an important starting point for a replacement component, but geometry alone may not establish that the new part will perform equivalently in the equipment.
         </p>
         <p class="insight-intro">
-          When an industrial machine is already operating, replacement components often appear to be a relatively straightforward manufacturing task.
+          Depending on the application, replacement performance may also depend on specified tolerances, material and surface requirements, mating relationships, wear-related characteristics and other function-critical features.
         </p>
         <p class="insight-intro">
-          The original part already exists. A drawing may already be available. In some cases, a physical sample can also be provided. So the requirement can appear simple: Manufacture another part that matches the existing one.
+          The manufacturing question is therefore not only whether the original shape can be reproduced, but whether the requirements that matter to the part's intended function can be identified, manufactured and verified.
         </p>
         <p class="insight-intro">
-          But for components involved in locating, mating, movement, wear or repeated mechanical use, reproducing the visible geometry is only part of the requirement.
-        </p>
-        <p class="insight-intro">
-          The more important question is:
-        </p>
-        <p class="insight-intro">
-          <span class="highlight">
-            Can the replacement component perform its intended function consistently and be reproduced again when the next batch is needed?
-          </span>
+          <span class="highlight">Matching Geometry ≠ Proven Replacement-Part Equivalence</span>
         </p>
 
         <div class="engineering-summary">
           <span class="summary-label">Engineering Summary</span>
-          <p>For production equipment, a replacement component should be considered through four connected requirements:</p>
-          
-          <div class="case-mini-process" style="background: transparent; border: none; padding: 0; margin: 15px 0;">
-            <div class="case-mini-step" style="min-width: auto; text-align: left;">Requirement Definition</div>
-            <div class="case-mini-arrow">→</div>
-            <div class="case-mini-step" style="min-width: auto; text-align: left;">Manufacturing Consistency</div>
-            <div class="case-mini-arrow">→</div>
-            <div class="case-mini-step" style="min-width: auto; text-align: left;">Production Validation</div>
-            <div class="case-mini-arrow">→</div>
-            <div class="case-mini-step" style="min-width: auto; text-align: left;">Repeat Supply</div>
-          </div>
-          
-          <p>A component that resembles the original part may still behave differently if characteristics important to its function are not reproduced consistently.</p>
-          <p>And even a successful first batch does not fully solve the replacement problem if future batches cannot be produced with comparable consistency.</p>
-          <p>Matching Geometry ≠ Reliable Replacement Supply</p>
+          <p>A replacement part should first be reviewed against the available engineering requirements and the function it needs to support in the equipment. An existing sample can provide useful physical reference, but it may represent only one manufactured condition—and may already include wear, repair or modification.</p>
+          <p>Where a drawing is available, it should remain the primary engineering reference. The manufacturing review can then consider which specified characteristics are important to fit, positioning, movement, contact, wear or other relevant functions.</p>
+          <p>Matching the original geometry is a starting point. Replacement-part equivalence still needs to be evaluated against the relevant engineering and application requirements.</p>
         </div>
       </div>
     </div>
@@ -712,242 +626,126 @@ header {
 
   <section class="bg-light-section">
     <div class="main-shell article-reading">
+      <h2 class="section-title-h2" style="margin-top: 0;">When Is a Replacement Part Worth Reviewing Beyond Geometry?</h2>
+      <p>Not every replacement component requires an extensive manufacturing review. For a conventional part with a complete drawing and a straightforward manufacturing history, reproducing the specified requirements may be relatively direct.</p>
+      <p>Additional review may be useful when the replacement situation includes conditions such as:</p>
+      
+      <div class="checklist-grid">
+        <div class="checklist-item">Only an existing physical part is available</div>
+        <div class="checklist-item">The available sample has already been used, worn, repaired or modified</div>
+        <div class="checklist-item">A drawing exists, but the original manufacturing source or process is no longer available</div>
+        <div class="checklist-item">The part affects locating, alignment, fit, movement, contact or wear</div>
+        <div class="checklist-item">Previous replacement parts have fitted physically but behaved differently in use</div>
+        <div class="checklist-item">Material, hardness, coating or surface condition may affect performance</div>
+        <div class="checklist-item">Replacement parts from different batches have shown inconsistent results</div>
+        <div class="checklist-item">The customer is developing an additional or alternative manufacturing source</div>
+      </div>
+
+      <p style="margin-top: 20px;">If one or more of these conditions applies, reproducing the visible geometry may be only one part of the replacement-manufacturing question.</p>
+
+      <div class="engineering-principle">
+        <span class="principle-label">Manufacturing Question</span>
+        <span class="principle-content">What information is needed to determine whether a replacement part can reproduce the requirements that matter to its intended function—not only its visible geometry?</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white-section">
+    <div class="main-shell article-reading">
       
       <div class="engineering-factor">
         <span class="factor-label">01</span>
-        <h2 class="section-title-h2" style="margin-top: 0;">Start With the Function, Not Only the Shape</h2>
-        <p>The geometry of an existing component provides important manufacturing information.</p>
-        <p>But geometry alone does not always explain why the component works inside the equipment.</p>
-        <p>Depending on the application, its function may depend on characteristics such as:</p>
-        <ul>
-          <li>locating relationships,</li>
-          <li>mating dimensions,</li>
-          <li>clearance,</li>
-          <li>contact surfaces,</li>
-          <li>material condition,</li>
-          <li>surface condition,</li>
-          <li>wear-related characteristics,</li>
-          <li>or repeatability between replacement parts.</li>
-        </ul>
-        <p>This distinction matters because two components can appear geometrically similar while still behaving differently in actual equipment.</p>
-        <p>The manufacturing question should therefore not stop at: Can this part be reproduced?</p>
-        <p>It should also ask:</p>
-        
-        <div class="engineering-principle">
-          <span class="principle-content">Which characteristics allow this part to perform its function inside the equipment?</span>
-        </div>
-      </div>
-
-      <div class="engineering-factor">
-        <span class="factor-label">02</span>
-        <h2 class="section-title-h2" style="margin-top: 0;">The Drawing Should Remain the Primary Requirement</h2>
+        <h2 class="section-title-h2" style="margin-top: 0;">Start With the Drawing and Available Engineering Requirements</h2>
         <p>When a technical drawing is available, it should normally remain the primary manufacturing reference.</p>
-        <p>A drawing can define requirements such as:</p>
-        <ul>
-          <li>dimensions,</li>
-          <li>tolerances,</li>
-          <li>material,</li>
-          <li>surface requirements,</li>
-          <li>geometric relationships,</li>
-          <li>and other specified characteristics.</li>
-        </ul>
+        <p>A drawing can define requirements such as dimensions, tolerances, material, surface requirements, geometric relationships, and other specified characteristics.</p>
         <p>An existing sample can provide additional manufacturing context. But a sample and a drawing serve different purposes.</p>
-        <p>A sample shows one physical condition of the component. A drawing defines the intended engineering requirement.</p>
-        <p>That distinction becomes particularly important when the existing part has already been used, worn, repaired or modified.</p>
         
         <div class="engineering-principle">
           <span class="principle-content">Sample = Manufacturing Reference<br/>Drawing = Engineering Requirement</span>
         </div>
         
-        <p>Where both are available, they should be reviewed together rather than treating the physical sample as the complete specification.</p>
+        <p>A sample should not automatically be treated as the original design definition, particularly if it has already been used, worn, repaired or modified.</p>
+      </div>
+
+      <div class="engineering-factor">
+        <span class="factor-label">02</span>
+        <h2 class="section-title-h2" style="margin-top: 0;">Identify the Characteristics Related to the Part's Function</h2>
+        <p>Depending on the application, the relevant characteristics may include locating relationships, mating dimensions, clearances, alignment, contact surfaces, material condition, surface condition or wear-related features.</p>
+        <p>These functional features deserve particular attention during manufacturing review.</p>
+        <p>For example, a locating component may physically enter its mating feature while still producing inconsistent positioning if the relevant relationship varies from part to part.</p>
+        <p>The customer's engineering defines what the component must do. Manufacturing review uses the available drawing and project context to understand which specified characteristics require particular manufacturing and verification attention.</p>
       </div>
 
       <div class="engineering-factor">
         <span class="factor-label">03</span>
-        <h2 class="section-title-h2" style="margin-top: 0;">Functional Features Deserve More Attention</h2>
-        <p>Not every dimension on a replacement component has the same relationship to equipment function.</p>
-        <p>Some features may primarily define the overall shape.</p>
-        <p>Others may directly influence:</p>
+        <h2 class="section-title-h2" style="margin-top: 0;">Separate Original Requirements From the Condition of the Existing Sample</h2>
+        <p>An existing component may contain useful information that is not obvious from the drawing. At the same time, its current condition may no longer represent the original manufactured condition.</p>
+        <p>Examples of conditions that can alter a sample include:</p>
         <ul>
-          <li>positioning,</li>
-          <li>alignment,</li>
-          <li>assembly fit,</li>
-          <li>movement,</li>
-          <li>contact,</li>
-          <li>load transfer,</li>
-          <li>or wear.</li>
+          <li>wear,</li>
+          <li>deformation,</li>
+          <li>repair,</li>
+          <li>coating loss,</li>
+          <li>surface damage,</li>
+          <li>or previous modification.</li>
         </ul>
-        <p>These functional features deserve particular attention during manufacturing review.</p>
-        <p>For example, a locating component may physically enter its mating feature while still producing inconsistent positioning if the relevant relationship varies from part to part.</p>
-        <p>Similarly, a moving or contacting component may match the nominal dimensions while behaving differently if the material or surface condition is not appropriate for the application.</p>
-        <p>The objective is not to redesign the customer's component. It is to understand which existing requirements matter most to its intended function.</p>
+        
+        <div class="engineering-principle">
+          <span class="principle-content">The manufacturing question is not simply "How do we copy this sample?" but "Which characteristics come from the intended requirement, and which may reflect the sample's current condition?"</span>
+        </div>
       </div>
 
       <div class="engineering-factor">
         <span class="factor-label">04</span>
-        <h2 class="section-title-h2" style="margin-top: 0;">Manufacturing Consistency Matters Across Parts</h2>
-        <p>A replacement component is rarely useful only once.</p>
-        <p>If the equipment remains in operation, the same component may need to be manufactured again later.</p>
-        <p>This introduces another requirement: Can the manufacturing result be reproduced across multiple parts and future batches?</p>
-        <p>A single acceptable component provides evidence that the defined requirements can be achieved under the evaluated manufacturing conditions.</p>
-        <p>Repeat supply requires something more:</p>
+        <h2 class="section-title-h2" style="margin-top: 0;">Review How the Relevant Requirements Will Be Manufactured and Verified</h2>
+        <p>Once the relevant requirements are understood, the next question is whether the manufacturing and inspection approach can reproduce them consistently.</p>
+        <p>A single acceptable component provides evidence that the defined requirements can be achieved under the evaluated manufacturing conditions. However, repeat supply requires more than a one-time success.</p>
+        <p>The review should consider:</p>
         <ul>
-          <li>consistent interpretation of the drawing,</li>
-          <li>clearly defined manufacturing requirements,</li>
-          <li>repeatable critical features,</li>
-          <li>and consistent manufacturing conditions between batches.</li>
+          <li>tolerance relationships,</li>
+          <li>material and treatment,</li>
+          <li>critical surfaces,</li>
+          <li>geometric relationships,</li>
+          <li>inspection methods,</li>
+          <li>and batch-to-batch consistency.</li>
         </ul>
-        <p>This is why replacement-component manufacturing should not be evaluated only by whether the first part fits.</p>
-        
-        <div class="engineering-principle">
-          <span class="principle-content">Part-to-Part Consistency + Batch-to-Batch Consistency</span>
-        </div>
       </div>
 
       <div class="engineering-factor">
         <span class="factor-label">05</span>
-        <h2 class="section-title-h2" style="margin-top: 0;">Small-Batch Validation Can Reduce Production Risk</h2>
-        <p>For a production-critical replacement component, moving directly from an existing part to a full repeat-production quantity may not always be the most useful path.</p>
-        <p>An initial sample or small batch can create a validation stage between manufacturing and repeat supply.</p>
-        
-        <div class="case-mini-process" style="background: transparent; border: none; padding: 0;">
-          <div class="case-mini-step" style="min-width: auto; text-align: left;">Existing Component / Drawing</div>
-          <div class="case-mini-arrow">→</div>
-          <div class="case-mini-step" style="min-width: auto; text-align: left;">Requirement Review</div>
-          <div class="case-mini-arrow">→</div>
-          <div class="case-mini-step" style="min-width: auto; text-align: left;">Sample or Small Batch</div>
-          <div class="case-mini-arrow">→</div>
-          <div class="case-mini-step" style="min-width: auto; text-align: left;">Production Evaluation</div>
-          <div class="case-mini-arrow">→</div>
-          <div class="case-mini-step" style="min-width: auto; text-align: left;">Feedback</div>
-          <div class="case-mini-arrow">→</div>
-          <div class="case-mini-step" style="min-width: auto; text-align: left;">Repeat Supply</div>
-        </div>
-
+        <h2 class="section-title-h2" style="margin-top: 0;">Use Sampling or Small-Batch Production When Application Validation Is Needed</h2>
+        <p>Not every replacement component requires application validation or a dedicated small-batch stage.</p>
+        <p>Where the part has an important equipment function or where previous replacement results have been uncertain, a sample or small batch may provide useful evidence before repeat supply.</p>
         <p>This allows the replacement component to be evaluated in the environment where its function actually matters.</p>
-        <p>The objective is not simply to inspect whether the component looks correct.</p>
-        <p>It is to determine whether the manufactured result supports the intended equipment function before moving toward repeat production.</p>
+        <p>The objective is not simply to inspect whether the component looks correct, but to determine whether the manufactured result supports the intended equipment function before moving toward repeat production.</p>
       </div>
 
-    </div>
-  </section>
-
-  <section class="bg-white-section">
-    <div class="main-shell">
-      <div class="article-reading">
-        <span class="factor-label">06</span>
-        <h2 class="section-title-h2" style="margin-top: 0;">Production Validation Provides Information a Drawing Cannot</h2>
-        <p>A drawing defines the engineering requirement.</p>
-        <p>Manufacturing inspection evaluates whether the manufactured component conforms to the specified requirements.</p>
-        <p>But actual equipment use can provide another layer of information: How does the replacement component behave in its intended production environment?</p>
-        <p>Depending on the component, production evaluation may reveal practical information related to:</p>
-        <ul>
-          <li>assembly,</li>
-          <li>locating behavior,</li>
-          <li>mating,</li>
-          <li>repeated movement,</li>
-          <li>contact,</li>
-          <li>wear,</li>
-          <li>or replacement interchangeability.</li>
-        </ul>
-        <p>This does not replace drawing-based inspection.</p>
-        <p>Instead, the two forms of evaluation answer different questions:</p>
-      </div>
-
-      <div class="article-wide">
-        <div class="what-how-grid">
-          <div class="what-how-box">
-            <h3>Manufacturing Verification</h3>
-            <p style="margin: 0; font-size: 15px; color: var(--text-body);">Was the component produced to the defined requirement?</p>
-          </div>
-          <div class="what-how-box">
-            <h3>Production Validation</h3>
-            <p style="margin: 0; font-size: 15px; color: var(--text-body);">Does the manufactured component perform appropriately in its intended application?</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="article-reading">
-        <p>For critical replacement components, both perspectives can be useful.</p>
-      </div>
     </div>
   </section>
 
   <section class="bg-light-section">
     <div class="main-shell article-reading">
-      <span class="factor-label">07</span>
-      <h2 class="section-title-h2" style="margin-top: 0;">A Replacement Source Needs to Be Repeatable</h2>
-      <p>A supplier may successfully manufacture one replacement batch.</p>
-      <p>But the customer's underlying requirement often continues beyond that batch.</p>
-      <p>The equipment remains in service. Components continue to wear. Maintenance continues. Future replacement demand may appear again.</p>
-      <p>The real manufacturing objective therefore becomes: Can the same requirement be supported again when the next replacement is needed?</p>
-
+      <h2 class="section-title-h2" style="margin-top: 0;">From Replacement Validation to Repeat Supply</h2>
+      <p>If the replacement part is expected to be needed again, successful validation can become the basis for a repeat manufacturing approach.</p>
+      <p>At that stage, the objective extends beyond reproducing one acceptable part. Relevant manufacturing and verification conditions need to be sufficiently defined to support comparable future batches.</p>
+      
       <div class="engineering-principle">
-        <span class="principle-content">Successful First Batch ≠ Established Replacement Supply</span>
-      </div>
-
-      <div class="relationship-display">
-        <div>Requirement Defined</div>
-        <div class="relationship-operator">↓</div>
-        <div>Manufacturing Verified</div>
-        <div class="relationship-operator">↓</div>
-        <div>Production Evaluated</div>
-        <div class="relationship-operator">↓</div>
-        <div class="relationship-result">Repeat Supply Readiness</div>
+        <span class="principle-content">Successful Replacement Part ≠ Automatically Established Repeat Supply</span>
       </div>
     </div>
   </section>
 
   <section class="bg-white-section">
-    <div class="main-shell">
-      <div class="article-reading">
-        <h2 class="section-title-h2" style="margin-top: 0;">Replacement Component Manufacturing Framework</h2>
-        <p>For existing equipment, replacement-component development can be considered through four stages.</p>
-      </div>
-
-      <div class="article-wide">
-        <div class="what-how-grid">
-          <div class="info-card">
-            <span class="factor-label" style="color: var(--text-muted); margin-bottom: 4px;">01</span>
-            <h4 style="font-size: 16px; margin-bottom: 10px;">Requirement Definition</h4>
-            <p>Establish what needs to be reproduced.</p>
-            <p>Useful information can include: technical drawing, existing sample, material requirement, critical tolerances, functional features, known manufacturing problems, and expected quantity.</p>
-          </div>
-          <div class="info-card">
-            <span class="factor-label" style="color: var(--text-muted); margin-bottom: 4px;">02</span>
-            <h4 style="font-size: 16px; margin-bottom: 10px;">Manufacturing Evaluation</h4>
-            <p>Review how the specified requirements translate into manufacturing.</p>
-            <p>Particular attention can be given to features related to: locating, mating, alignment, contact, movement, surface condition, or wear.</p>
-            <p>The purpose is not to change the design unnecessarily. It is to understand how the defined requirements can be reproduced consistently.</p>
-          </div>
-          <div class="info-card">
-            <span class="factor-label" style="color: var(--text-muted); margin-bottom: 4px;">03</span>
-            <h4 style="font-size: 16px; margin-bottom: 10px;">Production Validation</h4>
-            <p>Where appropriate, use samples or a small batch to evaluate the replacement component in actual use.</p>
-            <p>Feedback from assembly, operation or maintenance can provide useful context before repeat production.</p>
-          </div>
-          <div class="info-card">
-            <span class="factor-label" style="color: var(--text-muted); margin-bottom: 4px;">04</span>
-            <h4 style="font-size: 16px; margin-bottom: 10px;">Repeat Supply</h4>
-            <p>Once the manufactured component has been evaluated, the manufacturing approach can move toward repeat supply.</p>
-            <p>The objective is to preserve the established manufacturing conditions and support comparable results across future replacement orders.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-light-section">
     <div class="main-shell article-wide">
-      <span class="snapshot-label">Real Manufacturing Case</span>
+      <span class="snapshot-label" style="font-size: 12px; font-weight: 750; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 10px;">Real Manufacturing Case</span>
       
-      <div class="related-card" style="background: var(--bg-white);">
+      <div class="related-card" style="background: var(--bg-alt); margin-top: 0;">
         <h3>Welding Locating Pins Replacement Supply</h3>
         <p>The project involved replacement welding locating pins used in production equipment.</p>
         <p>Rather than treating geometry alone as the complete requirement, the manufacturing review focused on characteristics related to locating function, dimensional consistency and production use.</p>
         <p>The replacement components were introduced through small-batch manufacturing and production evaluation before moving toward a repeat manufacturing approach.</p>
         
-        <div class="workflow-wide" style="box-shadow: none; padding: 20px; border: 1px solid var(--border-light); margin: 20px 0; background: var(--bg-light);">
+        <div class="workflow-wide" style="box-shadow: none; padding: 20px; border: 1px solid var(--border-light); margin: 20px 0; background: var(--bg-white);">
           <div class="workflow-step"><h4>Replacement Requirement</h4></div>
           <div class="workflow-arrow">→</div>
           <div class="workflow-step"><h4>Manufacturing Review</h4></div>
@@ -959,67 +757,53 @@ header {
           <div class="workflow-step"><h4>Repeat Manufacturing Approach</h4></div>
         </div>
 
-        <a href="/cases/welding-locating-pins-replacement-supply/" class="related-link">Read the full Welding Locating Pins Replacement Supply case →</a>
+        <p>This case does not mean every replacement component requires the same validation route. The appropriate review depends on the available drawing, condition of the existing sample, function of the component, manufacturing history and project requirements.</p>
+        <p>The broader lesson is that replacement manufacturing may need to reproduce more than visible geometry when other specified characteristics influence how the part functions in the equipment.</p>
+
+        <a href="/cases/welding-locating-pins-replacement-supply/" class="related-link" style="margin-top: 15px;">Read the full Welding Locating Pins Replacement Supply case →</a>
       </div>
     </div>
   </section>
 
-  <section class="bg-white-section">
+  <section class="bg-light-section">
     <div class="main-shell">
       <div class="article-reading">
-        <h2 class="section-title-h2" style="margin-top: 0;">What Information Helps With a Replacement Component Review?</h2>
-        <p>A technical drawing remains the primary manufacturing document. But for function-critical components, a small amount of additional context can sometimes make manufacturing review more useful.</p>
+        <h2 class="section-title-h2" style="margin-top: 0;">What Information Helps With a Replacement-Part Manufacturing Review?</h2>
+        <p>The evidence needed depends on what is uncertain about the replacement part. A technical drawing is the preferred starting point where available, while the existing part and relevant equipment context can help clarify the manufacturing question.</p>
       </div>
 
       <div class="article-wide">
         <div class="info-grid-3x2">
           <div class="info-card">
             <h4>Technical Drawing</h4>
-            <p>The preferred reference for dimensions, tolerances, material and specified engineering requirements.</p>
+            <p>Defines the specified dimensions, tolerances, material, surface and other engineering requirements.</p>
           </div>
           <div class="info-card">
-            <h4>Existing Sample</h4>
-            <p>Useful as additional manufacturing context, especially when reviewed together with the drawing.</p>
+            <h4>Existing Part or Sample</h4>
+            <p>Provides physical reference for the existing component, while its condition should be considered if the part has been worn, repaired or modified.</p>
           </div>
           <div class="info-card">
-            <h4>Functional Features</h4>
-            <p>Identify which areas of the component are related to locating, mating, movement, contact or wear.</p>
+            <h4>Critical / Functional Requirements</h4>
+            <p>Identifies the specified characteristics that the customer's engineering considers important to fit, locating, movement, contact, wear or other equipment functions.</p>
           </div>
           <div class="info-card">
-            <h4>Current Manufacturing Problem</h4>
-            <p>Explain whether the issue involves dimensional inconsistency, fit, durability, availability or another known concern.</p>
+            <h4>Current Replacement Situation</h4>
+            <p>Explains why another part or source is needed—for example wear, discontinued supply, inconsistent previous replacements or development of an additional source.</p>
           </div>
           <div class="info-card">
-            <h4>Quantity</h4>
-            <p>Expected initial and repeat quantities help provide context for the manufacturing approach.</p>
+            <h4>Expected Quantity</h4>
+            <p>Provides context for the initial replacement requirement and possible future repeat demand.</p>
           </div>
           <div class="info-card">
-            <h4>Production Feedback</h4>
-            <p>Where previous replacement parts have already been tested, practical feedback can help identify which characteristics require closer attention.</p>
+            <h4>Previous Replacement / Production Feedback</h4>
+            <p>Shows what has already worked or failed in assembly, operation, inspection or previous replacement attempts.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="bg-light-section">
-    <div class="main-shell article-reading">
-      <h2 class="section-title-h2" style="margin-top: 0;">Engineering Principle</h2>
-      <p>A replacement component is not fully defined by whether it matches the visible geometry of the original part.</p>
-      
-      <div class="relationship-display">
-        <div>Engineering Requirement</div>
-        <div class="relationship-operator">↓</div>
-        <div>Functional Characteristics</div>
-        <div class="relationship-operator">↓</div>
-        <div>Manufacturing Consistency</div>
-        <div class="relationship-operator">↓</div>
-        <div>Production Validation</div>
-        <div class="relationship-operator">↓</div>
-        <div class="relationship-result">Repeat Supply Readiness</div>
+      <div class="article-reading">
+        <p style="color: var(--text-body);">The complete machine design is not normally required. Only the information relevant to the replacement-manufacturing question may be needed.</p>
       </div>
-
-      <p>This is what helps move a reproduced component toward a repeat manufacturing approach that can support future replacement requirements.</p>
     </div>
   </section>
 
@@ -1029,24 +813,24 @@ header {
       
       <div class="faq-grid-wide">
         <div class="faq-item">
-          <h3>Can a replacement component be manufactured from a sample only?</h3>
+          <h3>Can a replacement part be manufactured from an existing sample only?</h3>
           <p>A physical sample can provide useful manufacturing information, but where a technical drawing exists, the drawing should normally remain the primary reference for specified dimensions, tolerances, material and other engineering requirements.</p>
         </div>
         <div class="faq-item">
-          <h3>Why isn't matching the original geometry enough?</h3>
+          <h3>Why isn't matching the original geometry always enough?</h3>
           <p>Because the component's function may also depend on characteristics such as dimensional relationships, fit, material condition, surface condition, contact or wear behavior.</p>
         </div>
         <div class="faq-item">
-          <h3>Why use a small batch before repeat production?</h3>
-          <p>A sample or small batch allows the manufactured component to be evaluated before expanding into repeat supply, particularly when the component has an important production function.</p>
+          <h3>What if the existing sample is already worn or modified?</h3>
+          <p>Its current condition may no longer represent the original manufactured requirement. The review should distinguish the intended engineering requirements from characteristics that may reflect the sample's current condition.</p>
         </div>
         <div class="faq-item">
-          <h3>Does production validation replace dimensional inspection?</h3>
-          <p>No. They answer different questions. Manufacturing verification checks the component against defined requirements, while production validation provides information about its behavior in the intended application.</p>
+          <h3>Does every replacement component need sampling or production validation?</h3>
+          <p>No. Not every component requires application validation. A sample or small batch is most useful when the part has an important equipment function or where previous replacement results have been uncertain.</p>
         </div>
         <div class="faq-item">
-          <h3>What information is most useful when reviewing a replacement component?</h3>
-          <p>A technical drawing, existing sample where available, material, critical tolerances, quantity, functional features and information about any existing manufacturing or production problems are useful starting points.</p>
+          <h3>What information is useful for reviewing a replacement component?</h3>
+          <p>A technical drawing is the preferred starting point. Depending on the situation, the existing part, material requirements, expected quantity, critical functional features, and feedback from previous replacements are also useful.</p>
         </div>
         <div class="faq-item">
           <h3>Does developing an additional source mean replacing the existing supplier?</h3>
@@ -1059,10 +843,10 @@ header {
   <section class="bg-light-section">
     <div class="main-shell">
       <div class="article-wide cta-wide">
-        <h2>Need to Review a Replacement Component?</h2>
-        <p>If you have a drawing for an existing replacement component, we can review the manufacturing requirements and discuss the features that may matter for repeat production.</p>
-        <p class="supporting-text">Helpful information can include: Drawing · Material · Quantity · Critical Tolerances · Existing Sample · Functional Requirements · Current Issues</p>
-        <a href="/#contact" class="btn-primary content-cta" data-home-anchor="contact">Send Your Drawing</a>
+        <h2>Have a Replacement Part That Needs Manufacturing Review?</h2>
+        <p>If an existing component needs to be reproduced and there is a question around drawing requirements, the condition of the existing sample, functional features, previous replacement results or repeat manufacturing, send us the drawing and relevant project information.</p>
+        <p class="supporting-text">Helpful information may include the existing part or sample, material and surface requirements, expected quantity, critical features and any previous replacement or production feedback, depending on the situation.</p>
+        <a href="/#contact" class="btn-primary content-cta" data-home-anchor="contact">Send Drawing for Manufacturing Review</a>
       </div>
     </div>
   </section>

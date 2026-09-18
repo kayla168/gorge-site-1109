@@ -228,26 +228,103 @@
     .hero-img-box { background: var(--bg-white); border-radius: 8px; padding: 20px; height: 100%; min-height: 350px; display: flex; align-items: center; justify-content: center; border: none; }
     .hero-img-box .img-placeholder { background: var(--bg-alt); border: none; }
 
-    /* 痛点认知模块 */
+    /* ==== S1 Featured Cards Styles ==== */
     .manufacturing-challenges { background: var(--bg-light); }
+    .s1-grid { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 30px; 
+    }
+    @media (max-width: 900px) { 
+      .s1-grid { grid-template-columns: 1fr; gap: 24px; } 
+    }
+    
+    .s1-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .s1-card:hover {
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    }
+    .s1-img-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg-alt);
+    }
+    .s1-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .s1-card:hover .s1-img-wrapper img {
+      transform: scale(1.03);
+    }
+    .s1-content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .s1-label {
+      font-size: 12px;
+      font-weight: 750;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .s1-title {
+      font-size: 20px;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+    .s1-desc {
+      font-size: 15px;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .s1-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.2s;
+    }
+    /* =================================== */
 
-    /* 第2屏：Components */
-    .components { background: var(--bg-light); }
+    /* 第3屏：Components */
+    .components { background: var(--bg-white); }
     .components .img-placeholder { height: 160px; margin-bottom: 15px; }
     .components h3 { font-size: 18px; color: var(--text-dark); margin-bottom: 5px; font-weight: 700; }
     .components p { font-size: 14px; color: var(--text-body); }
 
-    /* 第3屏：Industries */
-    .industries { background: var(--bg-white); }
+    /* 第4屏：Industries */
+    .industries { background: var(--bg-light); }
     .industries .card { padding: 16px; text-align: center; }
     .industries .img-placeholder { height: 120px; margin-bottom: 15px; }
     .industries h3 { font-size: 14px; color: var(--text-dark); line-height: 1.4; font-weight: 600; }
 
     /* Knowledge Relationship Section */
-    .knowledge-relationship { background: var(--bg-light); padding: 50px 0; border-top: 1px solid var(--border-light); }
-    .knowledge-flow { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; background: var(--bg-white); padding: 24px; border-radius: 8px; border: 1px solid var(--border-light); margin-bottom: 30px; text-align: center; }
-    .knowledge-flow-step { font-size: 13px; font-weight: 700; color: var(--text-dark); flex: 1; min-width: 130px; }
-    .knowledge-flow-arrow { color: var(--border-light); font-size: 18px; font-weight: bold; }
+    .knowledge-relationship { background: var(--bg-white); padding: 70px 0; border-top: 1px solid var(--border-light); }
+    .knowledge-flow { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; background: var(--bg-light); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); margin-bottom: 40px; text-align: center; }
+    .knowledge-flow-step { font-size: 14px; font-weight: 700; color: var(--text-dark); flex: 1; min-width: 130px; }
+    .knowledge-flow-arrow { color: var(--border-light); font-size: 20px; font-weight: bold; }
     @media (max-width: 900px) {
       .knowledge-flow-arrow { display: none; }
       .knowledge-flow { gap: 15px; }
@@ -258,7 +335,8 @@
       .knowledge-flow-step { min-width: 100%; }
     }
 
-    /* Content Cards Grid (Insights & Cases) */
+    /* Content Cards Grid (Cases) */
+    .cases { background: var(--bg-light); }
     .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
     .content-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 8px; padding: 30px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; justify-content: space-between; }
     .content-card:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -294,7 +372,7 @@
       .content-grid { grid-template-columns: 1fr; }
     }
 
-    /* 第5屏：How We Work */
+    /* 第6屏：How We Work */
     .how-we-work { background: var(--bg-white); }
     .workflow { display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; background: var(--bg-white); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); }
     .workflow-step { text-align: center; flex: 1; min-width: 120px; }
@@ -310,7 +388,7 @@
       .workflow-step { min-width: 100%; }
     }
 
-    /* 第6屏：Manufacturing (视频+证据链) */
+    /* 第7屏：Manufacturing (视频+证据链) */
     .manufacturing { background: var(--bg-light); }
     .video-lead-box { width: 100%; max-width: 800px; margin: 0 auto 50px; background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 8px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
     
@@ -323,15 +401,18 @@
     @media (max-width: 900px) { .proof-chain-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 500px) { .proof-chain-grid { grid-template-columns: 1fr; } }
     
-    /* 第7屏：Quality */
+    /* 第8屏：Quality */
     .quality { background: var(--bg-white); }
     .quality .img-placeholder { height: 200px; }
     .quality-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; list-style: none; }
     .quality-list li { font-size: 15px; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
     .quality-list li::before { content: "✓"; color: var(--accent); font-size: 18px; }
 
+    /* 第9屏：Library CTA */
+    .insights { background: var(--bg-light); text-align: center; }
+
     /* 轻量化 FAQ 模块样式 */
-    .faq-section { background: var(--bg-light); }
+    .faq-section { background: var(--bg-white); }
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; row-gap: 24px; column-gap: 40px; margin-top: 20px; }
     .faq-item { border-bottom: 1px solid var(--border-light); padding-bottom: 16px; }
     .faq-item h3 { font-size: 16px; color: var(--text-dark); margin-bottom: 6px; font-weight: 750; display: flex; align-items: flex-start; gap: 8px; }
@@ -339,8 +420,8 @@
     .faq-item p { font-size: 14px; color: var(--text-body); line-height: 1.5; padding-left: 24px; }
     @media (max-width: 768px) { .faq-grid { grid-template-columns: 1fr; gap: 20px; } }
 
-    /* 第9屏：Contact */
-    .contact { background: var(--bg-white); }
+    /* 第10屏：Contact */
+    .contact { background: var(--bg-light); }
     .profile-box { text-align: left; }
     
     .profile-text { font-size: 16px; color: var(--text-body); margin-bottom: 25px; line-height: 1.6; }
@@ -354,7 +435,7 @@
     .file-error { display: none; font-size: 13px; color: var(--danger); margin-top: 5px;}
 
     /* Footer */
-    footer { border-top: 1px solid var(--border-light); padding: 40px 0 30px; background: var(--bg-light); font-size: 13px; color: var(--text-muted); text-align: center; }
+    footer { border-top: 1px solid var(--border-light); padding: 40px 0 30px; background: var(--bg-white); font-size: 13px; color: var(--text-muted); text-align: center; }
   
   /* ===== Shared Header Sync ===== */
 header {
@@ -536,32 +617,74 @@ header {
   </div>
 </section>
 
-<!-- 痛点认知模块 -->
+<!-- 痛点认知模块：S1 GEO Entry Points -->
+<!-- 痛点认知模块：S1 GEO Entry Points -->
 <section class="manufacturing-challenges">
   <div class="wrap">
     <h2 class="section-title">Does Any of This Look Familiar?</h2>
-    <p class="section-subtitle">Custom fastener projects can become difficult for very different reasons once a drawing moves into sourcing and manufacturing.</p>
+    <p class="section-subtitle">These are common project situations where the manufacturing question may be worth looking at more closely.</p>
     
-    <div class="grid-3">
-      <div class="card" style="border-top: 3px solid var(--accent);">
-        <div>
-          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750; line-height: 1.4;">The Same Drawing Gets Very Different Manufacturing Responses</h3>
-          <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">One supplier may quote it normally, another much higher, while another may question the requirements or decide not to quote it at all. The same drawing does not always lead to the same manufacturing interpretation. Different suppliers may be evaluating the same part through different manufacturing routes, process assumptions or production setups.</p>
+    <div class="s1-grid">
+      <!-- Card 01 -->
+      <a href="/insights/why-can-the-same-custom-fastener-drawing-get-different-supplier-responses/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="The Same Drawing Gets Very Different Supplier Responses" />
         </div>
-      </div>
-      <div class="card" style="border-top: 3px solid var(--accent);">
-        <div>
-          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750; line-height: 1.4;">A Simple-Looking Part Becomes Surprisingly Difficult to Source</h3>
-          <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">A special bolt, pin, spacer or related component may look straightforward on the drawing, yet suppliers may decline it, require an unexpected MOQ, or return very different manufacturing feedback. A simple-looking part does not always mean a straightforward manufacturing fit. One feature, tolerance, material choice or quantity requirement can change which manufacturing route makes sense.</p>
+        <div class="s1-content">
+          <span class="s1-label">SUPPLIER RESPONSE</span>
+          <h3 class="s1-title">The Same Drawing Gets Very Different Supplier Responses</h3>
+          <p class="s1-desc">One supplier may quote it normally, another much higher, while another may question the requirements or decide not to quote. The same drawing does not always lead to the same manufacturing approach.</p>
+          <span class="s1-link">Understand Why →</span>
         </div>
-      </div>
-      <div class="card" style="border-top: 3px solid var(--accent);">
-        <div>
-          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750; line-height: 1.4;">A Supplier Asks Whether a Requirement Can Be Changed</h3>
-          <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">A tolerance, feature or other requirement may be difficult under the manufacturing approach being considered. Manufacturing difficulty does not automatically mean the requirement needs to change first. Another manufacturing approach may be worth evaluating before changing the drawing.</p>
+      </a>
+      
+      <!-- Card 02 -->
+      <a href="/insights/why-can-a-simple-looking-custom-fastener-be-difficult-to-source/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="A Simple-Looking Part Becomes Difficult to Source" />
         </div>
-      </div>
+        <div class="s1-content">
+          <span class="s1-label">SOURCING DIFFICULTY</span>
+          <h3 class="s1-title">A Simple-Looking Part Becomes Difficult to Source</h3>
+          <p class="s1-desc">When a simple-looking part repeatedly receives no-quotes, high MOQ or unusual pricing, the fit between the part requirements, manufacturing approach and project conditions may be worth reviewing.</p>
+          <span class="s1-link">Explore the Manufacturing Question →</span>
+        </div>
+      </a>
+
+      <!-- Card 03 -->
+      <a href="/insights/should-a-drawing-requirement-change-when-a-supplier-says-it-is-difficult-to-manufacture/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="A Supplier Asks Whether a Drawing Requirement Can Be Changed" />
+        </div>
+        <div class="s1-content">
+          <span class="s1-label">DRAWING CHANGE</span>
+          <h3 class="s1-title">A Supplier Asks Whether a Drawing Requirement Can Be Changed</h3>
+          <p class="s1-desc">Difficulty with one manufacturing approach does not automatically mean the drawing requirement needs to change. Another manufacturing approach may be worth evaluating before the requirement itself is reconsidered.</p>
+          <span class="s1-link">Understand What to Review →</span>
+        </div>
+      </a>
+
+      <!-- Card 04 -->
+      <a href="/insights/why-can-a-successful-prototype-still-be-difficult-to-repeat-in-production/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="A Successful Prototype Becomes Difficult to Repeat" />
+        </div>
+        <div class="s1-content">
+          <span class="s1-label">REPEAT PRODUCTION</span>
+          <h3 class="s1-title">A Successful Prototype Becomes Difficult to Repeat</h3>
+          <p class="s1-desc">A successful prototype shows that the part can be made under a particular set of conditions. It does not automatically prove that the same result can be repeated consistently in production.</p>
+          <span class="s1-link">Explore the Repeatability Question →</span>
+        </div>
+      </a>
     </div>
+
+   <!-- 新增的 View More 入口，直接复用 .section-footer-link 样式，并改为高亮橙色 -->
+    <div class="section-footer-link">
+      <a href="/insights/" data-local-href="insights/index.html" style="color: var(--accent);">
+        View More Manufacturing Questions →
+      </a>
+    </div>
+
   </div>
 </section>
 
@@ -662,7 +785,7 @@ header {
   </div>
 </section>
 
-<section id="cases" class="cases" style="background: var(--bg-white);">
+<section id="cases" class="cases">
   <div class="wrap">
     <h2 class="section-title">Real Manufacturing Cases</h2>
     <p class="section-subtitle">Practical examples of how manufacturing questions were evaluated, translated into manufacturing approaches and validated in real projects.</p>
@@ -819,34 +942,12 @@ header {
   </div>
 </section>
 
+<!-- 轻量化 Insights Library Entry -->
 <section id="insights" class="insights">
-  <div class="wrap">
-    <h2 class="section-title">Manufacturing Insights</h2>
-    <p class="section-subtitle">Manufacturing perspectives built around the real questions that arise when custom parts move from drawing into sourcing and production.</p>
-    
-    <div class="content-grid">
-      <div class="content-card">
-        <div>
-          <span class="content-label">Different Supplier Responses</span>
-          <h3>Why Can the Same Custom Part Get Very Different Manufacturing Responses?</h3>
-          <p>Why differences in quotation and manufacturing feedback may reflect different manufacturing routes, not only supplier pricing or capability.</p>
-        </div>
-        <a class="content-link" href="/insights/drawing-to-production/">Read Insight →</a>
-      </div>
-
-      <div class="content-card">
-        <div>
-          <span class="content-label">Simple Part, Unexpected Difficulty</span>
-          <h3>Why Can a Simple-Looking Custom Part Be Surprisingly Difficult to Source?</h3>
-          <p>Why one feature, process fit or combination of requirements can make an otherwise straightforward-looking part much less straightforward from the manufacturing side.</p>
-        </div>
-        <a class="content-link" href="/insights/precision-component-process-development/">Read Insight →</a>
-      </div>
-    </div>
-
-    <div class="section-footer-link">
-      <a href="/insights/">View All Manufacturing Insights →</a>
-    </div>
+  <div class="wrap" style="text-align: center;">
+    <h2 class="section-title">Explore More Manufacturing Insights</h2>
+    <p class="section-subtitle" style="margin-bottom: 30px; margin-left: auto; margin-right: auto;">Practical manufacturing perspectives and engineering guides for drawing-based components, sourcing questions and production decisions.</p>
+    <a href="/insights/" class="btn-primary">View All Manufacturing Insights →</a>
   </div>
 </section>
 
@@ -892,7 +993,7 @@ header {
         If a custom fastener or related component is creating manufacturing or sourcing questions for your project, send us the drawing and key requirements. We can take a look from the manufacturing side.
       </div>
 
-      <div style="font-size: 14px; color: var(--text-body); background: var(--bg-light); padding: 16px; border-radius: 8px; border: 1px solid var(--border-light); margin-top: 20px;">
+      <div style="font-size: 14px; color: var(--text-body); background: var(--bg-white); padding: 16px; border-radius: 8px; border: 1px solid var(--border-light); margin-top: 20px;">
         <strong>Helpful information to include:</strong> drawing, material, estimated quantity, critical tolerances, and any important application or assembly requirements.
       </div>
     </div>
