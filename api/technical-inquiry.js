@@ -124,7 +124,7 @@ export default async function handler(req, res) {
 const signature = `
   <div style="margin-top: 25px; font-family: Calibri, sans-serif; color: #333; line-height: 1.4;">
     Best regards,<br>
-    Catherine Zhang<br>
+    Catherine<br>
     GorgeoFasteners
   </div>
 `;
@@ -139,15 +139,20 @@ const autoReplyBody = `
 
     <p>Thanks — we’ve received your inquiry.</p>
 
-    <p>We’ll review the drawing and project information you provided from the manufacturing side, including the critical requirements and any considerations that may affect the proposed manufacturing approach.</p>
+    <p>A completed drawing does not always mean the project will move smoothly through production and delivery.</p>
 
-    <p>If additional information is needed to continue the review, we’ll contact you about the specific details required.</p>
+    <p>Some requirements may only become critical when the part is manufactured, verified or used in the equipment. If identified too late, they can lead to rework, additional validation, delivery delays or higher project costs.</p>
 
-    <p>You can expect a follow-up from us within one working day (often sooner).</p>
+    <p>We’ll review the drawing and project information to identify the points that could materially affect delivery, cost, validation or future production. Where different approaches involve meaningful trade-offs, we’ll discuss them with you and help establish the approach that best fits the project’s current priorities — whether that means protecting delivery timing, controlling total cost or balancing both.</p>
+
+    <p>The goal is to address the important issues early and keep the project moving toward validation, delivery and repeat production with greater reliability and better total-cost competitiveness.</p>
+
+    <p>We’ll follow up after the initial review with our findings and the recommended next step.</p>
 
     ${signature}
 
   </div>
+
 `;
     // ====== 管理员邮件 ======
     const adminMail = {

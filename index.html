@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Custom & Special Fasteners and Drawing-Based Components for OEM Equipment | GorgeoFasteners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Gorgeo provides custom and special fasteners and drawing-based components for OEM equipment, with manufacturing review, prototype and repeat production support." />
+  <meta name="description" content="Gorgeo supports OEM equipment manufacturers with custom and special fasteners and selected drawing-based components, from manufacturing review and prototype validation to controlled and repeat production." />
   <link rel="canonical" href="https://www.gorgeofasteners.com/" />
   
   <script type="application/ld+json">
@@ -15,7 +15,7 @@
     "name": "GorgeoFasteners",
     "url": "https://www.gorgeofasteners.com/",
     "logo": "https://www.gorgeofasteners.com/images/gf2.png",
-    "description": "GorgeoFasteners supports OEM equipment manufacturers with custom fasteners and drawing-based precision components, including manufacturing review, prototype support and repeat production."
+    "description": "GorgeoFasteners supports OEM equipment manufacturers with custom and special fasteners and selected drawing-based components, from manufacturing review and prototype validation to controlled and repeat production."
   }
   </script>
   
@@ -83,7 +83,6 @@
       white-space: nowrap;
     }
     
-    /* 头部Logo与品牌链接样式 */
     .brand-link { 
       display: flex; 
       align-items: center; 
@@ -99,7 +98,6 @@
       flex-shrink: 0;
     }
     
-    /* 轻量级锚点导航样式 */
     .nav-links { display: flex; gap: 24px; align-items: center; justify-content: center; margin: 0 24px; }
     .nav-links a {
       font-size: 16px;
@@ -110,19 +108,10 @@
       border-bottom: 2px solid transparent;
       line-height: 1.2;
     }
-    .nav-links a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-    .nav-links a.nav-active {
-      color: var(--text-dark);
-      font-weight: 700;
-      border-bottom-color: var(--accent);
-    }
+    .nav-links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .nav-links a.nav-active { color: var(--text-dark); font-weight: 700; border-bottom-color: var(--accent); }
     
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-    }
+    @media (max-width: 900px) { .nav-links { display: none; } }
 
     .btn-primary {
       display: inline-block; padding: 14px 28px; border-radius: 6px;
@@ -133,22 +122,8 @@
     }
     .btn-primary:hover { background: #ea580c; transform: translateY(-1px); box-shadow: 0 6px 8px -1px rgba(249, 115, 22, 0.3); }
 
-    .header-cta {
-      flex-shrink: 0;
-      white-space: nowrap;
-      width: auto;
-      min-width: max-content;
-      padding: 10px 20px;
-      font-size: 14px;
-      line-height: 1.2;
-    }
-
-    .content-cta {
-      padding: 12px 24px;
-      font-size: 14px;
-      line-height: 1.2;
-      white-space: nowrap;
-    }
+    .header-cta { flex-shrink: 0; white-space: nowrap; width: auto; min-width: max-content; padding: 10px 20px; font-size: 14px; line-height: 1.2; }
+    .content-cta { padding: 12px 24px; font-size: 14px; line-height: 1.2; white-space: nowrap; }
 
     @media (max-width: 480px) {
       .header-inner { padding-left: 12px; padding-right: 12px; gap: 10px; }
@@ -157,30 +132,15 @@
       .header-cta { padding: 9px 12px; font-size: 12px; }
     }
 
-    /* Typography & Sections */
     .article-reading p { margin-bottom: 20px; font-size: 16px; line-height: 1.75; }
     .article-reading ul { margin-bottom: 20px; padding-left: 24px; font-size: 16px; line-height: 1.75; }
     .article-reading li { margin-bottom: 6px; }
     
-    .section-title-h2 {
-      font-size: 26px;
-      color: var(--text-dark);
-      margin: 60px 0 20px;
-      font-weight: 750;
-      line-height: 1.3;
-    }
-    .section-title-h3 {
-      font-size: 18px;
-      color: var(--text-dark);
-      margin: 0 0 10px;
-      font-weight: 750;
-      line-height: 1.4;
-    }
+    .section-title-h2 { font-size: 26px; color: var(--text-dark); margin: 60px 0 20px; font-weight: 750; line-height: 1.3; }
+    .section-title-h3 { font-size: 18px; color: var(--text-dark); margin: 0 0 10px; font-weight: 750; line-height: 1.4; }
 
-    /* Section Rhythm */
     .bg-light-section { background: var(--bg-light); padding: 70px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
     .bg-white-section { background: var(--bg-white); padding: 70px 0; }
-    .hero-section { background: var(--bg-white); padding: 60px 0 40px; }
 
     section { padding: 70px 0; border-top: 1px solid var(--border-light); }
     .section-title { font-size: 28px; font-weight: 750; margin-bottom: 10px; color: var(--text-dark); text-align: center; }
@@ -201,112 +161,39 @@
     }
 
     .card { 
-      background: var(--bg-white); 
-      border: 1px solid var(--border-light); 
-      border-radius: 8px; 
-      padding: 20px; 
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-      transition: box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 8px; padding: 20px; 
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); transition: box-shadow 0.2s; display: flex; flex-direction: column; justify-content: space-between;
     }
     .card:hover { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
     
     .img-placeholder { width: 100%; background: var(--bg-alt); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 12px; border: 1px solid var(--border-light); text-align: center; padding: 10px; }
 
-    /* 第1屏：HERO */
-    .hero { padding: 90px 0; border-top: none; background: var(--bg-hero); color: #ffffff; }
-    .hero h1 { font-size: clamp(36px, 4vw, 52px); line-height: 1.15; margin-bottom: 15px; color: #ffffff; }
-    .hero-sub { font-size: 20px; color: #94a3b8; margin-bottom: 40px; font-weight: 400; line-height: 1.5; }
-    
-    .value-list { list-style: none; margin-bottom: 20px; font-size: 16px; }
-    .value-list li { margin-bottom: 14px; display: flex; align-items: center; gap: 12px; color: var(--text-body); }
-    .hero .value-list li { color: #ffffff; }
-    .value-list li::before { content: "✓"; color: var(--accent); font-weight: bold; font-size: 18px; }
+    /* 第1屏：HERO - Maximum Height Optimization & Wider Text Area */
+    .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 30px; } }
 
-    .hero-img-box { background: var(--bg-white); border-radius: 8px; padding: 20px; height: 100%; min-height: 350px; display: flex; align-items: center; justify-content: center; border: none; }
+    .hero { padding: clamp(35px, 5vh, 60px) 0; border-top: none; background: var(--bg-hero); color: #ffffff; }
+    .hero h1 { font-size: clamp(30px, 3.5vw, 44px); line-height: 1.15; margin-bottom: 12px; color: #ffffff; }
+    .hero-sub { font-size: 17px; color: #94a3b8; margin-bottom: 16px; font-weight: 400; line-height: 1.5; }
+    .hero-process { font-size: 15px; color: #ffffff; margin-bottom: 20px; font-weight: 600; line-height: 1.6; }
+    .hero-img-box { background: var(--bg-white); border-radius: 8px; padding: 12px; height: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; border: none; }
     .hero-img-box .img-placeholder { background: var(--bg-alt); border: none; }
 
-    /* ==== S1 Featured Cards Styles ==== */
+    /* 第2/3屏卡片 */
     .manufacturing-challenges { background: var(--bg-light); }
-    .s1-grid { 
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      gap: 30px; 
-    }
-    @media (max-width: 900px) { 
-      .s1-grid { grid-template-columns: 1fr; gap: 24px; } 
-    }
+    .s1-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    @media (max-width: 900px) { .s1-grid { grid-template-columns: 1fr; gap: 24px; } }
     
-    .s1-card {
-      background: var(--bg-white);
-      border: 1px solid var(--border-light);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-    }
-    .s1-card:hover {
-      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
-    }
-    .s1-img-wrapper {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: var(--bg-alt);
-    }
-    .s1-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-      display: block;
-    }
-    .s1-card:hover .s1-img-wrapper img {
-      transform: scale(1.03);
-    }
-    .s1-content {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .s1-label {
-      font-size: 12px;
-      font-weight: 750;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .s1-title {
-      font-size: 20px;
-      color: var(--text-dark);
-      margin-bottom: 15px;
-      font-weight: 750;
-      line-height: 1.35;
-    }
-    .s1-desc {
-      font-size: 15px;
-      color: var(--text-body);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-    .s1-link {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      transition: color 0.2s;
-    }
-    /* =================================== */
+    .s1-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); transition: box-shadow 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; text-decoration: none; }
+    .s1-card:hover { box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1); }
+    .s1-img-wrapper { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-alt); }
+    .s1-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+    .s1-card:hover .s1-img-wrapper img { transform: scale(1.03); }
+    .s1-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+    .s1-label { font-size: 12px; font-weight: 750; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; display: block; }
+    .s1-title { font-size: 20px; color: var(--text-dark); margin-bottom: 15px; font-weight: 750; line-height: 1.35; }
+    .s1-desc { font-size: 15px; color: var(--text-body); line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
+    .s1-link { font-size: 14px; font-weight: 700; color: var(--accent); display: inline-flex; align-items: center; transition: color 0.2s; }
 
     /* 第3屏：Components */
     .components { background: var(--bg-white); }
@@ -322,19 +209,7 @@
 
     /* Knowledge Relationship Section */
     .knowledge-relationship { background: var(--bg-white); padding: 70px 0; border-top: 1px solid var(--border-light); }
-    .knowledge-flow { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; background: var(--bg-light); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); margin-bottom: 40px; text-align: center; }
-    .knowledge-flow-step { font-size: 14px; font-weight: 700; color: var(--text-dark); flex: 1; min-width: 130px; }
-    .knowledge-flow-arrow { color: var(--border-light); font-size: 20px; font-weight: bold; }
-    @media (max-width: 900px) {
-      .knowledge-flow-arrow { display: none; }
-      .knowledge-flow { gap: 15px; }
-      .knowledge-flow-step { min-width: 45%; }
-    }
-    @media (max-width: 600px) {
-      .knowledge-flow { flex-direction: column; }
-      .knowledge-flow-step { min-width: 100%; }
-    }
-
+    
     /* Content Cards Grid (Cases) */
     .cases { background: var(--bg-light); }
     .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
@@ -350,48 +225,21 @@
     .section-footer-link a { font-size: 15px; font-weight: 700; color: var(--text-dark); transition: color 0.2s; }
     .section-footer-link a:hover { color: var(--accent); }
 
-    /* Case Evidence Row */
-    .case-evidence {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 4px 0 20px;
-    }
-    .case-evidence span {
-      font-size: 12px;
-      font-weight: 650;
-      color: var(--text-dark);
-      background: var(--bg-alt);
-      border: 1px solid var(--border-light);
-      border-radius: 4px;
-      padding: 6px 9px;
-      line-height: 1.3;
-    }
+    .case-evidence { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
+    .case-evidence span { font-size: 12px; font-weight: 650; color: var(--text-dark); background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: 4px; padding: 6px 9px; line-height: 1.3; }
 
-    @media (max-width: 900px) {
-      .content-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 900px) { .content-grid { grid-template-columns: 1fr; } }
 
     /* 第6屏：How We Work */
     .how-we-work { background: var(--bg-white); }
-    .workflow { display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; background: var(--bg-white); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); }
+    .workflow { display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; background: var(--bg-white); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); margin-top: 30px;}
     .workflow-step { text-align: center; flex: 1; min-width: 120px; }
     .workflow-arrow { color: var(--border-light); font-size: 24px; font-weight: bold; }
     .workflow h4 { color: var(--text-dark); font-size: 15px; margin-top: 10px; font-weight: 700; }
-    @media (max-width: 900px) {
-      .workflow-arrow { display: none; }
-      .workflow { gap: 20px; }
-      .workflow-step { min-width: 45%; }
-    }
-    @media (max-width: 600px) {
-      .workflow { flex-direction: column; }
-      .workflow-step { min-width: 100%; }
-    }
 
-    /* 第7屏：Manufacturing (视频+证据链) */
+    /* 第7屏：Manufacturing */
     .manufacturing { background: var(--bg-light); }
     .video-lead-box { width: 100%; max-width: 800px; margin: 0 auto 50px; background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 8px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-    
     .proof-chain-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px; }
     .proof-step-card { background: var(--bg-white); border: 1px solid var(--border-light); border-radius: 8px; padding: 16px; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
     .proof-step-badge { position: absolute; top: 12px; left: 12px; background: var(--text-dark); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -401,17 +249,12 @@
     @media (max-width: 900px) { .proof-chain-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 500px) { .proof-chain-grid { grid-template-columns: 1fr; } }
     
-    /* 第8屏：Quality */
-    .quality { background: var(--bg-white); }
-    .quality .img-placeholder { height: 200px; }
     .quality-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; list-style: none; }
     .quality-list li { font-size: 15px; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
     .quality-list li::before { content: "✓"; color: var(--accent); font-size: 18px; }
 
-    /* 第9屏：Library CTA */
+    /* 第9屏：Library CTA & FAQ */
     .insights { background: var(--bg-light); text-align: center; }
-
-    /* 轻量化 FAQ 模块样式 */
     .faq-section { background: var(--bg-white); }
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; row-gap: 24px; column-gap: 40px; margin-top: 20px; }
     .faq-item { border-bottom: 1px solid var(--border-light); padding-bottom: 16px; }
@@ -423,7 +266,6 @@
     /* 第10屏：Contact */
     .contact { background: var(--bg-light); }
     .profile-box { text-align: left; }
-    
     .profile-text { font-size: 16px; color: var(--text-body); margin-bottom: 25px; line-height: 1.6; }
     
     form { display: grid; gap: 15px; background: var(--bg-white); padding: 30px; border-radius: 8px; border: 1px solid var(--border-light); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
@@ -434,145 +276,13 @@
     .file-note { font-size: 12px; color: var(--text-muted); margin-top: 5px; }
     .file-error { display: none; font-size: 13px; color: var(--danger); margin-top: 5px;}
 
-    /* Footer */
     footer { border-top: 1px solid var(--border-light); padding: 40px 0 30px; background: var(--bg-white); font-size: 13px; color: var(--text-muted); text-align: center; }
-  
-  /* ===== Shared Header Sync ===== */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  border-bottom: 1px solid var(--border-light);
-  background: #ffffff;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 14px 20px;
-}
-
-.brand-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.brand-logo {
-  height: 30px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  flex-shrink: 0;
-}
-
-.brand-text-main {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.2;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--text-dark);
-  white-space: nowrap;
-}
-
-.nav-links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  margin: 0 24px;
-}
-
-.nav-links a {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-dark);
-  transition: color 0.2s, border-color 0.2s;
-  padding: 8px 0 7px;
-  border-bottom: 2px solid transparent;
-  line-height: 1.2;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-.nav-links a.nav-active {
-  color: var(--text-dark);
-  font-weight: 700;
-  border-bottom-color: var(--accent);
-}
-
-.header-cta {
-  display: inline-block;
-  flex-shrink: 0;
-  white-space: nowrap;
-  width: auto;
-  min-width: max-content;
-  padding: 10px 20px;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  background: var(--accent);
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.2);
-}
-
-.header-cta:hover {
-  background: #ea580c;
-  color: #ffffff;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 8px -1px rgba(249, 115, 22, 0.3);
-}
-
-@media (max-width: 900px) {
-  .nav-links {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-inner {
-    padding-left: 12px;
-    padding-right: 12px;
-    gap: 10px;
-  }
-
-  .brand-text-main {
-    font-size: 14px;
-  }
-
-  .brand-logo {
-    height: 26px;
-  }
-
-  .header-cta {
-    padding: 9px 12px;
-    font-size: 12px;
-  }
-}
-/* ===== End Shared Header Sync ===== */
   </style>
 </head>
 <body>
 
-<!-- /components/header.html -->
 <header>
-  <div class="header-inner">
+  <div class="header-inner wrap">
     <a href="/" class="brand-link" data-home-link>
       <img src="/images/gf2.png" alt="GorgeoFasteners" class="brand-logo" data-local-src="images/gf2.png" />
       <span class="brand-text-main">GorgeoFasteners</span>
@@ -581,7 +291,6 @@ header {
       <a href="#components">Components</a>
       <a href="#industries">Industries</a>
       <a href="#manufacturing">Manufacturing</a>
-      <a href="#quality">Quality</a>
       <a href="/insights/" data-local-href="insights/index.html">Insights</a>
       <a href="/cases/" data-local-href="cases/index.html">Cases</a>
     </nav>
@@ -589,108 +298,39 @@ header {
   </div>
 </header>
 
+<!-- 01 | Hero -->
 <section class="hero">
-  <div class="wrap grid-2" style="align-items: center;">
+  <!-- 使用了专属的 hero-grid 来扩宽文字区域 -->
+  <div class="wrap hero-grid">
     <div>
       <h1>Custom & Special Fasteners and Drawing-Based Components for OEM Equipment</h1>
       
       <p class="hero-sub">
-        When a drawing becomes a manufacturing question, we look beyond whether the part can simply be made — and evaluate how the requirements can be manufactured, validated and supported into repeat production.
+        We help OEM equipment manufacturers reduce manufacturing uncertainty as drawing-based components move from engineering requirements into validated, repeatable production.<br><br>
+        So fewer manufacturing questions become late problems in assembly, validation, delivery, total cost or supply stability.
       </p>
 
-      <ul class="value-list">
-        <li>Drawing-Based Manufacturing Review</li>
-        <li>Manufacturing Approach Evaluation</li>
-        <li>Prototype & Small-Batch Production</li>
-        <li>Repeat Production Support</li>
-      </ul>
+      <div class="hero-process">
+        Manufacturing Review → Prototype / Validation → Controlled Production → Repeat Production
+      </div>
       
-      <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+      <div style="margin-top: 15px; display: flex; gap: 15px; flex-wrap: wrap;">
         <a href="#contact" class="btn-primary">Send Your Drawing</a>
-        <a href="/cases/" class="btn-primary" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); box-shadow: none;">Explore Manufacturing Cases</a>
+        <a href="/cases/" class="btn-primary" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); box-shadow: none;">Explore Manufacturing Case Reviews</a>
       </div>
     </div>
     
     <div class="hero-img-box">
-      <img class="img-placeholder" src="/images/index/1.png" alt="Hero Products" style="height: 60%; min-height: 300px; padding: 0; object-fit: cover;" />
+      <img class="img-placeholder" src="/images/index/1.png" alt="Hero Products" style="height: 60%; min-height: 240px; padding: 0; object-fit: cover;" />
     </div>
   </div>
 </section>
 
-<!-- 痛点认知模块：S1 GEO Entry Points -->
-<!-- 痛点认知模块：S1 GEO Entry Points -->
-<section class="manufacturing-challenges">
-  <div class="wrap">
-    <h2 class="section-title">Does Any of This Look Familiar?</h2>
-    <p class="section-subtitle">These are common project situations where the manufacturing question may be worth looking at more closely.</p>
-    
-    <div class="s1-grid">
-      <!-- Card 01 -->
-      <a href="/insights/why-can-the-same-custom-fastener-drawing-get-different-supplier-responses/" class="s1-card">
-        <div class="s1-img-wrapper">
-          <img src="../images/index/14.png" alt="The Same Drawing Gets Very Different Supplier Responses" />
-        </div>
-        <div class="s1-content">
-          <span class="s1-label">SUPPLIER RESPONSE</span>
-          <h3 class="s1-title">The Same Drawing Gets Very Different Supplier Responses</h3>
-          <p class="s1-desc">One supplier may quote it normally, another much higher, while another may question the requirements or decide not to quote. The same drawing does not always lead to the same manufacturing approach.</p>
-          <span class="s1-link">Understand Why →</span>
-        </div>
-      </a>
-      
-      <!-- Card 02 -->
-      <a href="/insights/why-can-a-simple-looking-custom-fastener-be-difficult-to-source/" class="s1-card">
-        <div class="s1-img-wrapper">
-          <img src="../images/index/14.png" alt="A Simple-Looking Part Becomes Difficult to Source" />
-        </div>
-        <div class="s1-content">
-          <span class="s1-label">SOURCING DIFFICULTY</span>
-          <h3 class="s1-title">A Simple-Looking Part Becomes Difficult to Source</h3>
-          <p class="s1-desc">When a simple-looking part repeatedly receives no-quotes, high MOQ or unusual pricing, the fit between the part requirements, manufacturing approach and project conditions may be worth reviewing.</p>
-          <span class="s1-link">Explore the Manufacturing Question →</span>
-        </div>
-      </a>
-
-      <!-- Card 03 -->
-      <a href="/insights/should-a-drawing-requirement-change-when-a-supplier-says-it-is-difficult-to-manufacture/" class="s1-card">
-        <div class="s1-img-wrapper">
-          <img src="../images/index/14.png" alt="A Supplier Asks Whether a Drawing Requirement Can Be Changed" />
-        </div>
-        <div class="s1-content">
-          <span class="s1-label">DRAWING CHANGE</span>
-          <h3 class="s1-title">A Supplier Asks Whether a Drawing Requirement Can Be Changed</h3>
-          <p class="s1-desc">Difficulty with one manufacturing approach does not automatically mean the drawing requirement needs to change. Another manufacturing approach may be worth evaluating before the requirement itself is reconsidered.</p>
-          <span class="s1-link">Understand What to Review →</span>
-        </div>
-      </a>
-
-      <!-- Card 04 -->
-      <a href="/insights/why-can-a-successful-prototype-still-be-difficult-to-repeat-in-production/" class="s1-card">
-        <div class="s1-img-wrapper">
-          <img src="../images/index/14.png" alt="A Successful Prototype Becomes Difficult to Repeat" />
-        </div>
-        <div class="s1-content">
-          <span class="s1-label">REPEAT PRODUCTION</span>
-          <h3 class="s1-title">A Successful Prototype Becomes Difficult to Repeat</h3>
-          <p class="s1-desc">A successful prototype shows that the part can be made under a particular set of conditions. It does not automatically prove that the same result can be repeated consistently in production.</p>
-          <span class="s1-link">Explore the Repeatability Question →</span>
-        </div>
-      </a>
-    </div>
-
-   <!-- 新增的 View More 入口，直接复用 .section-footer-link 样式，并改为高亮橙色 -->
-    <div class="section-footer-link">
-      <a href="/insights/" data-local-href="insights/index.html" style="color: var(--accent);">
-        View More Manufacturing Questions →
-      </a>
-    </div>
-
-  </div>
-</section>
-
+<!-- 02 | Components -->
 <section id="components" class="components">
   <div class="wrap">
-    <h2 class="section-title">Components We Manufacture</h2>
+    <h2 class="section-title">Drawing-Based Components We Support</h2>
+    <p class="section-subtitle">Custom fasteners and selected drawing-based mechanical components used in OEM equipment and machinery.</p>
     <div class="grid-6">
       <div class="card">
         <img class="img-placeholder" src="/images/index/2.jpg" alt="Custom Pins" style="padding: 0; object-fit: cover;" />
@@ -720,75 +360,310 @@ header {
   </div>
 </section>
 
-<section id="industries" class="industries">
+<!-- 03 | Project Symptoms -->
+<section class="manufacturing-challenges">
   <div class="wrap">
-    <h2 class="section-title">Industries We Support</h2>
-    <div class="grid-5">
+    <h2 class="section-title">Does Any of This Look Familiar?</h2>
+    <p class="section-subtitle">Different sourcing or production symptoms can sometimes point to an unresolved manufacturing question behind the drawing.</p>
+    
+    <div class="s1-grid">
+      <a href="/insights/why-can-the-same-custom-fastener-drawing-get-different-supplier-responses/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="The Same Drawing Gets Very Different Supplier Responses" />
+        </div>
+        <div class="s1-content">
+          <span class="s1-label">SUPPLIER RESPONSE</span>
+          <h3 class="s1-title">The Same Drawing Gets Very Different Supplier Responses</h3>
+          <p class="s1-desc">One supplier may quote it normally, another much higher, while another may question the requirements or decide not to quote. The same drawing does not always lead to the same manufacturing approach.</p>
+          <span class="s1-link">Understand Why →</span>
+        </div>
+      </a>
+      
+      <a href="/insights/why-can-a-simple-looking-custom-fastener-be-difficult-to-source/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="A Simple-Looking Part Becomes Difficult to Source" />
+        </div>
+        <div class="s1-content">
+          <span class="s1-label">SOURCING DIFFICULTY</span>
+          <h3 class="s1-title">A Simple-Looking Part Becomes Difficult to Source</h3>
+          <p class="s1-desc">When a simple-looking part repeatedly receives no-quotes, high MOQ or unusual pricing, the fit between the part requirements, manufacturing approach and project conditions may be worth reviewing.</p>
+          <span class="s1-link">Explore the Manufacturing Question →</span>
+        </div>
+      </a>
+
+      <a href="/insights/should-a-drawing-requirement-change-when-a-supplier-says-it-is-difficult-to-manufacture/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="A Supplier Asks Whether a Drawing Requirement Can Be Changed" />
+        </div>
+        <div class="s1-content">
+          <span class="s1-label">DRAWING CHANGE</span>
+          <h3 class="s1-title">A Supplier Asks Whether a Drawing Requirement Can Be Changed</h3>
+          <p class="s1-desc">Difficulty with one manufacturing approach does not automatically mean the drawing requirement needs to change. Another manufacturing approach may be worth evaluating before the requirement itself is reconsidered.</p>
+          <span class="s1-link">Understand What to Review →</span>
+        </div>
+      </a>
+
+      <a href="/insights/why-can-a-successful-prototype-still-be-difficult-to-repeat-in-production/" class="s1-card">
+        <div class="s1-img-wrapper">
+          <img src="../images/index/14.png" alt="A Successful Prototype Becomes Difficult to Repeat" />
+        </div>
+        <div class="s1-content">
+          <span class="s1-label">REPEAT PRODUCTION</span>
+          <h3 class="s1-title">A Successful Prototype Becomes Difficult to Repeat</h3>
+          <p class="s1-desc">A successful prototype shows that the part can be made under a particular set of conditions. It does not automatically prove that the same result can be repeated consistently in production.</p>
+          <span class="s1-link">Explore the Repeatability Question →</span>
+        </div>
+      </a>
+    </div>
+
+    <p style="text-align: center; font-size: 16px; margin: 40px auto 20px; max-width: 800px; color: var(--text-dark); font-weight: 600; line-height: 1.6;">
+      These situations can be early signs of an unresolved manufacturing question. Recognizing it early gives the project more options before the consequences become harder to change.
+    </p>
+
+    <div class="section-footer-link">
+      <a href="/insights/" data-local-href="insights/index.html" style="color: var(--accent);">
+        View More Manufacturing Questions →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 04 | Manufacturing Judgment -->
+<section class="bg-white-section">
+  <div class="wrap">
+    <h2 class="section-title">Think Differently About Manufacturing Questions</h2>
+    <div class="grid-4" style="margin-top: 40px;">
       <div class="card">
-        <img src="/images/in/1.png" alt="OEM Equipment Manufacturers" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
-        <h3>OEM Equipment Manufacturers</h3>
+        <div>
+          <span class="content-label" style="font-size: 24px; color: var(--border-light); margin-bottom: 5px;">01</span>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Drawing Compliance ≠ Functional Success</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 12px; line-height: 1.6;">Meeting the drawing requirements is essential, but dimensional conformity alone may not always establish how the part will perform in the actual assembly.</p>
+        </div>
+        <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; margin: 0;">Why it matters: Understanding the actual application helps identify which requirements are critical to fit and function.</p>
       </div>
+
       <div class="card">
-        <img src="/images/in/2.png" alt="Automation Machine Builders" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
-        <h3>Automation Machine Builders</h3>
+        <div>
+          <span class="content-label" style="font-size: 24px; color: var(--border-light); margin-bottom: 5px;">02</span>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Can Manufacture ≠ Can Repeat Reliably</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 12px; line-height: 1.6;">Producing acceptable samples once does not automatically mean the same result can be reproduced consistently in later production.</p>
+        </div>
+        <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; margin: 0;">Why it matters: A suitable production approach must support not only the first acceptable parts, but consistent results when the requirement repeats.</p>
       </div>
+
       <div class="card">
-        <img src="/images/in/3.png" alt="Material Handling System Integrators" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
-        <h3>Material Handling System Integrators</h3>
+        <div>
+          <span class="content-label" style="font-size: 24px; color: var(--border-light); margin-bottom: 5px;">03</span>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Tighter Tolerance ≠ Better Project Result</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 12px; line-height: 1.6;">A tighter tolerance can be essential when function requires it, but unnecessary tightness can restrict manufacturing options and increase cost or verification burden.</p>
+        </div>
+        <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; margin: 0;">Why it matters: The goal is to protect what is functionally critical without adding unnecessary manufacturing or verification burden elsewhere.</p>
       </div>
+
       <div class="card">
-        <img src="/images/in/4.png" alt="Packaging Machinery Manufacturers" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
-        <h3>Packaging Machinery Manufacturers</h3>
-      </div>
-      <div class="card">
-        <img src="/images/in/5.png" alt="Industrial Equipment OEMs" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
-        <h3>Industrial Equipment OEMs</h3>
+        <div>
+          <span class="content-label" style="font-size: 24px; color: var(--border-light); margin-bottom: 5px;">04</span>
+          <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Prototype Route ≠ Production Route</h3>
+          <p style="font-size: 14px; color: var(--text-body); margin-bottom: 12px; line-height: 1.6;">A route suitable for producing and validating prototypes may not be the most suitable route for repeat production.</p>
+        </div>
+        <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; margin: 0;">Why it matters: If the production route changes after prototyping, it is important to understand what has already been validated and what may need to be validated again.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Knowledge / Evidence 关系说明区 -->
+<!-- 05 | Project Consequence -->
 <section class="knowledge-relationship">
   <div class="wrap">
-    <h2 class="section-title">The Drawing Defines the What. Manufacturing Still Has to Determine the How.</h2>
-    <p class="section-subtitle">Customer drawings define the required part. Our role is to evaluate the manufacturing approach we propose — how the requirements can be produced, verified and supported into repeat production.</p>
+    <h2 class="section-title">A Manufacturing Decision Can Become a Project Decision</h2>
+    <p class="section-subtitle">The impact of a manufacturing choice does not always stop at the part itself. It can carry forward into assembly, validation, delivery, total cost and future supply stability.</p>
     
-    <div class="knowledge-flow">
-      <div class="knowledge-flow-step">Customer Drawing</div>
-      <div class="knowledge-flow-arrow">→</div>
-      <div class="knowledge-flow-step">Manufacturing Review</div>
-      <div class="knowledge-flow-arrow">→</div>
-      <div class="knowledge-flow-step">Manufacturing Approach</div>
-      <div class="knowledge-flow-arrow">→</div>
-      <div class="knowledge-flow-step">Prototype / Sample</div>
-      <div class="knowledge-flow-arrow">→</div>
-      <div class="knowledge-flow-step">Validation</div>
-      <div class="knowledge-flow-arrow">→</div>
-      <div class="knowledge-flow-step">Repeat Production</div>
+    <div style="text-align: center; margin-bottom: 30px;">
+      <!-- Level 1 -->
+      <div style="display: inline-block; background: var(--bg-hero); color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 16px;">
+        Manufacturing Question
+      </div>
+      
+      <div style="font-size: 24px; color: var(--border-light); margin: 10px 0;">↓</div>
+      
+      <!-- Level 2: Manufacturing Judgment -->
+      <div style="display: inline-block; background: var(--accent); color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 16px; box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.2);">
+        Manufacturing Judgment
+      </div>
+      
+      <div style="font-size: 24px; color: var(--border-light); margin: 10px 0;">↓</div>
+      
+      <!-- Level 3: Decisions -->
+      <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 10px;">
+        <span style="font-size: 15px; font-weight: 700; color: var(--text-dark);">Route</span>
+        <span style="color: var(--border-light);">·</span>
+        <span style="font-size: 15px; font-weight: 700; color: var(--text-dark);">Control</span>
+        <span style="color: var(--border-light);">·</span>
+        <span style="font-size: 15px; font-weight: 700; color: var(--text-dark);">Verification</span>
+        <span style="color: var(--border-light);">·</span>
+        <span style="font-size: 15px; font-weight: 700; color: var(--text-dark);">Trade-off</span>
+      </div>
+      
+      <div style="font-size: 24px; color: var(--border-light); margin: 10px 0;">↓</div>
+      
+      <!-- Level 4: Project Consequences -->
+      <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+        <span style="background: var(--bg-alt); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; color: var(--text-dark); border: 1px solid var(--border-light);">Assembly</span>
+        <span style="background: var(--bg-alt); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; color: var(--text-dark); border: 1px solid var(--border-light);">Validation</span>
+        <span style="background: var(--bg-alt); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; color: var(--text-dark); border: 1px solid var(--border-light);">Delivery</span>
+        <span style="background: var(--bg-alt); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; color: var(--text-dark); border: 1px solid var(--border-light);">Total Cost</span>
+        <span style="background: var(--bg-alt); padding: 8px 16px; border-radius: 4px; font-size: 14px; font-weight: 600; color: var(--text-dark); border: 1px solid var(--border-light);">Supply Stability</span>
+      </div>
     </div>
 
-    <div class="grid-3" style="margin-top: 30px;">
-      <div class="card">
-        <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Review the Complete Manufacturing Situation</h3>
-        <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">A complete drawing defines the required part, but the manufacturing approach still needs to consider how geometry, tolerances, material, quantity and process requirements work together.</p>
+    <!-- Level 5: Customer Project Outcome -->
+    <p style="text-align: center; font-size: 16px; max-width: 700px; margin: 30px auto 0; color: var(--text-dark); font-weight: 600; line-height: 1.6;">
+      Handled early, these manufacturing decisions can help protect assembly, validation, delivery, total cost and future supply as the equipment project moves forward.
+    </p>
+
+  </div>
+</section>
+
+<!-- 06 | How Gorgeo Helps -->
+<section class="how-we-work">
+  <div class="wrap">
+    <h2 class="section-title">You Provide Context. We Provide Judgment.</h2>
+    
+    <div class="grid-2" style="margin: 40px 0;">
+      <div class="card" style="border-top: 3px solid var(--border-light);">
+        <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 6px; font-weight: 750;">Helpful Project Context</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px; font-style: italic;">(Share what is already known)</p>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">✓</span> Drawing / CAD
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">✓</span> Application / Assembly
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">✓</span> Quantity
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">✓</span> Project Stage
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">✓</span> Current Priority / Concern
+          </li>
+        </ul>
       </div>
-      <div class="card">
-        <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Consider the Manufacturing Route</h3>
-        <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">A part may be possible through more than one manufacturing approach. Different routes can affect feasibility, sampling, production conditions and repeatability.</p>
+
+      <div class="card" style="border-top: 3px solid var(--accent);">
+        <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 16px; font-weight: 750;">What We Help Judge</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">→</span> Critical requirements
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">→</span> Manufacturing approach & assumptions
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">→</span> Validation needs
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">→</span> Manufacturing & production risks
+          </li>
+          <li style="margin-bottom: 12px; font-size: 15px; color: var(--text-body); display: flex; gap: 10px;">
+            <span style="color: var(--accent); font-weight: bold;">→</span> What needs clarification now
+          </li>
+        </ul>
       </div>
-      <div class="card">
-        <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 12px; font-weight: 750;">Validate Before Repeat Production</h3>
-        <p style="font-size: 14px; color: var(--text-body); margin: 0; line-height: 1.6;">Where needed, prototype and sample production provide a practical way to verify the proposed manufacturing approach before moving into repeat production.</p>
-      </div>
+    </div>
+
+    <p style="text-align: center; font-size: 16px; margin: 30px auto; max-width: 800px; color: var(--text-dark); font-weight: 600; line-height: 1.6;">
+      The goal is not to give you more manufacturing decisions to make, but to help you make the project decisions that matter with better information.
+    </p>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 40px; padding-top: 20px;">
+      <div style="font-weight: 700; color: var(--text-dark); font-size: 16px;">Manufacturing Judgment</div>
+      <div style="color: var(--border-light); font-weight: bold; font-size: 20px;">→</div>
+      <div style="font-weight: 700; color: var(--text-dark); font-size: 16px;">Physical Execution & Evidence</div>
     </div>
   </div>
 </section>
 
+<!-- 07 | Execution Evidence -->
+<section id="manufacturing" class="manufacturing">
+  <div class="wrap">
+    <h2 class="section-title">Turning Manufacturing Judgment into Physical Evidence</h2>
+    <p class="section-subtitle">A manufacturing judgment only becomes useful when critical requirements can be translated into controlled production and objectively verified on the finished part.</p>
+    
+    <div class="video-lead-box">
+      <video class="img-placeholder" src="/media/production-route-support.mp4" controls autoplay muted loop style="height: 400px; width: 100%; padding: 0; object-fit: cover; border: none;"></video>
+    </div>
+
+    <div class="proof-chain-grid">
+      <div class="proof-step-card">
+        <div>
+          <span class="proof-step-badge">Step 1</span>
+          <img class="img-placeholder" src="/images/index/7.png" alt="CNC Process" style="padding: 0; object-fit: cover;" />
+          <h3>Machining</h3>
+          <p>The manufacturing approach is selected around the part geometry, critical requirements, quantity and project stage.</p>
+        </div>
+      </div>
+      
+      <div class="proof-step-card">
+        <div>
+          <span class="proof-step-badge">Step 2</span>
+          <img class="img-placeholder" src="/images/index/9.png" alt="Process Control" style="padding: 0; object-fit: cover;" />
+          <h3>In-process Control</h3>
+          <p>Critical and process-sensitive requirements are checked during production so deviations can be identified before they carry into later operations.</p>
+        </div>
+      </div>
+      
+      <div class="proof-step-card">
+        <div>
+          <span class="proof-step-badge">Step 3</span>
+          <img class="img-placeholder" src="/images/index/10.png" alt="Final Inspection" style="padding: 0; object-fit: cover;" />
+          <h3>Final Inspection</h3>
+          <p>Critical requirements are verified against the agreed drawing and project requirements before release.</p>
+        </div>
+      </div>
+      
+      <div class="proof-step-card">
+        <div>
+          <span class="proof-step-badge">Step 4</span>
+          <img class="img-placeholder" src="/images/index/13.png" alt="Finished Parts" style="padding: 0; object-fit: cover;" />
+          <h3>Finished Parts</h3>
+          <p>Finished components are released after the agreed manufacturing and verification requirements have been completed, then prepared for delivery.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 80px; text-align: center;">
+      <h2 class="section-title">From Critical Requirement to Verification Evidence</h2>
+      <p class="section-subtitle" style="margin-bottom: 40px; margin-left: auto; margin-right: auto; max-width: 700px;">
+        Verification should follow the requirement. Critical features need an appropriate verification method and objective evidence before the part is released.
+      </p>
+    </div>
+    
+    <div class="grid-2" style="max-width: 800px; margin: 0 auto 30px;">
+      <img class="img-placeholder" src="/images/index/11.png" alt="Thread Gauge" style="padding: 0; object-fit: cover; height: 200px;" />
+      <img class="img-placeholder" src="/images/index/12.png" alt="Inspection Process" style="padding: 0; object-fit: cover; height: 200px;" />
+    </div>
+
+    <div style="text-align: center; margin-bottom: 15px; font-size: 13px; font-weight: 750; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+      Examples of Objective Evidence
+    </div>
+    <ul class="quality-list" style="margin-top: 0;">
+      <li>Dimensional Inspection</li>
+      <li>Thread Verification</li>
+      <li>First Article Inspection</li>
+      <li>Material Documentation</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- 08 | Supporting Trust -->
 <section id="cases" class="cases">
   <div class="wrap">
-    <h2 class="section-title">Real Manufacturing Cases</h2>
-    <p class="section-subtitle">Practical examples of how manufacturing questions were evaluated, translated into manufacturing approaches and validated in real projects.</p>
+    <h2 class="section-title">Manufacturing Case Reviews</h2>
+    <p class="section-subtitle">Examples of how manufacturing questions can be reviewed through requirements, manufacturing approach, validation and production considerations.</p>
     
     <div class="content-grid">
       <div class="content-card">
@@ -849,100 +724,40 @@ header {
     </div>
 
     <div class="section-footer-link">
-      <a href="/cases/">View All Manufacturing Cases →</a>
+      <a href="/cases/">View All Manufacturing Case Reviews →</a>
     </div>
   </div>
 </section>
 
-<section class="how-we-work">
+<section id="industries" class="industries">
   <div class="wrap">
-    <h2 class="section-title">How We Work</h2>
-    <div class="workflow">
-      <div class="workflow-step"><h4>Send Drawing</h4></div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step"><h4>Manufacturing Review</h4></div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step"><h4>Manufacturing Feedback</h4></div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step"><h4>Prototype</h4></div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step"><h4>Verification</h4></div>
-      <div class="workflow-arrow">→</div>
-      <div class="workflow-step"><h4>Repeat Production</h4></div>
-    </div>
-  </div>
-</section>
-
-<section id="manufacturing" class="manufacturing">
-  <div class="wrap">
-    <h2 class="section-title">Manufacturing Verification</h2>
-    <p class="section-subtitle">Real CNC machining and inspection process for OEM drawing-based components.</p>
-    
-    <div class="video-lead-box">
-      <video class="img-placeholder" src="/media/production-route-support.mp4" controls autoplay muted loop style="height: 400px; width: 100%; padding: 0; object-fit: cover; border: none;"></video>
-    </div>
-
-    <h2 class="section-title" style="margin-top: 40px;">From Machining to Final Inspection</h2>
-    <p class="section-subtitle">From machining and in-process checks to final inspection and finished parts.</p>
-    
-    <div class="proof-chain-grid">
-      <div class="proof-step-card">
-        <div>
-          <span class="proof-step-badge">Step 1</span>
-          <img class="img-placeholder" src="/images/index/7.png" alt="CNC Process" style="padding: 0; object-fit: cover;" />
-          <h3>Machining</h3>
-          <p>CNC machining processes for drawing-based precision components.</p>
-        </div>
+    <h2 class="section-title">Industries We Support</h2>
+    <p class="section-subtitle" style="margin-bottom: 40px;">We primarily support OEM equipment manufacturers that design and build machinery or mechanical systems with recurring drawing-based component requirements.</p>
+    <div class="grid-5">
+      <div class="card">
+        <img src="/images/in/1.png" alt="OEM Equipment Manufacturers" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
+        <h3>OEM Equipment Manufacturers</h3>
       </div>
-      
-      <div class="proof-step-card">
-        <div>
-          <span class="proof-step-badge">Step 2</span>
-          <img class="img-placeholder" src="/images/index/9.png" alt="Process Control" style="padding: 0; object-fit: cover;" />
-          <h3>In-process Control</h3>
-          <p>In-process checks help monitor critical dimensions and manufacturing consistency during production.</p>
-        </div>
+      <div class="card">
+        <img src="/images/in/2.png" alt="Automation Machine Builders" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
+        <h3>Automation Machine Builders</h3>
       </div>
-      
-      <div class="proof-step-card">
-        <div>
-          <span class="proof-step-badge">Step 3</span>
-          <img class="img-placeholder" src="/images/index/10.png" alt="Final Inspection" style="padding: 0; object-fit: cover;" />
-          <h3>Final Inspection</h3>
-          <p>Dimensional inspection and verification of critical requirements before batch release.</p>
-        </div>
+      <div class="card">
+        <img src="/images/in/3.png" alt="Material Handling System Integrators" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
+        <h3>Material Handling System Integrators</h3>
       </div>
-      
-      <div class="proof-step-card">
-        <div>
-          <span class="proof-step-badge">Step 4</span>
-          <img class="img-placeholder" src="/images/index/13.png" alt="Finished Parts" style="padding: 0; object-fit: cover;" />
-          <h3>Finished Parts</h3>
-          <p>Finished components inspected, packed, and prepared for shipment.</p>
-        </div>
+      <div class="card">
+        <img src="/images/in/4.png" alt="Packaging Machinery Manufacturers" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
+        <h3>Packaging Machinery Manufacturers</h3>
+      </div>
+      <div class="card">
+        <img src="/images/in/5.png" alt="Industrial Equipment OEMs" style="width: 64px; height: 64px; object-fit: contain; margin: 0 auto 15px; display: block;" />
+        <h3>Industrial Equipment OEMs</h3>
       </div>
     </div>
   </div>
 </section>
 
-<section id="quality" class="quality">
-  <div class="wrap">
-    <h2 class="section-title">Quality Assurance</h2>
-    <div class="grid-3">
-      <img class="img-placeholder" src="/images/index/10.png" alt="Dimensional Inspection" style="padding: 0; object-fit: cover;" />
-      <img class="img-placeholder" src="/images/index/11.png" alt="Thread Gauge" style="padding: 0; object-fit: cover;" />
-      <img class="img-placeholder" src="/images/index/12.png" alt="Inspection Process" style="padding: 0; object-fit: cover;" />
-    </div>
-    <ul class="quality-list">
-      <li>Dimensional Inspection</li>
-      <li>Thread Verification</li>
-      <li>First Article Inspection</li>
-      <li>Material Documentation</li>
-    </ul>
-  </div>
-</section>
-
-<!-- 轻量化 Insights Library Entry -->
 <section id="insights" class="insights">
   <div class="wrap" style="text-align: center;">
     <h2 class="section-title">Explore More Manufacturing Insights</h2>
@@ -956,33 +771,30 @@ header {
     <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq-grid">
       <div class="faq-item">
-        <h3>Do you manufacture directly from customer drawings?</h3>
-        <p>Yes. We manufacture custom components based on customer drawings and review relevant manufacturing considerations before production where needed.</p>
+        <h3>Can you start reviewing if the drawing information is temporarily incomplete?</h3>
+        <p>Yes. We can often begin reviewing the primary manufacturing questions based on the available drawing and basic project context.</p>
       </div>
       <div class="faq-item">
-        <h3>Can you review manufacturing considerations before sampling?</h3>
-        <p>Yes. We can review manufacturing considerations related to geometry, tolerances, materials, or production before sampling.</p>
+        <h3>Can manufacturing considerations be reviewed during the prototype stage?</h3>
+        <p>Yes. Reviewing manufacturing considerations early can help align the prototype route with the intended repeat production route.</p>
       </div>
       <div class="faq-item">
-        <h3>Do you support prototype and repeat production?</h3>
-        <p>Yes. We support prototype validation and repeat production, with manufacturing and inspection considerations reviewed as the project moves between stages.</p>
+        <h3>What if the final production quantity is not yet determined?</h3>
+        <p>We can evaluate the manufacturing approach based on estimated quantities or initial batches, and discuss how the approach might need to adjust for volume.</p>
       </div>
       <div class="faq-item">
-        <h3>What materials can you work with?</h3>
-        <p>Carbon steel, stainless steel, alloy steel, brass and aluminum are commonly supported depending on the drawing requirements.</p>
+        <h3>Do you support drawing-based components other than non-standard fasteners?</h3>
+        <p>Yes. We support various drawing-based mechanical components (such as small shafts, spacers, and custom pins) where the manufacturing approach and critical requirements need careful review.</p>
       </div>
       <div class="faq-item">
-        <h3>What information should I provide with a drawing?</h3>
-        <p>Helpful information includes the drawing, material, estimated quantity, critical tolerances, surface requirements, and any important application or assembly requirements. A 3D model can also be provided if available.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Can you provide inspection reports?</h3>
-        <p>Inspection reports and material documentation can be provided where applicable to the project requirements.</p>
+        <h3>Does the MOQ depend on the part and manufacturing approach?</h3>
+        <p>Yes. The minimum order quantity is usually determined by the selected manufacturing process, setup requirements, and material availability for the specific component.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 09 | Start / Contact -->
 <section id="contact" class="contact">
   <div class="wrap grid-2" style="align-items: flex-start;">
     
@@ -990,11 +802,11 @@ header {
       <h2 style="font-size: 28px; font-weight: 750; color: var(--text-dark); margin-bottom: 20px; line-height: 1.2;">Have a Custom Part Drawing to Review?</h2>
       
       <div class="profile-text">
-        If a custom fastener or related component is creating manufacturing or sourcing questions for your project, send us the drawing and key requirements. We can take a look from the manufacturing side.
+        Send the drawing and a few lines of project context. Gorgeo will identify the few questions that actually change project results, and only confirm what is needed for the next step.
       </div>
 
       <div style="font-size: 14px; color: var(--text-body); background: var(--bg-white); padding: 16px; border-radius: 8px; border: 1px solid var(--border-light); margin-top: 20px;">
-        <strong>Helpful information to include:</strong> drawing, material, estimated quantity, critical tolerances, and any important application or assembly requirements.
+        <strong>Helpful Project Context:</strong> Drawing / CAD, Application / Assembly, Quantity, Project Stage, and Current Priority / Concern.
       </div>
     </div>
 
@@ -1025,7 +837,7 @@ header {
 
         <div>
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Share any material, quantity, tolerance, application, or assembly requirements..."></textarea>
+          <textarea id="message" name="message" placeholder="Share any useful project context, such as the application or assembly, quantity, project stage, current priority or concern, and any known technical requirements."></textarea>
         </div>
 
         <button id="submit-btn" type="submit" class="btn-primary" style="width: 100%;">

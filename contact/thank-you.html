@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Drawing Received | GorgeoFasteners</title>
+  <title>Your Drawing Is Ready for Manufacturing Review | GorgeoFasteners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
 
@@ -30,7 +30,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    .wrap { max-width: 640px; margin: 0 auto; }
+    .wrap { max-width: 720px; margin: 0 auto; }
 
     .card {
       background: var(--bg-white);
@@ -53,7 +53,7 @@
     h1 {
       text-align: center;
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       color: var(--text-dark);
       font-weight: 750;
       line-height: 1.3;
@@ -64,7 +64,7 @@
       font-size: 16px;
       margin-bottom: 16px;
       color: var(--text-body);
-      max-width: 500px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -74,7 +74,7 @@
       padding: 30px;
       border-radius: 8px;
       border: 1px solid var(--border-light);
-      margin: 35px 0;
+      margin: 35px 0 25px 0;
     }
 
     .next-steps h3 {
@@ -90,7 +90,7 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .step:last-child {
@@ -107,17 +107,38 @@
     .step p {
       font-size: 15px;
       color: var(--text-dark);
-      font-weight: 500;
+      font-weight: 600;
       margin: 0;
+      line-height: 1.4;
+    }
+
+    .step-desc {
+      display: block;
+      font-weight: 400;
+      font-size: 14.5px;
+      color: var(--text-body);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .value-summary {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 35px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.5;
     }
 
     .additional-note {
-      font-size: 14px;
+      font-size: 14.5px;
       color: var(--text-muted);
       text-align: center;
       margin-bottom: 40px;
-      max-width: 500px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -192,46 +213,63 @@
 
       <div class="brand-text">GorgeoFasteners</div>
       
-      <h1>Drawing Received</h1>
+      <h1>Your Drawing Is Ready for Manufacturing Review</h1>
       
-      <p class="intro-text">Thank you for sharing your drawing and project requirements.</p>
-      <p class="intro-text">We’ll review the drawing from the manufacturing side and evaluate the requirements, critical features and manufacturing considerations before determining the appropriate next step.</p>
+      <p class="intro-text"><strong>Submitting a drawing does not mean every manufacturing decision must already be resolved.</strong></p>
+      
+      <p class="intro-text">What matters is identifying which requirements and manufacturing questions could actually change the project outcome. Your drawing provides a starting point for identifying the manufacturing questions that could materially affect the project — before they become later issues in validation, delivery or production.</p>
+      
+      <p class="intro-text">The same drawing can lead to different manufacturing approaches, control requirements and verification needs depending on how the part functions in the equipment and where the project currently stands.</p>
 
       <div class="next-steps">
         <h3>Next Steps</h3>
         
         <div class="step">
           <span class="step-num">01</span>
-          <p><strong>Drawing Review</strong><br>We review the submitted drawing, requirements and available project information.</p>
+          <p>Identify What Could Change the Project
+            <span class="step-desc">The first priority is to identify the requirements and manufacturing questions that could materially affect how the part is produced, controlled or verified. These are the points most likely to affect assembly, validation, delivery, total cost or repeat production if they remain unresolved.</span>
+          </p>
         </div>
         
         <div class="step">
           <span class="step-num">02</span>
-          <p><strong>Manufacturing Assessment</strong><br>We evaluate the critical requirements and manufacturing considerations that may affect the proposed manufacturing approach.</p>
+          <p>Separate What Can Proceed from What Needs Clarification
+            <span class="step-desc">Not every open point needs to stop the project. Where a reasonable manufacturing basis can be established, the review can continue. Clarification is focused on the few points that could materially change manufacturing, verification or delivery decisions.</span>
+          </p>
         </div>
         
         <div class="step">
           <span class="step-num">03</span>
-          <p><strong>Follow-Up</strong><br>If clarification is needed, we’ll contact you about the specific information required to continue the review and determine the appropriate next step.</p>
+          <p>Build a Clear Basis for the Next Project Step
+            <span class="step-desc">The review is used to establish the clearest practical basis for what comes next — whether that is focused clarification, manufacturing evaluation, prototype / validation planning or quotation.</span>
+          </p>
         </div>
       </div>
 
-      <p class="additional-note">A complete drawing is usually enough to begin the review. If additional information would materially affect the manufacturing assessment, we’ll ask for it during follow-up.</p>
+      <!-- 修改点 1: Value Summary 推到终端项目价值，形成完整的因果链 -->
+      <div class="value-summary">
+        The purpose is not simply to complete a manufacturing review. It is to identify the decisions that matter early enough to reduce late manufacturing surprises as the equipment project moves through validation, delivery and repeat production — supporting faster progress, more reliable execution and better total-cost competitiveness.
+      </div>
+
+      <!-- 修改点 2: Additional Note 不再重复 Step 2，改为解释“不用等全部Unknown解决”对客户项目的防守价值 -->
+      <p class="additional-note">You do not need to resolve every manufacturing question before the review can begin. The aim is to keep the project moving while bringing forward the decisions that could affect validation, delivery, total cost or repeat production — before they become harder and more expensive to change.</p>
 
       <div class="actions">
-        <a class="btn-main" href="/" data-local-href="../index.html">
-          Return to Homepage
+        <a class="btn-main" href="/cases/" data-local-href="../cases/index.html">
+          See How Manufacturing Questions Affect Equipment Projects
         </a>
       </div>
 
       <div class="resource-links">
-        <a href="/insights/" data-local-href="../insights/index.html">Manufacturing Insights</a>
+        <a href="/insights/" data-local-href="../insights/index.html">Explore Manufacturing Decisions</a>
         <span>•</span>
-        <a href="/cases/" data-local-href="../cases/index.html">Manufacturing Cases</a>
+        <a href="/cases/" data-local-href="../cases/index.html">See Manufacturing Case Reviews</a>
+        <span>•</span>
+        <a href="/" data-local-href="../index.html">Return to Homepage</a>
       </div>
 
       <div class="footer">
-        GorgeoFasteners · Drawing-Based Components for OEM Equipment
+        GorgeoFasteners · Custom Fasteners & Drawing-Based Components for OEM Equipment
       </div>
 
     </div>
